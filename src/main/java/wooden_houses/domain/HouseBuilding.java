@@ -1,4 +1,4 @@
-package project.domain;
+package wooden_houses.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
