@@ -26,7 +26,7 @@ public class ContactUsController {
     private static final Logger log = Logger.getLogger(ContactUsController.class);
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
-            @ApiResponse(code = SC_CONFLICT, message = "Contact information was already created!"),
+            @ApiResponse(code = SC_CONFLICT, message = "User contact information was already created!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are empty or incorrect input!")
@@ -34,26 +34,26 @@ public class ContactUsController {
     @PostMapping("/createContact")
     public ResponseEntity<?> createNewContact(@RequestBody ContactUs contact, UriComponentsBuilder builder) {
         if (service.isExists(contact.getId())) {
-            log.error("Contact information  with id " + contact.getId() + " already exists!" + contact);
+            log.error("User contact information  with id " + contact.getId() + " already exists!" + contact);
             return new ResponseEntity<>((HttpStatus.CONFLICT));
         }
         service.save(contact);
         log.info(contact + " was created!");
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/house/{id}").buildAndExpand(contact.getId()).toUri());
+        headers.setLocation(builder.path("/userContactInformation/{id}").buildAndExpand(contact.getId()).toUri());
         return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found contact information in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found user contact information in the database!"),
     })
     @GetMapping("contact/{id}")
     public ResponseEntity<?> readContactById(@PathVariable("id") int id) {
-        log.info("Looking for a house by id " + id);
+        log.info("Looking for a user contact information by id " + id);
         ContactUs contact = service.findOne(id);
         if (Objects.isNull(contact)) {
-            log.error("Contact information with id " + id + " not found!");
+            log.error("User contact information with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         log.info("Contact information with id " + id + " : " + contact);
@@ -62,37 +62,37 @@ public class ContactUsController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found contact information in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found user contact information in the database!"),
     })
-    @ApiOperation(value = "Retrieves information about all houses!",
+    @ApiOperation(value = "Retrieves information about all user contact information!",
             response = ContactUs.class,
             responseContainer = "List")
     @GetMapping("/contacts")
     public ResponseEntity<List<ContactUs>> readAllContacts() {
-        log.info("Looking for all contacts information from database!");
+        log.info("Looking for all users contact information from database!");
         List<ContactUs> contactList = service.findAll();
         if (contactList.isEmpty()) {
-            log.info("Contacts information not found!");
+            log.info("Users contact information not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        log.info("All contacts information : " + contactList);
+        log.info("All users contact information : " + contactList);
         return new ResponseEntity<>(contactList, HttpStatus.OK);
     }
 
 
-    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found contact information in database"),
+    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found user contact information in database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found contact information in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found user contact information in the database!"),
     })
     @DeleteMapping("deleteContact/{id}")
     public ResponseEntity<?> deleteContactById(@PathVariable("id") int id) {
-        log.info("Deleting contact information with id " + id);
+        log.info("Deleting user contact information with id " + id);
         if (Objects.isNull(service.findOne(id))) {
-            log.error("Contact information with id " + id + " doesn't exists!");
+            log.error("User contact information with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         service.delete(id);
-        log.info("Contact information with id " + id + " was deleted!");
+        log.info("User contact information with id " + id + " was deleted!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

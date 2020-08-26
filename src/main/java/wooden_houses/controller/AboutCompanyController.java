@@ -41,7 +41,7 @@ public class AboutCompanyController {
         service.save(company);
         log.info("Information : " + company + " was created!");
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/house/{id}").buildAndExpand(company.getId()).toUri());
+        headers.setLocation(builder.path("/informationAboutCompany/{id}").buildAndExpand(company.getId()).toUri());
         return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
