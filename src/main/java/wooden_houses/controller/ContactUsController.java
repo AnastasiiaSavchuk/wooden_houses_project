@@ -39,9 +39,9 @@ public class ContactUsController {
         }
         service.save(contact);
         log.info(contact + " was created!");
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/userContactInformation/{id}").buildAndExpand(contact.getId()).toUri());
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        HttpHeaders contactHeaders = new HttpHeaders();
+        contactHeaders.setLocation(builder.path("/userContactInformation/{id}").buildAndExpand(contact.getId()).toUri());
+        return new ResponseEntity<>(contactHeaders, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),

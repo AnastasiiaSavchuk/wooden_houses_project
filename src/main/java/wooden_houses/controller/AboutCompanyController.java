@@ -40,9 +40,9 @@ public class AboutCompanyController {
         }
         service.save(company);
         log.info("Information : " + company + " was created!");
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/informationAboutCompany/{id}").buildAndExpand(company.getId()).toUri());
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        HttpHeaders companyHeaders = new HttpHeaders();
+        companyHeaders.setLocation(builder.path("/informationAboutCompany/{id}").buildAndExpand(company.getId()).toUri());
+        return new ResponseEntity<>(companyHeaders, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),

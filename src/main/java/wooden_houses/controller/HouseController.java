@@ -39,9 +39,9 @@ public class HouseController {
         }
         service.save(house);
         log.info(house + " was created!");
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(builder.path("/house/{id}").buildAndExpand(house.getId()).toUri());
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        HttpHeaders houseHeaders = new HttpHeaders();
+        houseHeaders.setLocation(builder.path("/house/{id}").buildAndExpand(house.getId()).toUri());
+        return new ResponseEntity<>(houseHeaders, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
