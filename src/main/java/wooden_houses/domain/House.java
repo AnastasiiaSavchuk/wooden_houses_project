@@ -3,7 +3,6 @@ package wooden_houses.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -15,8 +14,8 @@ import javax.persistence.*;
 public class House {
 
     @Id
-    @Column(name = "house_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "house_id")
     private int id;
 
     @Column(name = "name")

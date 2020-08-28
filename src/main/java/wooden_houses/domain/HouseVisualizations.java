@@ -54,6 +54,18 @@ public class HouseVisualizations {
     private byte[] image9;
 
     @Lob
+    @Column(name = "image_10")
+    private byte[] image10;
+
+    @Lob
+    @Column(name = "image_11")
+    private byte[] image11;
+
+    @Lob
+    @Column(name = "image_12")
+    private byte[] image12;
+
+    @Lob
     @Column(name = "first_floor")
     private byte[] firstFloor;
 

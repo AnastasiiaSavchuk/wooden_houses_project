@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class AboutCompany {
 
     @Id
-    @Column(name = "company_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "company_id")
     private int id;
 
     @Column(name = "information_name")

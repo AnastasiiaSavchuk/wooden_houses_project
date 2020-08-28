@@ -17,8 +17,8 @@ import javax.validation.constraints.NotNull;
 public class ContactUs {
 
     @Id
-    @Column(name = "contact_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "contact_id")
     private int id;
 
     @NotEmpty(message = "Please fill field!")
