@@ -10,8 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import wooden_houses.domain.ContactUs;
-import wooden_houses.service.impl.ContactUsServiceImpl;
+import wooden_houses.domain.ContactInformation;
+import wooden_houses.service.impl.ContactInformationServiceImpl;
 
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ import static javax.servlet.http.HttpServletResponse.*;
 public class ContactUsController {
 
     @Autowired
-    private ContactUsServiceImpl service;
+    private ContactInformationServiceImpl service;
     private static final Logger log = Logger.getLogger(ContactUsController.class);
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
@@ -32,7 +32,7 @@ public class ContactUsController {
                     "Some fields are empty or incorrect input!")
     })
     @PostMapping("/createContact")
-    public ResponseEntity<?> createNewContact(@RequestBody ContactUs contact, UriComponentsBuilder builder) {
+    public ResponseEntity<?> createNewContact(@RequestBody ContactInformation contact, UriComponentsBuilder builder) {
         if (service.isExists(contact.getId())) {
             log.error("User contact information  with id " + contact.getId() + " already exists!" + contact);
             return new ResponseEntity<>((HttpStatus.CONFLICT));
@@ -51,7 +51,7 @@ public class ContactUsController {
     @GetMapping("contact/{id}")
     public ResponseEntity<?> readContactById(@PathVariable("id") int id) {
         log.info("Looking for a user contact information by id " + id);
-        ContactUs contact = service.findOne(id);
+        ContactInformation contact = service.findOne(id);
         if (Objects.isNull(contact)) {
             log.error("User contact information with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -65,12 +65,12 @@ public class ContactUsController {
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found user contact information in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all user contact information!",
-            response = ContactUs.class,
+            response = ContactInformation.class,
             responseContainer = "List")
     @GetMapping("/contacts")
-    public ResponseEntity<List<ContactUs>> readAllContacts() {
+    public ResponseEntity<List<ContactInformation>> readAllContacts() {
         log.info("Looking for all users contact information from database!");
-        List<ContactUs> contactList = service.findAll();
+        List<ContactInformation> contactList = service.findAll();
         if (contactList.isEmpty()) {
             log.info("Users contact information not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

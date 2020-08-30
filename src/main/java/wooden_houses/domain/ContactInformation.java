@@ -14,10 +14,10 @@ import javax.validation.constraints.NotNull;
 @Table(name = "contact_us")
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactUs {
+public class ContactInformation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "contact_id")
     private int id;
 
@@ -63,7 +63,7 @@ public class ContactUs {
     @Column(name = "others")
     private String others;
 
-    public ContactUs(String firstName, String lastName, String email, int post_code, String address, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String others) {
+    public ContactInformation(String firstName, String lastName, String email, int post_code, String address, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String others) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

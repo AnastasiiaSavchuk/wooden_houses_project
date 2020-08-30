@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class HouseServices {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "service_id")
     private int id;
 

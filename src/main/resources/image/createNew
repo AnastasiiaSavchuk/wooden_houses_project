@@ -1,0 +1,211 @@
+House
+    1
+{
+    "name": "MODUM",
+    "type": "BUNGALOW SAMPLE 7",
+    "description": "SINGLE-STOREY SOPHISTICATION",
+    "story": "The story behind the house By choosing to build a one-storey bungalow, this family  with two children created an easy-access home with many advantages. Without the roof ridge determining the layout of the house, the family had great flexibility in designing their home. Since the home has no stairs to manoeuvre, it will remain accessible even as the owners advance in years. Solid oak floorboards look charmingly rustic and offer a perfect contrast to the sophisticated furniture and high gloss kitchen from StilART.",
+    "dimensions": "see floorplan",
+    "houseFootprint": "175.45 m² / 1889 sqft",
+    "totalGrossExternalArea": "175.45 m² / 1.889 sqft",
+    "grossInternalAreaFirstFloor": 0.0,
+    "grossInternalAreaSecondFloor": 0.0,
+    "heating": "",
+    "roofPitch": "Single-storey",
+    "feature": "Single-storey",
+    "purpose": "Open-plan space",
+    "purposeInformation": "The living room features light wooden boards and opens out onto the patio, extending the interior space outwards. The large kitchen offers enough space for the entire family to come together."
+}
+    2
+{
+    "name": "MODUM 8",
+    "type": "SAMPLE 4",
+    "description": "PLENTY OF PERSONAL SPACE",
+    "story": "The story behind the house.It is not just the unobstructed views of the outdoors that enthral the owners of this MODUM 8. The ebony-coloured post-and-beam home fits perfectly into its surroundings and provides the ideal stage for the interior design. The outdoor seating area can be accessed from the comfortable living room where the owners can survey the garden and enjoy the great outdoors. The first floor provides plenty of room for an impressive collection of sneakers and also boasts a wellness treat:  an integrated StilART sauna constructed with millimetre  precision. The smart home control system guarantees  additional comfort and convenience.",
+    "dimensions": "10.10 m x 12.50 m + alcove",
+    "houseFootprint": "136.09 m² / 1.465 sqft",
+    "totalGrossExternalArea": "398.43 m² / 4.289 sqft",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "30°",
+    "feature": "Wellness area",
+    "purpose": "nature peeks in everywhere",
+    "purposeInformation": "Whether in the dining room, the sauna or in the expansive living room area with its vaulted ceiling opening to the first floor – nature peeks in everywhere. The bright  rooms feel light and airy, while bold reds set a vibrant contrast to the neutral tones of the timber, white walls and green foliage."
+}
+    3
+{
+    "name": "MODUM 7",
+    "type": "SAMPLE 2",
+    "description": "INTELLIGENT SPACE TO REALISE YOUR POTENTIAL",
+    "story": "The story behind the house This house enjoys a spacious living area despite its compact dimensions. The open-plan, light flooded, dining and kitchen areas flow seamlessly into each other, while the intelligently designed utility room and wardrobe make the most of avail-able space. On the first floor, the floor-to-ceiling windows offer wide ranging views and create a feeling of openness, while throughout the house an ingenious heating system that adjusts to the user’s needs ensures maximum comfort and an ideal room temperature.",
+    "dimensions": "8.90 m x 12.50 m",
+    "houseFootprint": "111.25 m² / 1.197 sqft",
+    "totalGrossExternalArea": "222.50 m² / 2.395 sqft",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "30°",
+    "feature": "Elegant wooden floors",
+    "purpose": "Optimum utilisation of space",
+    "purposeInformation": "The house’s modular planning structure has made it possible to create a spacious living area, where it is easy to forget that the house’s external dimensions are rather compact. With sophisticated coat rack fittings and cleverly planned utility rooms, the ground floor space is put to optimum use. In this way plenty of high-quality living space is provided, where non-conformists have room to thrive. The bedrooms that are open in the direction of the roof ridge, with their large glazed surfaces, show how compact rooms can be reconceptualised. The striking post-and-beam construction creates a dramatic contrast to the light fittings. It gives the rooms charm and atmosphere. "
+}
+    4
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    5
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    6
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    7
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    8
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    9
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    10
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+    11
+{
+    "name": "",
+    "type": "",
+    "description": "",
+    "story": "",
+    "dimensions": "",
+    "houseFootprint": "",
+    "totalGrossExternalArea": "",
+    "grossInternalAreaFirstFloor": "",
+    "grossInternalAreaSecondFloor": "",
+    "heating": "",
+    "roofPitch": "",
+    "feature": "",
+    "purpose": "",
+    "purposeInformation": ""
+}
+
+About Company
+
+{
+    "informationName": "HUF HAUS",
+    "informationType": "THE ORIGINAL. SINCE 1912.",
+    "informationDescription": "Thank you for considering HUF HAUS as your partner to build your new dream home. Be inspired by how exceptionally close to nature your life will be in a HUF house! The HUF HAUS FEELING by definition is essentially the unique living atmosphere created by panoramic views of the outdoors, emphasised by natural light throughout the course of the day and changing seasons. The HUF HAUS STATEMENT represents our uncompromising demand for quality and is achieved through careful selection of materials and individual product design. Through each project phase our experts create only the best homes for our clients – from our production facilities in Germany to the construction of the basement and the completion of house and interiors on site. The HUF HAUS LIFESTYLE stands for the fulfilment of the most unusual design requests, from the interior design to built-in furniture made by our very own StilART company. Also our GartenART team will be delighted to assist with your garden design in harmony with our architecture. From a dream home to your home: HUF HAUS EXPERIENCE begins with your visit to one of our HUF show houses throughout Europe, or to our exclusive 'HUF Village' in Hartenfels, Germany. We hope to hear from you, and we look forward to creating your very own HUF HAUS home."
+}
+
+Contact Information
+
+{
+    "firstName": "anastasiia",
+    "lastName": "savchuk",
+    "email": "gdfsgd@fgh.gg",
+    "post_code": 79069,
+    "address": "lviv, shevchenka str.,394",
+    "country": "ukraine",
+    "phoneNumber": 380637210702,
+    "whatAreYouInterestedIn": "something",
+    "yourMessage": "hello",
+    "others": ""
+}
