@@ -42,20 +42,14 @@ public class House implements Serializable {
     @Column(name = "total_gross_external_area")
     private String totalGrossExternalArea;
 
-    @Column(name = "gross_internal_area_first_floor")
-    private String grossInternalAreaFirstFloor;
-
-    @Column(name = "gross_internal_area_second_floor")
-    private String grossInternalAreaSecondFloor;
-
-    @Column(name = "heating")
-    private String heating;
-
     @Column(name = "roof_pitch")
     private String roofPitch;
 
-    @Column(name = "features")
-    private String feature;
+    @Column(name = "feature_1")
+    private String feature1;
+
+    @Column(name = "feature_2")
+    private String feature2;
 
     @Lob
     @Column(name = "purpose")
@@ -65,7 +59,7 @@ public class House implements Serializable {
     @Column(name = "purpose_informaition")
     private String purposeInformation;
 
-    public House(String name, String type, String description, String story, String dimensions, String houseFootprint, String totalGrossExternalArea, String grossInternalAreaFirstFloor, String grossInternalAreaSecondFloor, String heating, String roofPitch, String feature, String purpose, String purposeInformation) {
+    public House(String name, String type, String description, String story, String dimensions, String houseFootprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2, String purpose, String purposeInformation) {
         this.name = name;
         this.type = type;
         this.description = description;
@@ -73,11 +67,9 @@ public class House implements Serializable {
         this.dimensions = dimensions;
         this.houseFootprint = houseFootprint;
         this.totalGrossExternalArea = totalGrossExternalArea;
-        this.grossInternalAreaFirstFloor = grossInternalAreaFirstFloor;
-        this.grossInternalAreaSecondFloor = grossInternalAreaSecondFloor;
-        this.heating = heating;
         this.roofPitch = roofPitch;
-        this.feature = feature;
+        this.feature1 = feature1;
+        this.feature2 = feature2;
         this.purpose = purpose;
         this.purposeInformation = purposeInformation;
     }
