@@ -19,19 +19,47 @@ public class House implements Serializable {
     @Column(name = "house_id")
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "house")
+    private String house;
 
     @Column(name = "type")
     private String type;
 
     @Lob
-    @Column(name = "description")
-    private String description;
+    @Column(name = "info")
+    private String info;
 
     @Lob
-    @Column(name = "story")
-    private String story;
+    @Column(name = "story_1")
+    private String story1;
+
+    @Lob
+    @Column(name = "story_2")
+    private String story2;
+
+    @Lob
+    @Column(name = "story_3")
+    private String story3;
+
+    @Lob
+    @Column(name = "story_4")
+    private String story4;
+
+    @Lob
+    @Column(name = "story_5")
+    private String story5;
+
+    @Lob
+    @Column(name = "story_6")
+    private String story6;
+
+    @Lob
+    @Column(name = "story_7")
+    private String story7;
+
+    @Lob
+    @Column(name = "story_8")
+    private String story8;
 
     @Column(name = "dimensions")
     private String dimensions;
@@ -56,14 +84,30 @@ public class House implements Serializable {
     private String purpose;
 
     @Lob
-    @Column(name = "purpose_informaition")
-    private String purposeInformation;
+    @Column(name = "purpose_infor_1")
+    private String purposeInfo1;
 
-    public House(String name, String type, String description, String story, String dimensions, String houseFootprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2, String purpose, String purposeInformation) {
-        this.name = name;
+    @Lob
+    @Column(name = "purpose_infor_2")
+    private String purposeInfo2;
+
+    @Lob
+    @Column(name = "purpose_infor_3")
+    private String purposeInfo3;
+
+
+    public House(String house, String type, String info, String story1, String story2, String story3, String story4, String story5, String story6, String story7, String story8, String dimensions, String houseFootprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2, String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
+        this.house = house;
         this.type = type;
-        this.description = description;
-        this.story = story;
+        this.info = info;
+        this.story1 = story1;
+        this.story2 = story2;
+        this.story3 = story3;
+        this.story4 = story4;
+        this.story5 = story5;
+        this.story6 = story6;
+        this.story7 = story7;
+        this.story8 = story8;
         this.dimensions = dimensions;
         this.houseFootprint = houseFootprint;
         this.totalGrossExternalArea = totalGrossExternalArea;
@@ -71,6 +115,8 @@ public class House implements Serializable {
         this.feature1 = feature1;
         this.feature2 = feature2;
         this.purpose = purpose;
-        this.purposeInformation = purposeInformation;
+        this.purposeInfo1 = purposeInfo1;
+        this.purposeInfo2 = purposeInfo2;
+        this.purposeInfo3 = purposeInfo3;
     }
 }

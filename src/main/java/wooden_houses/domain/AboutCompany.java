@@ -26,12 +26,47 @@ public class AboutCompany {
     private String informationType;
 
     @Lob
-    @Column(name = "information_description")
-    private String informationDescription;
+    @Column(name = "information_1")
+    private String information1;
 
-    public AboutCompany(String informationName, String informationType, String informationDescription) {
+    @Lob
+    @Column(name = "information_2")
+    private String information2;
+
+    @Lob
+    @Column(name = "information_3")
+    private String information3;
+
+    @Lob
+    @Column(name = "information_4")
+    private String information4;
+
+    @Lob
+    @Column(name = "information_5")
+    private String information5;
+
+    @Lob
+    @Column(name = "information_6")
+    private String information6;
+
+    @Lob
+    @Column(name = "information_7")
+    private String information7;
+
+    @Lob
+    @Column(name = "information_8")
+    private String information8;
+
+    public AboutCompany(String informationName, String informationType, String information1, String information2, String information3, String information4, String information5, String information6, String information7, String information8) {
         this.informationName = informationName;
         this.informationType = informationType;
-        this.informationDescription = informationDescription;
+        this.information1 = information1;
+        this.information2 = information2;
+        this.information3 = information3;
+        this.information4 = information4;
+        this.information5 = information5;
+        this.information6 = information6;
+        this.information7 = information7;
+        this.information8 = information8;
     }
 }
