@@ -21,10 +21,9 @@ import static javax.servlet.http.HttpServletResponse.*;
 @RestController
 public class HouseServicesController {
 
-
-    private static final Logger log = Logger.getLogger(HouseServicesController.class);
     @Autowired
     private HouseServicesServiceImpl service;
+    private static final Logger log = Logger.getLogger(HouseServicesController.class);
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_CONFLICT, message = "House service was already created!"),
