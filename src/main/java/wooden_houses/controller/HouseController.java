@@ -81,7 +81,7 @@ public class HouseController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found houses in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input")
     })
@@ -100,7 +100,7 @@ public class HouseController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found house in database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found houses in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house in the database!"),
     })
     @DeleteMapping("deleteHouse/{id}")
     public ResponseEntity<?> deleteHouseById(@PathVariable("id") int id) {
