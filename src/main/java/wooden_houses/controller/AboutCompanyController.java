@@ -62,7 +62,7 @@ public class AboutCompanyController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the information about company in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found any information about company in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input!")
     })

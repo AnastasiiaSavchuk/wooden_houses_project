@@ -62,7 +62,7 @@ public class ContactUsController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the user contact information in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found any user contact information in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all user contact information!",
             response = ContactInformation.class,
