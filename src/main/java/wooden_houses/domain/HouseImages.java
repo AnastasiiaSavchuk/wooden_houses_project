@@ -8,14 +8,14 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "house_visualizations")
+@Table(name = "house_images")
 @AllArgsConstructor
 @NoArgsConstructor
 public class HouseImages {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "house_id")
+    @Column(name = "image_id")
     private int id;
 
     @Lob
@@ -67,18 +67,18 @@ public class HouseImages {
     private byte[] image12;
 
     @Lob
-    @Column(name = "first_floor")
-    private byte[] firstFloor;
+    @Column(name = "ground_floor")
+    private byte[] groundFloor;
 
     @Lob
-    @Column(name = "second_floor")
-    private byte[] secondFloor;
+    @Column(name = "first_floor")
+    private byte[] firstFloor;
 
     @Lob
     @Column(name = "basement")
     private byte[] basement;
 
-    public HouseImages(byte[] image1, byte[] image2, byte[] image3, byte[] image4, byte[] image5, byte[] image6, byte[] image7, byte[] image8, byte[] image9, byte[] image10, byte[] image11, byte[] image12, byte[] firstFloor, byte[] secondFloor, byte[] basement) {
+    public HouseImages(byte[] image1, byte[] image2, byte[] image3, byte[] image4, byte[] image5, byte[] image6, byte[] image7, byte[] image8, byte[] image9, byte[] image10, byte[] image11, byte[] image12, byte[] groundFloor, byte[] firstFloor, byte[] basement) {
         this.image1 = image1;
         this.image2 = image2;
         this.image3 = image3;
@@ -91,8 +91,12 @@ public class HouseImages {
         this.image10 = image10;
         this.image11 = image11;
         this.image12 = image12;
+        this.groundFloor = groundFloor;
         this.firstFloor = firstFloor;
-        this.secondFloor = secondFloor;
         this.basement = basement;
+    }
+
+    public HouseImages(byte[] image1) {
+        this.image1 = image1;
     }
 }

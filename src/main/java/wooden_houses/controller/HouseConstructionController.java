@@ -10,8 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import wooden_houses.domain.HouseBuilding;
-import wooden_houses.service.impl.HouseBuildingServiceImpl;
+import wooden_houses.domain.HouseConstruction;
+import wooden_houses.service.impl.HouseConstructionServiceImpl;
 
 import java.util.List;
 import java.util.Objects;
@@ -19,11 +19,11 @@ import java.util.Objects;
 import static javax.servlet.http.HttpServletResponse.*;
 
 @RestController
-public class HouseBuildingController {
+public class HouseConstructionController {
 
+    private static final Logger log = Logger.getLogger(HouseConstructionController.class);
     @Autowired
-    private HouseBuildingServiceImpl service;
-    private static final Logger log = Logger.getLogger(HouseBuildingController.class);
+    private HouseConstructionServiceImpl service;
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_CONFLICT, message = "House building component was already created!"),
@@ -32,7 +32,7 @@ public class HouseBuildingController {
                     "Some fields are incorrect input!")
     })
     @PostMapping("/createHouseBuildingComponent")
-    public ResponseEntity<?> createNewHouseBuildingComponent(@RequestBody HouseBuilding component, UriComponentsBuilder builder) {
+    public ResponseEntity<?> createNewHouseBuildingComponent(@RequestBody HouseConstruction component, UriComponentsBuilder builder) {
         if (service.isExists(component.getId())) {
             log.error("House with id " + component.getId() + " already exists!" + component);
             return new ResponseEntity<>((HttpStatus.CONFLICT));
@@ -51,7 +51,7 @@ public class HouseBuildingController {
     @GetMapping("houseBuildingComponent/{id}")
     public ResponseEntity<?> readHouseBuildingComponentById(@PathVariable("id") int id) {
         log.info("Looking for a house building component by id " + id);
-        HouseBuilding component = service.findOne(id);
+        HouseConstruction component = service.findOne(id);
         if (Objects.isNull(component)) {
             log.error("House building component with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -65,12 +65,12 @@ public class HouseBuildingController {
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found house building components in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all houses!",
-            response = HouseBuilding.class,
+            response = HouseConstruction.class,
             responseContainer = "List")
     @GetMapping("/houseBuildingComponents")
-    public ResponseEntity<List<HouseBuilding>> readAllHouseBuildingComponents() {
+    public ResponseEntity<List<HouseConstruction>> readAllHouseBuildingComponents() {
         log.info("Looking for all house building components from database!");
-        List<HouseBuilding> componentList = service.findAll();
+        List<HouseConstruction> componentList = service.findAll();
         if (componentList.isEmpty()) {
             log.info("Records not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -86,7 +86,7 @@ public class HouseBuildingController {
                     "Some fields are incorrect input")
     })
     @PutMapping("/updateBuildingComponent/{id}")
-    public ResponseEntity<?> updateHouseBuildingComponentById(@RequestBody HouseBuilding component, @PathVariable("id") int id) {
+    public ResponseEntity<?> updateHouseBuildingComponentById(@RequestBody HouseConstruction component, @PathVariable("id") int id) {
         log.info("Updating house building component with id : " + id);
         if (!service.isExists(id)) {
             log.error("House building component with id " + component.getId() + " doesn't exists!");

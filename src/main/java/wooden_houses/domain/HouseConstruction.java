@@ -8,17 +8,17 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "house_building")
+@Table(name = "house_construction")
 @AllArgsConstructor
 @NoArgsConstructor
-public class HouseBuilding {
+public class HouseConstruction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "house_id")
+    @Column(name = "house_construction_id")
     private int id;
 
-    @Column(name = "name")
+    @Column(name = "house_construction_name")
     private String name;
 
     @Lob
@@ -53,7 +53,7 @@ public class HouseBuilding {
     @Column(name = "description_8")
     private String description8;
 
-    public HouseBuilding(String name, String description1, String description2, String description3, String description4, String description5, String description6, String description7, String description8) {
+    public HouseConstruction(String name, String description1, String description2, String description3, String description4, String description5, String description6, String description7, String description8) {
         this.name = name;
         this.description1 = description1;
         this.description2 = description2;
