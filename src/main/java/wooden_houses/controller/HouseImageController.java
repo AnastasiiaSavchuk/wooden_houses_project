@@ -1,38 +1,20 @@
 package wooden_houses.controller;
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import wooden_houses.domain.HouseImages;
+import org.springframework.web.bind.annotation.RestController;
 import wooden_houses.service.impl.HouseImagesServiceImpl;
-
-import java.util.List;
-import java.util.Objects;
-
-import static javax.servlet.http.HttpServletResponse.*;
 
 @RestController
 public class HouseImageController {
 
-    private static final Logger log = Logger.getLogger(HouseImageController.class);
     @Autowired
     private HouseImagesServiceImpl service;
+    private static final Logger log = Logger.getLogger(HouseImageController.class);
 
-    @PostMapping("/uploadImage")
+    /*@PostMapping("/uploadImage")
     public HouseImages uploadImage(@RequestParam("image") MultipartFile image) {
-        HouseImages houseImages = service.saveFile(file);
-        String fileDownloadUrl = ServletUriComponentsBuilder.fromCurrentContextPath().path("/downloadFile/")
-                .path(houseImages.getId()).toUriString();
-        return new MultipartUploadResponse(houseImages.getFileName(), fileDownloadUrl,
-                file.getContentType(), file.getSize());
+        return service.save(image);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
@@ -42,29 +24,11 @@ public class HouseImageController {
                     "Some fields are incorrect input!")
     })
     @PostMapping("/uploadHouseImages")
-    public ResponseEntity<?> uploadNewHouseImages(@RequestParam("image1") MultipartFile image1,
-                                                  @RequestParam("image2") MultipartFile image2,
-                                                  @RequestParam("image3") MultipartFile image3,
-                                                  @RequestParam("image4") MultipartFile image4,
-                                                  @RequestParam("image5") MultipartFile image5,
-                                                  @RequestParam("image6") MultipartFile image6,
-                                                  @RequestParam("image7") MultipartFile image7,
-                                                  @RequestParam("image8") MultipartFile image8,
-                                                  @RequestParam("image9") MultipartFile image9,
-                                                  @RequestParam("image10") MultipartFile image10,
-                                                  @RequestParam("image11") MultipartFile image11,
-                                                  @RequestParam("image12") MultipartFile image12,
-                                                  @RequestParam("image13") MultipartFile image13,
-                                                  @RequestParam("image14") MultipartFile image14,
-                                                  @RequestParam("image15") MultipartFile image15) {
-        if (service.isExists(house.getId())) {
-            log.error("House with id " + house.getId() + " already exists!" + house);
-            return new ResponseEntity<>((HttpStatus.CONFLICT));
-        }
-        service.save(house);
-        log.info(house + " was created!");
+    public ResponseEntity<?> uploadNewHouseImages(@RequestParam("images") MultipartFile[] images, UriComponentsBuilder builder) {
+        service.save();
+        log.info(  " was created!");
         HttpHeaders houseHeaders = new HttpHeaders();
-        houseHeaders.setLocation(builder.path("/house/{id}").buildAndExpand(house.getId()).toUri());
+        houseHeaders.setLocation(builder.path("/houseImages/{id}").buildAndExpand(.getId()).toUri());
         return new ResponseEntity<>(houseHeaders, HttpStatus.CREATED);
     }
 
@@ -136,5 +100,5 @@ public class HouseImageController {
         service.delete(id);
         log.info("House images with id " + id + " was deleted!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+    }*/
 }

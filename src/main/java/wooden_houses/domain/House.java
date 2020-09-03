@@ -5,14 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Data
 @Entity
 @Table(name = "house")
 @AllArgsConstructor
 @NoArgsConstructor
-public class House implements Serializable {
+public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -94,7 +93,6 @@ public class House implements Serializable {
     @Lob
     @Column(name = "purpose_infor_3")
     private String purposeInfo3;
-
 
     public House(String house, String type, String info, String story1, String story2, String story3, String story4, String story5, String story6, String story7, String story8, String dimensions, String houseFootprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2, String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
         this.house = house;
