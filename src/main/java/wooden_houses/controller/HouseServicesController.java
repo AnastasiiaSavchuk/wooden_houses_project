@@ -46,11 +46,11 @@ public class HouseServicesController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found a house service in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house service in the database!"),
     })
     @GetMapping("houseService/{id}")
     public ResponseEntity<?> readHouseServiceById(@PathVariable("id") int id) {
-        log.info("Looking for a house service by id " + id);
+        log.info("Looking for the house service by id " + id);
         HouseServices houseServices = service.findOne(id);
         if (Objects.isNull(houseServices)) {
             log.error("House service with id " + id + " not found!");
@@ -62,12 +62,12 @@ public class HouseServicesController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house services in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house services in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all house services!",
             response = HouseServices.class,
             responseContainer = "List")
-    @GetMapping("/houseServices")
+    @GetMapping("/houseService")
     public ResponseEntity<List<HouseServices>> readAllHouseServices() {
         log.info("Looking for all house services from database!");
         List<HouseServices> houseServiceList = service.findAll();
@@ -81,13 +81,13 @@ public class HouseServicesController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house service in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house service in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input")
     })
     @PutMapping("/updateHouseService/{id}")
     public ResponseEntity<?> updateHouseServiceById(@RequestBody HouseServices houseService, @PathVariable("id") int id) {
-        log.info("Updating house service with id : " + id);
+        log.info("Updating the house service with id : " + id);
         if (!service.isExists(id)) {
             log.error("House service with id " + houseService.getId() + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -98,13 +98,13 @@ public class HouseServicesController {
         return new ResponseEntity<>(houseService, HttpStatus.OK);
     }
 
-    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found house service in database"),
+    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the house service in the database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house service in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house service in the database!"),
     })
     @DeleteMapping("deleteHouseService/{id}")
     public ResponseEntity<?> deleteHouseServiceById(@PathVariable("id") int id) {
-        log.info("Deleting house service with id " + id);
+        log.info("Deleting the house service with id " + id);
         if (Objects.isNull(service.findOne(id))) {
             log.error("House service with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

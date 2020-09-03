@@ -67,7 +67,7 @@ public class HouseController {
     @ApiOperation(value = "Retrieves information about all houses!",
             response = House.class,
             responseContainer = "List")
-    @GetMapping("/houses")
+    @GetMapping("/house")
     public ResponseEntity<List<House>> readAllHouses() {
         log.info("Looking for all houses from database!");
         List<House> houseList = service.findAll();

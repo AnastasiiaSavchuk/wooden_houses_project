@@ -13,7 +13,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.AboutCompany;
 import wooden_houses.service.impl.AboutCompanyServiceImpl;
 
-
 import java.util.List;
 import java.util.Objects;
 
@@ -32,8 +31,8 @@ public class AboutCompanyController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input!")
     })
-    @PostMapping("/createInformation")
-    public ResponseEntity<?> createNewFieldCompany(@RequestBody AboutCompany company, UriComponentsBuilder builder) {
+    @PostMapping("/createInfoAboutCompany")
+    public ResponseEntity<?> createNewInfoAboutCompany(@RequestBody AboutCompany company, UriComponentsBuilder builder) {
         if (service.isExists(company.getId())) {
             log.error("Information : " + company + ",  with id " + company.getId() + " already exists!");
             return new ResponseEntity<>((HttpStatus.CONFLICT));
@@ -47,10 +46,10 @@ public class AboutCompanyController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found information about company in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the information about company in the database!"),
     })
-    @GetMapping("information/{id}")
-    public ResponseEntity<?> readHouseById(@PathVariable("id") int id) {
+    @GetMapping("/infoAboutCompany/{id}")
+    public ResponseEntity<?> readInfoAboutCompanyById(@PathVariable("id") int id) {
         log.info("Looking for information about company by id " + id);
         AboutCompany company = service.findOne(id);
         if (Objects.isNull(company)) {
@@ -63,15 +62,15 @@ public class AboutCompanyController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found information about company in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the information about company in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input!")
     })
     @ApiOperation(value = "Retrieves all information about company!",
             response = AboutCompany.class,
             responseContainer = "List")
-    @GetMapping("/information")
-    public ResponseEntity<List<AboutCompany>> readAllHouses() {
+    @GetMapping("/infoAboutCompany")
+    public ResponseEntity<List<AboutCompany>> readAllInfoAboutCompany() {
         log.info("Looking for all houses from database!");
         List<AboutCompany> houseList = service.findAll();
         if (houseList.isEmpty()) {
@@ -84,13 +83,13 @@ public class AboutCompanyController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found information about company in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the information about company in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input")
     })
-    @PutMapping("/updateInformation/{id}")
+    @PutMapping("/updateInfoAboutCompany/{id}")
     public ResponseEntity<?> updateHouseById(@RequestBody AboutCompany company, @PathVariable("id") int id) {
-        log.info("Updating information about company with id : " + id);
+        log.info("Updating the information about company with id : " + id);
         if (!service.isExists(id)) {
             log.error("Information about company with id " + company.getId() + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -101,13 +100,13 @@ public class AboutCompanyController {
         return new ResponseEntity<>(company, HttpStatus.OK);
     }
 
-    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found information about company in database"),
+    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the information about company in the database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found information about company in the database!"),
     })
-    @DeleteMapping("deleteInformation/{id}")
-    public ResponseEntity<?> deleteHouseById(@PathVariable("id") int id) {
-        log.info("Deleting information about company with id " + id);
+    @DeleteMapping("deleteInfoAboutCompany/{id}")
+    public ResponseEntity<?> deleteInfoAboutCompanyById(@PathVariable("id") int id) {
+        log.info("Deleting the information about company with id " + id);
         if (Objects.isNull(service.findOne(id))) {
             log.error("Information about company with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
