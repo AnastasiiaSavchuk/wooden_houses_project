@@ -40,11 +40,11 @@ public class HouseImagesServiceImpl implements HouseImagesService {
 
     @SneakyThrows
     @Override
-    public HouseImages update(MultipartFile image1, MultipartFile image2, MultipartFile image3, MultipartFile image4,
+    public HouseImages update(int id, MultipartFile image1, MultipartFile image2, MultipartFile image3, MultipartFile image4,
                               MultipartFile image5, MultipartFile image6, MultipartFile image7, MultipartFile image8,
                               MultipartFile image9, MultipartFile image10, MultipartFile image11, MultipartFile image12,
                               MultipartFile groundFloor, MultipartFile firstFloor, MultipartFile basement) {
-        return repository.save(new HouseImages(image1.getBytes(), image2.getBytes(), image3.getBytes(), image4.getBytes(),
+        return repository.save(new HouseImages(id, image1.getBytes(), image2.getBytes(), image3.getBytes(), image4.getBytes(),
                 image5.getBytes(), image6.getBytes(), image7.getBytes(), image8.getBytes(), image9.getBytes(),
                 image10.getBytes(), image11.getBytes(), image12.getBytes(), groundFloor.getBytes(), firstFloor.getBytes(),
                 basement.getBytes()));

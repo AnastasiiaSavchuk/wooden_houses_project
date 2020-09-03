@@ -1,5 +1,6 @@
 package wooden_houses.controller;
 
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
@@ -7,15 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.HouseImages;
 import wooden_houses.service.impl.HouseImagesServiceImpl;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Objects;
 
 import static javax.servlet.http.HttpServletResponse.*;
 
@@ -56,10 +57,9 @@ public class HouseImageController {
         return new ResponseEntity<>(imageHeaders, HttpStatus.CREATED);
     }
 
-    /*
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found a house images in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house images in the database!"),
     })
     @GetMapping("houseImages/{id}")
     public ResponseEntity<?> readHouseImagesById(@PathVariable("id") int id) {
@@ -75,7 +75,7 @@ public class HouseImageController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house images in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found any house images in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all house images!",
             response = HouseImages.class,
@@ -94,29 +94,44 @@ public class HouseImageController {
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house images in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house images in the database!"),
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. ")
     })
     @PutMapping("/updateHouseImages/{id}")
-    public ResponseEntity<?> updateHouseImagesById(@RequestBody House house, @PathVariable("id") int id) {
-        log.info("Updating house images with id : " + id);
+    public ResponseEntity<?> updateHouseImagesById(@RequestParam("image1") MultipartFile image1,
+                                                   @RequestParam("image2") MultipartFile image2,
+                                                   @RequestParam("image3") MultipartFile image3,
+                                                   @RequestParam("image4") MultipartFile image4,
+                                                   @RequestParam("image5") MultipartFile image5,
+                                                   @RequestParam("image6") MultipartFile image6,
+                                                   @RequestParam("image7") MultipartFile image7,
+                                                   @RequestParam("image8") MultipartFile image8,
+                                                   @RequestParam("image9") MultipartFile image9,
+                                                   @RequestParam("image10") MultipartFile image10,
+                                                   @RequestParam("image11") MultipartFile image11,
+                                                   @RequestParam("image12") MultipartFile image12,
+                                                   @RequestParam("groundFloor") MultipartFile groundFloor,
+                                                   @RequestParam("firstFloor") MultipartFile firstFloor,
+                                                   @RequestParam("basement") MultipartFile basement,
+                                                   @PathVariable("id") int id) {
+        log.info("Updating the house images with id : " + id);
         if (!service.isExists(id)) {
-            log.error("House images with id " + house.getId() + " doesn't exists!");
+            log.error("House images with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        house.setId(id);
-        service.update(house);
-        log.info("House images was updated into" + house);
-        return new ResponseEntity<>(house, HttpStatus.OK);
+        service.update(id, image1, image2, image3, image4, image5, image6, image7, image8, image9,
+                image10, image11, image12, groundFloor, firstFloor, basement);
+        log.info("House images was updated!");
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found images house in database"),
+    @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the house images in the database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
-            @ApiResponse(code = SC_NOT_FOUND, message = "Not found house images in the database!"),
+            @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house images in the database!"),
     })
     @DeleteMapping("deleteHouseImages/{id}")
     public ResponseEntity<?> deleteHouseImagesById(@PathVariable("id") int id) {
-        log.info("Deleting house images with id " + id);
+        log.info("Deleting the house images with id " + id);
         if (Objects.isNull(service.findOne(id))) {
             log.error("House images with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -124,5 +139,5 @@ public class HouseImageController {
         service.delete(id);
         log.info("House images with id " + id + " was deleted!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }*/
+    }
 }
