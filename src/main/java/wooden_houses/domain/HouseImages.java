@@ -95,8 +95,4 @@ public class HouseImages {
         this.firstFloor = firstFloor;
         this.basement = basement;
     }
-
-    public HouseImages(byte[] image1) {
-        this.image1 = image1;
-    }
 }
