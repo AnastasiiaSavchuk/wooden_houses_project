@@ -8,7 +8,7 @@ public interface HouseConstructionService {
 
     HouseConstruction save(HouseConstruction houseConstruction);
 
-    HouseConstruction findOne(int id);
+    HouseConstruction findById(int id);
 
     List<HouseConstruction> findAll();
 

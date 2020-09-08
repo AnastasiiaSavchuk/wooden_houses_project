@@ -20,7 +20,7 @@ public class HouseConstructionServiceImpl implements HouseConstructionService {
     }
 
     @Override
-    public HouseConstruction findOne(int id) {
+    public HouseConstruction findById(int id) {
         return repository.findById(id).orElse(null);
     }
 
