@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,9 @@ import static javax.servlet.http.HttpServletResponse.*;
 
 @RestController
 public class HouseImageController {
+
+    @Value("/image")
+    private String uploadFolder;
 
     @Autowired
     private HouseImagesServiceImpl service;
