@@ -19,80 +19,14 @@ public class HouseImages {
     private int id;
 
     @Lob
-    @Column(name = "image_1")
-    private byte[] image1;
+    @Column(name = "image")
+    private byte[] image;
 
-    @Lob
-    @Column(name = "image_2")
-    private byte[] image2;
+    @Column(name = "house_id")
+    private int houseId;
 
-    @Lob
-    @Column(name = "image_3")
-    private byte[] image3;
-
-    @Lob
-    @Column(name = "image_4")
-    private byte[] image4;
-
-    @Lob
-    @Column(name = "image_5")
-    private byte[] image5;
-
-    @Lob
-    @Column(name = "image_6")
-    private byte[] image6;
-
-    @Lob
-    @Column(name = "image_7")
-    private byte[] image7;
-
-    @Lob
-    @Column(name = "image_8")
-    private byte[] image8;
-
-    @Lob
-    @Column(name = "image_9")
-    private byte[] image9;
-
-    @Lob
-    @Column(name = "image_10")
-    private byte[] image10;
-
-    @Lob
-    @Column(name = "image_11")
-    private byte[] image11;
-
-    @Lob
-    @Column(name = "image_12")
-    private byte[] image12;
-
-    @Lob
-    @Column(name = "ground_floor")
-    private byte[] groundFloor;
-
-    @Lob
-    @Column(name = "first_floor")
-    private byte[] firstFloor;
-
-    @Lob
-    @Column(name = "basement")
-    private byte[] basement;
-
-    public HouseImages(byte[] image1, byte[] image2, byte[] image3, byte[] image4, byte[] image5, byte[] image6, byte[] image7, byte[] image8, byte[] image9, byte[] image10, byte[] image11, byte[] image12, byte[] groundFloor, byte[] firstFloor, byte[] basement) {
-        this.image1 = image1;
-        this.image2 = image2;
-        this.image3 = image3;
-        this.image4 = image4;
-        this.image5 = image5;
-        this.image6 = image6;
-        this.image7 = image7;
-        this.image8 = image8;
-        this.image9 = image9;
-        this.image10 = image10;
-        this.image11 = image11;
-        this.image12 = image12;
-        this.groundFloor = groundFloor;
-        this.firstFloor = firstFloor;
-        this.basement = basement;
+    public HouseImages(byte[] image, int houseId) {
+        this.image = image;
+        this.houseId = houseId;
     }
 }
