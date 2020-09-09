@@ -34,14 +34,13 @@ public class HouseImageController {
     })
     @PostMapping("/uploadImage")
     public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image,
-                                         @RequestParam("houseId") int houseId,
                                          UriComponentsBuilder builder,
                                          HttpServletResponse response) throws IOException {
-        Optional<HouseImages> houseImage = Optional.ofNullable(service.save(image, houseId));
+        Optional<HouseImages> houseImage = Optional.ofNullable(service.save(image, image.getOriginalFilename()));
         log.info("Images were created!");
         HttpHeaders imageHeaders = new HttpHeaders();
         imageHeaders.setLocation(builder.path("/houseImages/{id}").buildAndExpand(houseImage.get().getId()).toUri());
-        response.setContentType("image/jpeg, image/jpg, image/png, image/gif");
+        response.setContentType("image/jpeg");
         response.getOutputStream().write(houseImage.get().getImage());
         response.getOutputStream().close();
         return new ResponseEntity<>(houseImage, imageHeaders, HttpStatus.OK);
@@ -59,7 +58,7 @@ public class HouseImageController {
             log.error("House images with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        response.setContentType("image/jpeg, image/jpg, image/png, image/gif");
+        response.setContentType("image/jpeg");
         response.getOutputStream().write(images.get().getImage());
         response.getOutputStream().close();
         log.info("House images with id " + id + " : " + images);
@@ -93,15 +92,20 @@ public class HouseImageController {
     })
     @PutMapping("/updateHouseImage/{id}")
     public ResponseEntity<?> updateHouseImagesById(@RequestParam("image") MultipartFile image,
-                                                   @PathVariable("id") int id) throws IOException {
+                                                   @PathVariable("id") int id,
+                                                   HttpServletResponse response) throws IOException {
         log.info("Updating the house images with id : " + id);
         if (!service.isExists(id)) {
             log.error("House images with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         HouseImages previous = service.findById(id);
-        service.update(previous.getId(), image, previous.getHouseId());
+        HouseImages houseImage = service.update(previous.getId(), image, previous.getImageName());
+        response.setContentType("image/jpeg");
+        response.getOutputStream().write(houseImage.getImage());
+        response.getOutputStream().close();
         log.info("House images with id : " + id + " was updated!");
+
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

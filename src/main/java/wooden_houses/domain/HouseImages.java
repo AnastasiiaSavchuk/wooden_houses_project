@@ -22,11 +22,11 @@ public class HouseImages {
     @Column(name = "image")
     private byte[] image;
 
-    @Column(name = "house_id")
-    private int houseId;
+    @Column(name = "image_name")
+    private String imageName;
 
-    public HouseImages(byte[] image, int houseId) {
+    public HouseImages(byte[] image, String imageName) {
         this.image = image;
-        this.houseId = houseId;
+        this.imageName = imageName;
     }
 }

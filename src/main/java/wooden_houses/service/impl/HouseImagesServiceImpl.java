@@ -19,8 +19,8 @@ public class HouseImagesServiceImpl implements HouseImagesService {
 
     @SneakyThrows
     @Override
-    public HouseImages save(MultipartFile image, int houseId) {
-        HouseImages images = new HouseImages(image.getBytes(), houseId);
+    public HouseImages save(MultipartFile image, String imageName) {
+        HouseImages images = new HouseImages(image.getBytes(), imageName);
         return repository.save(images);
     }
 
@@ -30,18 +30,13 @@ public class HouseImagesServiceImpl implements HouseImagesService {
     }
 
     @Override
-    public List<HouseImages> findByHouseId(int houseId) {
-        return repository.findByHouseId(houseId);
-    }
-
-    @Override
     public List<HouseImages> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public HouseImages update(int id, MultipartFile image, int houseId) throws IOException {
-        HouseImages houseImage = new HouseImages(image.getBytes(), houseId);
+    public HouseImages update(int id, MultipartFile image, String imageName) throws IOException {
+        HouseImages houseImage = new HouseImages(image.getBytes(), imageName);
         return repository.save(houseImage);
     }
 

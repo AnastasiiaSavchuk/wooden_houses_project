@@ -8,15 +8,13 @@ import java.util.List;
 
 public interface HouseImagesService {
 
-    HouseImages save(MultipartFile image, int houseId);
+    HouseImages save(MultipartFile image, String imageName);
 
     HouseImages findById(int id);
 
-    List<HouseImages> findByHouseId(int houseId);
-
     List<HouseImages> findAll();
 
-    HouseImages update(int id, MultipartFile image, int houseId) throws IOException;
+    HouseImages update(int id, MultipartFile image, String imageName) throws IOException;
 
     void delete(int id);
 
