@@ -1,5 +1,6 @@
 package wooden_houses.controller;
 
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
@@ -15,8 +16,9 @@ import wooden_houses.service.impl.HouseImagesServiceImpl;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static javax.servlet.http.HttpServletResponse.*;
 
@@ -33,16 +35,18 @@ public class HouseImageController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred.")
     })
     @PostMapping("/uploadImage")
-    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image,
-                                         UriComponentsBuilder builder,
+    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image, UriComponentsBuilder builder,
                                          HttpServletResponse response) throws IOException {
-        Optional<HouseImages> houseImage = Optional.ofNullable(service.save(image, image.getOriginalFilename()));
+        HouseImages houseImage = service.save(image, image.getOriginalFilename());
         log.info("Images were created!");
+
         HttpHeaders imageHeaders = new HttpHeaders();
-        imageHeaders.setLocation(builder.path("/houseImages/{id}").buildAndExpand(houseImage.get().getId()).toUri());
+        imageHeaders.setLocation(builder.path("/houseImages/{id}").buildAndExpand(houseImage.getId()).toUri());
+
         response.setContentType("image/jpeg");
-        response.getOutputStream().write(houseImage.get().getImage());
+        response.getOutputStream().write(houseImage.getImage());
         response.getOutputStream().close();
+
         return new ResponseEntity<>(houseImage, imageHeaders, HttpStatus.OK);
     }
 
@@ -53,19 +57,24 @@ public class HouseImageController {
     @GetMapping("houseImage/{id}")
     public ResponseEntity<?> readHouseImagesById(@PathVariable("id") int id, HttpServletResponse response) throws IOException {
         log.info("Looking for a house images by id " + id);
-        Optional<HouseImages> images = Optional.ofNullable(service.findById(id));
+        HouseImages images = service.findById(id);
+
         if (Objects.isNull(images)) {
             log.error("House images with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
         response.setContentType("image/jpeg");
-        response.getOutputStream().write(images.get().getImage());
+        response.getOutputStream().write(images.getImage());
         response.getOutputStream().close();
         log.info("House images with id " + id + " : " + images);
         return new ResponseEntity<>(images, HttpStatus.OK);
     }
 
-    /*@ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
+    /*TODO: я не розумію що зробити щоб воно мені виводило всі фото які є загруженні в базу даних!!!!!
+     *  допоможеш мені з цим розібратись??? Пліз!!!!!!!!!!!!!!!!!!!!!*/
+
+    @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found any house images in the database!"),
     })
@@ -73,17 +82,23 @@ public class HouseImageController {
             response = HouseImages.class,
             responseContainer = "List")
     @GetMapping("/houseImages")
-    public ResponseEntity<List<HouseImages>> readAllHouseImages(Model map) {
+    public ResponseEntity<List<HouseImages>> readAllHouseImages(HttpServletResponse response) throws IOException {
         log.info("Looking for all house images from database!");
         List<HouseImages> imagesList = service.findAll();
+
         if (imagesList.isEmpty()) {
             log.info("Records not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        map.addAttribute("imageList", imagesList);
-        log.info("All house images : " + imagesList);
+
+        List<byte[]> imagesToShow = imagesList.stream().map(HouseImages::getImage).collect(Collectors.toList());
+
+        response.setContentType("image/jpeg");
+        response.getOutputStream().write( ?????)
+        response.getOutputStream().close();
+        log.info("All house images : " + ? ???)
         return new ResponseEntity<>(HttpStatus.OK);
-    }*/
+    }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
@@ -91,21 +106,22 @@ public class HouseImageController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. ")
     })
     @PutMapping("/updateHouseImage/{id}")
-    public ResponseEntity<?> updateHouseImagesById(@RequestParam("image") MultipartFile image,
-                                                   @PathVariable("id") int id,
+    public ResponseEntity<?> updateHouseImagesById(@RequestParam("image") MultipartFile image, @PathVariable("id") int id,
                                                    HttpServletResponse response) throws IOException {
         log.info("Updating the house images with id : " + id);
+
         if (!service.isExists(id)) {
             log.error("House images with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
         HouseImages previous = service.findById(id);
         HouseImages houseImage = service.update(previous.getId(), image, previous.getImageName());
+
         response.setContentType("image/jpeg");
         response.getOutputStream().write(houseImage.getImage());
         response.getOutputStream().close();
         log.info("House images with id : " + id + " was updated!");
-
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -116,10 +132,12 @@ public class HouseImageController {
     @DeleteMapping("deleteHouseImage/{id}")
     public ResponseEntity<?> deleteHouseImagesById(@PathVariable("id") int id) {
         log.info("Deleting the house images with id " + id);
+
         if (Objects.isNull(service.findById(id))) {
             log.error("House images with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
         service.delete(id);
         log.info("House images with id " + id + " was deleted!");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
