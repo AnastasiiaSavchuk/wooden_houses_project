@@ -86,6 +86,21 @@ public class HouseImageController {
         log.info("Looking for all house images from database!");
         List<HouseImages> imagesList = service.findAll();
 
+        /*List<Integer> ids = null;
+        List<Blob> photos = new ArrayList<>();
+        int i;
+        for (int j = 0; j < ids.size(); j++) {
+            photos.add((Blob) readHouseImageById(ids.get(j), null));
+        }
+
+        if (photos.isEmpty()) {
+            log.info("Records not found!");
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        log.info("All house images : " + photos);
+        return new ResponseEntity<>(photos, HttpStatus.OK);*/
+
         if (imagesList.isEmpty()) {
             log.info("Records not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -116,7 +131,7 @@ public class HouseImageController {
         }
 
         HouseImages previous = service.findById(id);
-        HouseImages houseImage = service.update(previous.getId(), image, previous.getImageName());
+        HouseImages houseImage = service.update(previous.getId(), image, image.getOriginalFilename());
 
         response.setContentType("image/jpeg");
         response.getOutputStream().write(houseImage.getImage());
