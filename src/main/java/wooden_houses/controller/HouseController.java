@@ -51,7 +51,7 @@ public class HouseController {
     @GetMapping("house/{id}")
     public ResponseEntity<?> readHouseById(@PathVariable("id") int id) {
         log.info("Looking for a house by id " + id);
-        House house = service.findOne(id);
+        House house = service.findById(id);
         if (Objects.isNull(house)) {
             log.error("House with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -105,7 +105,7 @@ public class HouseController {
     @DeleteMapping("deleteHouse/{id}")
     public ResponseEntity<?> deleteHouseById(@PathVariable("id") int id) {
         log.info("Deleting house with id " + id);
-        if (Objects.isNull(service.findOne(id))) {
+        if (Objects.isNull(service.findById(id))) {
             log.error("House with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

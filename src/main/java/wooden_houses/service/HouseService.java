@@ -8,7 +8,7 @@ public interface HouseService {
 
     House save(House house);
 
-    House findOne(int id);
+    House findById(int id);
 
     List<House> findAll();
 
