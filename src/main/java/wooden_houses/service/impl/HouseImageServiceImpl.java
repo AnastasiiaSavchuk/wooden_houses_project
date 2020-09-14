@@ -3,31 +3,31 @@ package wooden_houses.service.impl;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import wooden_houses.domain.HouseImages;
-import wooden_houses.repository.HouseImagesRepository;
-import wooden_houses.service.HouseImagesService;
+import wooden_houses.domain.HouseImage;
+import wooden_houses.repository.HouseImageRepository;
+import wooden_houses.service.HouseImageService;
 
 import java.util.List;
 
 @Service
-public class HouseImagesServiceImpl implements HouseImagesService {
+public class HouseImageServiceImpl implements HouseImageService {
 
     @Autowired
-    private HouseImagesRepository repository;
+    private HouseImageRepository repository;
 
     @SneakyThrows
     @Override
-    public HouseImages save(HouseImages houseImages) {
-        return repository.save(houseImages);
+    public HouseImage save(HouseImage houseImage) {
+        return repository.save(houseImage);
     }
 
     @Override
-    public HouseImages findById(int id) {
+    public HouseImage findById(int id) {
         return repository.findById(id).orElse(null);
     }
 
     @Override
-    public List<HouseImages> findAll() {
+    public List<HouseImage> findAll() {
         return repository.findAll();
     }
 

@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.util.UriComponentsBuilder;
-import wooden_houses.domain.HouseImages;
-import wooden_houses.service.impl.HouseImagesServiceImpl;
+import wooden_houses.domain.HouseImage;
+import wooden_houses.service.impl.HouseImageServiceImpl;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import static javax.servlet.http.HttpServletResponse.*;
 public class HouseImageController {
 
     @Autowired
-    private HouseImagesServiceImpl service;
+    private HouseImageServiceImpl service;
     private static final Logger log = Logger.getLogger(HouseImageController.class);
 
     @JsonIgnore
@@ -37,7 +37,7 @@ public class HouseImageController {
     public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image,
                                          UriComponentsBuilder builder,
                                          HttpServletResponse response) throws IOException {
-        HouseImages houseImage = new HouseImages(image.getBytes(), image.getOriginalFilename());
+        HouseImage houseImage = new HouseImage(image.getBytes(), image.getOriginalFilename());
         service.save(houseImage);
         log.info("Images were created!");
         HttpHeaders imageHeaders = new HttpHeaders();
@@ -55,7 +55,7 @@ public class HouseImageController {
     @GetMapping("houseImage/{id}")
     public ResponseEntity<?> readHouseImagesById(@PathVariable("id") int id, HttpServletResponse response) throws IOException {
         log.info("Looking for a house images by id " + id);
-        HouseImages images = service.findById(id);
+        HouseImage images = service.findById(id);
         if (Objects.isNull(images)) {
             log.error("House images with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

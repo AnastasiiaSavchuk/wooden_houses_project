@@ -20,7 +20,7 @@ public class HouseServicesServiceImpl implements HouseServicesService {
     }
 
     @Override
-    public HouseServices findOne(int id) {
+    public HouseServices findById(int id) {
         return repository.findById(id).orElse(null);
     }
 

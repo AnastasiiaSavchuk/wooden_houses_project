@@ -51,7 +51,7 @@ public class ContactUsController {
     @GetMapping("contactInfo/{id}")
     public ResponseEntity<?> readContactInfoById(@PathVariable("id") int id) {
         log.info("Looking for a user contact information by id " + id);
-        ContactInformation contactInfo = service.findOne(id);
+        ContactInformation contactInfo = service.findById(id);
         if (Objects.isNull(contactInfo)) {
             log.error("User contact information with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -87,7 +87,7 @@ public class ContactUsController {
     @DeleteMapping("deleteContactInfo/{id}")
     public ResponseEntity<?> deleteContactById(@PathVariable("id") int id) {
         log.info("Deleting the user contact information with id " + id);
-        if (Objects.isNull(service.findOne(id))) {
+        if (Objects.isNull(service.findById(id))) {
             log.error("User contact information with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

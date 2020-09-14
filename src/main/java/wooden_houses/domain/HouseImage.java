@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "house_images")
 @AllArgsConstructor
 @NoArgsConstructor
-public class HouseImages {
+public class HouseImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class HouseImages {
     @Column(name = "image_name")
     private String imageName;
 
-    public HouseImages(byte[] image, String imageName) {
+    public HouseImage(byte[] image, String imageName) {
         this.image = image;
         this.imageName = imageName;
     }

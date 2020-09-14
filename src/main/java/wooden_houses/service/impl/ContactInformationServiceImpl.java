@@ -20,7 +20,7 @@ public class ContactInformationServiceImpl implements ContactInformationService 
     }
 
     @Override
-    public ContactInformation findOne(int id) {
+    public ContactInformation findById(int id) {
         return repository.findById(id).orElse(null);
     }
 

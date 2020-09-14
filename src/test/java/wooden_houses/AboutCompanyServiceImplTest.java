@@ -19,24 +19,25 @@ public class AboutCompanyServiceImplTest {
 
 
     @Test
-    @DisplayName("Read all house in dataBase test")
+    @DisplayName("Test read all info about company")
     public void findAllTest() {
         List<AboutCompany> infoList = service.findAll();
         assertThat(infoList).isNotEmpty();
     }
 
     @Test
-    @DisplayName("Save, update and delete house")
+    @DisplayName("Test save, update and delete info about company")
     public void SaveUpdateDeleteTest() {
         AboutCompany testInfo = new AboutCompany("information_name_create", "information_type_create", "information1_creat", "information2_creat",
                 "information3_creat", "information4_creat", "information5_creat",
                 "information6_creat", "information7_creat", "information8_creat");
 
-        int id = lastId(service.findAll());
-
         service.save(testInfo);
-        AboutCompany actualHouse = service.findById(id);
-        assertThat(testInfo).isEqualTo(actualHouse);
+
+        int id = testInfo.getId();
+
+        AboutCompany actualInfo = service.findById(id);
+        assertThat(testInfo).isEqualTo(actualInfo);
 
         AboutCompany updateInfo = service.findById(id);
         updateInfo.setInformationName("information_name_update");
@@ -52,23 +53,15 @@ public class AboutCompanyServiceImplTest {
         service.update(updateInfo);
         assertThat(updateInfo).isEqualTo(service.findById(id));
 
-        service.isExists(id);
-        assertThat(service.isExists(id)).isTrue();
-
         service.delete(id);
         assertThat(service.findById(id)).isNull();
     }
 
     @Test
-    @DisplayName("Is exists information about company test")
+    @DisplayName("Test is exists information about company")
     public void isExistsTest() {
         int id = 1;
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
-    }
-
-    int lastId(List<AboutCompany> infoList) {
-        int lastElement = infoList.size() + 1;
-        return lastElement;
     }
 }

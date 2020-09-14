@@ -8,7 +8,7 @@ public interface ContactInformationService {
 
     ContactInformation save(ContactInformation contactInformation);
 
-    ContactInformation findOne(int id);
+    ContactInformation findById(int id);
 
     List<ContactInformation> findAll();
 

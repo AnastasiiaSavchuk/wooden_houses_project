@@ -19,14 +19,14 @@ public class HouseServiceImplTest {
 
 
     @Test
-    @DisplayName("Read all house in dataBase test")
+    @DisplayName("Test read all houses")
     public void findAllTest() {
         List<House> houseList = service.findAll();
         assertThat(houseList).isNotEmpty();
     }
 
     @Test
-    @DisplayName("Save, update and delete house")
+    @DisplayName("Test save, update and delete house")
     public void SaveUpdateDeleteTest() {
         House testHouse = new House("house_create", "type_create", "info_creat", "story1_creat",
                 "story2_creat", "story3_creat", "story4_creat", "story5_creat",
@@ -35,9 +35,10 @@ public class HouseServiceImplTest {
                 "roofPitch_creat", "feature1_creat", "feature2_creat", "purpose_creat",
                 "purposeInfo1_creat", "purposeInfo2_creat", "purposeInfo3_creat");
 
-        int id = lastId(service.findAll());
-
         service.save(testHouse);
+
+        int id = testHouse.getId();
+
         House actualHouse = service.findById(id);
         assertThat(testHouse).isEqualTo(actualHouse);
 
@@ -66,23 +67,15 @@ public class HouseServiceImplTest {
         service.update(updateHouse);
         assertThat(updateHouse).isEqualTo(service.findById(id));
 
-        service.isExists(id);
-        assertThat(service.isExists(id)).isTrue();
-
         service.delete(id);
         assertThat(service.findById(id)).isNull();
     }
 
     @Test
-    @DisplayName("Is exists house test")
+    @DisplayName("Test is exists house")
     public void isExistsTest() {
         int id = 1;
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
-    }
-
-    int lastId(List<House> houseList) {
-        int lastElement = houseList.size() + 1;
-        return lastElement;
     }
 }

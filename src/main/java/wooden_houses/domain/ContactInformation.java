@@ -21,33 +21,37 @@ public class ContactInformation {
     @Column(name = "contact_id")
     private int id;
 
-    @NotEmpty(message = "Please fill field!")
+    @NotEmpty(message = "This field must be filled!")
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @NotEmpty(message = "Please fill field!")
+    @NotEmpty(message = "This field must be filled!")
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @NotEmpty(message = "Please fill field!")
+    @NotEmpty(message = "This is not a valid email address!")
     @Email(message = "Email address hes invalid form: ${validateValue}",
             regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$")
     @Column(name = "email", nullable = false, length = 120)
     private String email;
 
-    @NotNull(message = "Please fill field!")
+    @NotNull(message = "PlThis field must be filled!")
     @Column(name = "post_code", nullable = false)
-    private int post_code;
+    private int postCode;
 
-    @NotEmpty(message = "Please fill field!")
+    @NotEmpty(message = "This field must be filled!")
     @Column(name = "address", nullable = false)
     private String address;
 
-    @NotEmpty(message = "Please fill field!")
+    @NotEmpty(message = "This field must be filled!")
+    @Column(name = "city", nullable = false)
+    private String city;
+
+    @NotEmpty(message = "This field must be filled!")
     @Column(name = "country", nullable = false)
     private String country;
 
-    @NotNull(message = "Please fill field!")
+    @NotNull(message = "This field must be filled!")
     @Column(name = "phone_number", nullable = false)
     private long phoneNumber;
 
@@ -55,24 +59,30 @@ public class ContactInformation {
     private String whatAreYouInterestedIn;
 
     @Lob
-    @NotNull(message = "Please fill field!")
+    @NotNull(message = "This field must be filled!")
     @Column(name = "your_message", nullable = false)
     private String yourMessage;
+
+    @NotEmpty(message = "This field must be filled!")
+    @Column(name = "your_date_for_consultation", nullable = false)
+    private String yourDateForConsultation;
 
     @Lob
     @Column(name = "others")
     private String others;
 
-    public ContactInformation(String firstName, String lastName, String email, int post_code, String address, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String others) {
+    public ContactInformation(String firstName, String lastName, String email, int postCode, String address, String city, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String yourDateForConsultation, String others) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.post_code = post_code;
+        this.postCode = postCode;
         this.address = address;
+        this.city = city;
         this.country = country;
         this.phoneNumber = phoneNumber;
         this.whatAreYouInterestedIn = whatAreYouInterestedIn;
         this.yourMessage = yourMessage;
+        this.yourDateForConsultation = yourDateForConsultation;
         this.others = others;
     }
 }
