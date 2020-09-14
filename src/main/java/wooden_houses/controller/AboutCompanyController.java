@@ -51,7 +51,7 @@ public class AboutCompanyController {
     @GetMapping("/infoAboutCompany/{id}")
     public ResponseEntity<?> readInfoAboutCompanyById(@PathVariable("id") int id) {
         log.info("Looking for information about company by id " + id);
-        AboutCompany company = service.findOne(id);
+        AboutCompany company = service.findById(id);
         if (Objects.isNull(company)) {
             log.error("Information about company with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -107,7 +107,7 @@ public class AboutCompanyController {
     @DeleteMapping("deleteInfoAboutCompany/{id}")
     public ResponseEntity<?> deleteInfoAboutCompanyById(@PathVariable("id") int id) {
         log.info("Deleting the information about company with id " + id);
-        if (Objects.isNull(service.findOne(id))) {
+        if (Objects.isNull(service.findById(id))) {
             log.error("Information about company with id " + id + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

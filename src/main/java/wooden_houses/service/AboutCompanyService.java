@@ -8,7 +8,7 @@ public interface AboutCompanyService {
 
     AboutCompany save(AboutCompany company);
 
-    AboutCompany findOne(int id);
+    AboutCompany findById(int id);
 
     List<AboutCompany> findAll();
 

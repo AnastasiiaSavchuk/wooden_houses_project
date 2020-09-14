@@ -6,7 +6,6 @@ import wooden_houses.domain.AboutCompany;
 import wooden_houses.repository.AboutCompanyRepository;
 import wooden_houses.service.AboutCompanyService;
 
-
 import java.util.List;
 
 @Service
@@ -20,7 +19,7 @@ public class AboutCompanyServiceImpl implements AboutCompanyService {
     }
 
     @Override
-    public AboutCompany findOne(int id) {
+    public AboutCompany findById(int id) {
         return repository.findById(id).orElse(null);
     }
 

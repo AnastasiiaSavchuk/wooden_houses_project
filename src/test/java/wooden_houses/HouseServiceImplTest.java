@@ -26,8 +26,8 @@ public class HouseServiceImplTest {
     }
 
     @Test
-    @DisplayName("Save house test")
-    public void SaveTest() {
+    @DisplayName("Save, update and delete house")
+    public void SaveUpdateDeleteTest() {
         House testHouse = new House("house_create", "type_create", "info_creat", "story1_creat",
                 "story2_creat", "story3_creat", "story4_creat", "story5_creat",
                 "story6_creat", "story7_creat", "story8_creat", "dimensions_creat",
@@ -36,15 +36,11 @@ public class HouseServiceImplTest {
                 "purposeInfo1_creat", "purposeInfo2_creat", "purposeInfo3_creat");
 
         int id = lastId(service.findAll());
+
         service.save(testHouse);
         House actualHouse = service.findById(id);
         assertThat(testHouse).isEqualTo(actualHouse);
-    }
 
-    @Test
-    @DisplayName("Update house test")
-    public void UpdateTest() {
-        int id = 1;
         House updateHouse = service.findById(id);
         updateHouse.setHouse("house_update");
         updateHouse.setType("type_update");
@@ -69,12 +65,10 @@ public class HouseServiceImplTest {
         updateHouse.setPurposeInfo3("purposeInfo3_update");
         service.update(updateHouse);
         assertThat(updateHouse).isEqualTo(service.findById(id));
-    }
 
-    @Test
-    @DisplayName("Delete house test")
-    public void DeleteTest() {
-        int id = lastId(service.findAll());
+        service.isExists(id);
+        assertThat(service.isExists(id)).isTrue();
+
         service.delete(id);
         assertThat(service.findById(id)).isNull();
     }
