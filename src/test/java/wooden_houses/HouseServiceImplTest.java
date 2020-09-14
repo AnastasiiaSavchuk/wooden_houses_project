@@ -82,7 +82,7 @@ public class HouseServiceImplTest {
     @Test
     @DisplayName("Is exists house test")
     public void isExistsTest() {
-        int id = 4;
+        int id = 1;
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
     }
