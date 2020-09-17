@@ -8,6 +8,7 @@ import wooden_houses.repository.HouseImageRepository;
 import wooden_houses.service.HouseImageService;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class HouseImageServiceImpl implements HouseImageService {
@@ -29,6 +30,13 @@ public class HouseImageServiceImpl implements HouseImageService {
     @Override
     public List<HouseImage> findAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public List<Integer> getAllIds() {
+        List<HouseImage> houseImages = findAll();
+        List<Integer> ids = houseImages.stream().map(HouseImage::getId).collect(Collectors.toList());
+        return ids;
     }
 
     @Override

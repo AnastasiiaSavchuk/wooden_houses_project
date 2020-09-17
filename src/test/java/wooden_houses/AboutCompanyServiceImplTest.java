@@ -1,5 +1,6 @@
 package wooden_houses;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,6 @@ public class AboutCompanyServiceImplTest {
 
     @Autowired
     private AboutCompanyService service;
-
 
     @Test
     @DisplayName("Test read all info about company")
@@ -61,7 +61,6 @@ public class AboutCompanyServiceImplTest {
     @DisplayName("Test is exists information about company")
     public void isExistsTest() {
         int id = 1;
-        service.isExists(id);
-        assertThat(service.isExists(id)).isTrue();
+        Assertions.assertNotNull(service.isExists(id));
     }
 }

@@ -12,6 +12,8 @@ public interface HouseImageService {
 
     List<HouseImage> findAll();
 
+    List<Integer> getAllIds();
+
     void delete(int id);
 
     boolean isExists(int id);

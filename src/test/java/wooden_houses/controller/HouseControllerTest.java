@@ -1,10 +1,12 @@
-package wooden_houses;
+/*
+package wooden_houses.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 import wooden_houses.domain.House;
 import wooden_houses.service.impl.HouseServiceImpl;
 
@@ -13,17 +15,17 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class HouseServiceImplTest {
+public class HouseControllerTest {
 
     @Autowired
-    private HouseServiceImpl service;
+    private HouseController controller;
 
 
     @Test
     @DisplayName("Test read all houses")
     public void findAllTest() {
-        List<House> houseList = service.findAll();
-        assertThat(houseList).isNotEmpty();
+        ResponseEntity<List<House>> allHouses = controller.readAllHouses();
+        assertThat(allHouses).;
     }
 
     @Test
@@ -78,4 +80,4 @@ public class HouseServiceImplTest {
         int id = 1;
         Assertions.assertNotNull(service.isExists(id));
     }
-}
+}*/

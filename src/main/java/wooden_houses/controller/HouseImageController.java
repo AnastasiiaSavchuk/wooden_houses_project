@@ -1,6 +1,7 @@
 package wooden_houses.controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
@@ -16,7 +17,10 @@ import wooden_houses.service.impl.HouseImageServiceImpl;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import static javax.servlet.http.HttpServletResponse.*;
 
@@ -63,50 +67,35 @@ public class HouseImageController {
         response.setContentType("image/jpeg");
         response.getOutputStream().write(images.getImage());
         response.getOutputStream().close();
-        log.info("House images with id " + id + " : " + images);
+        log.info("House images with id " + id + " : " + images.getImageName());
         return new ResponseEntity<>(images, HttpStatus.OK);
     }
 
-    /*TODO: я не розумію що зробити щоб воно мені виводило всі фото які є загруженні в базу даних!!!!!
-     *  допоможеш мені з цим розібратись??? Пліз!!!!!!!!!!!!!!!!!!!!!*/
-
-    /*@ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
+    @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found any house images in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all house images!",
-            response = HouseImages.class,
+            response = HouseImage.class,
             responseContainer = "List")
     @GetMapping("/houseImages")
-    public ResponseEntity<List<HouseImages>> readAllHouseImages(HttpServletResponse response) throws IOException {
+    public ResponseEntity<List<HouseImage>> readAllHouseImages() throws IOException {
         log.info("Looking for all house images from database!");
-        List<HouseImages> imagesList = service.findAll();
 
-        *//*List<Integer> ids = null;
-        List<Blob> photos = new ArrayList<>();
-        int i;
-        for (int j = 0; j < ids.size(); j++) {
-            photos.add((Blob) readHouseImageById(ids.get(j), null));
+        List<Integer> ids = service.getAllIds();
+        List<HouseImage> imageList = new ArrayList<>();
+        for (int i = 0; i < ids.size(); i++) {
+            imageList.add(service.findById(ids.get(i)));
         }
-
-        if (photos.isEmpty()) {
+        if (imageList.isEmpty()) {
             log.info("Records not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+        /* List<byte[]> images = imageList.stream().map(HouseImage::getImage).collect((Collectors.toList()));*/
 
-        log.info("All house images : " + photos);
-        return new ResponseEntity<>(photos, HttpStatus.OK);*//*
-
-        if (imagesList.isEmpty()) {
-            log.info("Records not found!");
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-
-        List<byte[]> imagesToShow = imagesList.stream().map(HouseImages::getImage).collect(Collectors.toList());
-
-        log.info("All house images : " + ? ???)
+        log.info("All house images : " + imageList.stream().map(HouseImage::getImageName).collect((Collectors.toList())));
         return new ResponseEntity<>(HttpStatus.OK);
-    }*/
+    }
 
     @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the house images in the database"),
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),

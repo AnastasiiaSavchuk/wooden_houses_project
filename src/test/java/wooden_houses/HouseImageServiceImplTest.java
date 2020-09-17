@@ -1,3 +1,4 @@
+/*
 package wooden_houses;
 
 import org.junit.jupiter.api.DisplayName;
@@ -58,4 +59,4 @@ public class HouseImageServiceImplTest {
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
     }
-}
+}*/
