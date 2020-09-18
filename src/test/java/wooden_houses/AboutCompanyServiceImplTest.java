@@ -8,8 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import wooden_houses.domain.AboutCompany;
 import wooden_houses.service.AboutCompanyService;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
@@ -17,13 +15,6 @@ public class AboutCompanyServiceImplTest {
 
     @Autowired
     private AboutCompanyService service;
-
-    @Test
-    @DisplayName("Test read all info about company")
-    public void findAllTest() {
-        List<AboutCompany> infoList = service.findAll();
-        assertThat(infoList).isNotEmpty();
-    }
 
     @Test
     @DisplayName("Test save, update and delete info about company")

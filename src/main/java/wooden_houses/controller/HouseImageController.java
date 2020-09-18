@@ -13,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import wooden_houses.domain.HouseImage;
 import wooden_houses.service.impl.HouseImageServiceImpl;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,15 +35,14 @@ public class HouseImageController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred.")
     })
     @PostMapping("/uploadImage")
-    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image,
-                                         HttpServletResponse response) throws IOException {
+    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image/*, HttpServletResponse response*/) throws IOException {
         HouseImage houseImage = new HouseImage(image.getBytes(), image.getOriginalFilename());
         service.save(houseImage);
         log.info("Images were created!");
 
-        response.setContentType("image/jpeg");
+        /*response.setContentType("image/jpeg");
         response.getOutputStream().write(houseImage.getImage());
-        response.getOutputStream().close();
+        response.getOutputStream().close();*/
         return new ResponseEntity<>(houseImage, HttpStatus.OK);
     }
 
@@ -53,16 +51,16 @@ public class HouseImageController {
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house images in the database!"),
     })
     @GetMapping("houseImage/{id}")
-    public ResponseEntity<?> readHouseImagesById(@PathVariable("id") int id, HttpServletResponse response) throws IOException {
+    public ResponseEntity<?> readHouseImagesById(@PathVariable("id") int id/*, HttpServletResponse response*/) throws IOException {
         log.info("Looking for a house images by id " + id);
         HouseImage images = service.findById(id);
         if (Objects.isNull(images)) {
             log.error("House images with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        response.setContentType("image/jpeg");
+        /*response.setContentType("image/jpeg");
         response.getOutputStream().write(images.getImage());
-        response.getOutputStream().close();
+        response.getOutputStream().close();*/
         log.info("House images with id " + id + " : " + images.getImageName());
         return new ResponseEntity<>(images, HttpStatus.OK);
     }

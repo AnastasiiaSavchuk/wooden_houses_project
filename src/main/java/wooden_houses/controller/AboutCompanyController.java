@@ -31,10 +31,6 @@ public class AboutCompanyController {
     })
     @PostMapping("/createInfoAboutCompany")
     public ResponseEntity<?> createNewInfoAboutCompany(@RequestBody AboutCompany company) {
-        if (service.isExists(company.getId())) {
-            log.error("Information : " + company + ",  with id " + company.getId() + " already exists!");
-            return new ResponseEntity<>((HttpStatus.CONFLICT));
-        }
         service.save(company);
         log.info("Information : " + company + " was created!");
         return new ResponseEntity<>(company, HttpStatus.CREATED);

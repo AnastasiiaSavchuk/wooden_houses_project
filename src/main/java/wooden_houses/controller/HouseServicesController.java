@@ -31,10 +31,6 @@ public class HouseServicesController {
     })
     @PostMapping("/createHouseService")
     public ResponseEntity<?> createNewHouseService(@RequestBody HouseServices houseService) {
-        if (service.isExists(houseService.getId())) {
-            log.error("House service with id " + houseService.getId() + " already exists!" + houseService);
-            return new ResponseEntity<>((HttpStatus.CONFLICT));
-        }
         service.save(houseService);
         log.info(houseService + " was created!");
         return new ResponseEntity<>(houseService, HttpStatus.CREATED);

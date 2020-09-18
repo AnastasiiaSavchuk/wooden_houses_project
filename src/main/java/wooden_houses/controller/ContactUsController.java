@@ -31,10 +31,6 @@ public class ContactUsController {
     })
     @PostMapping("/createContactInfo")
     public ResponseEntity<?> createNewContactInfo(@RequestBody ContactInformation contactInfo) {
-        if (service.isExists(contactInfo.getId())) {
-            log.error("User contact information  with id " + contactInfo.getId() + " already exists!" + contactInfo);
-            return new ResponseEntity<>((HttpStatus.CONFLICT));
-        }
         service.save(contactInfo);
         log.info(contactInfo + " was created!");
         return new ResponseEntity<>(contactInfo, HttpStatus.CREATED);

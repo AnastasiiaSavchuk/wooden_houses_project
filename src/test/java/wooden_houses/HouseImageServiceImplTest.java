@@ -1,16 +1,18 @@
-/*
 package wooden_houses;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 import wooden_houses.domain.HouseImage;
 import wooden_houses.service.impl.HouseImageServiceImpl;
 
-import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,7 +22,6 @@ public class HouseImageServiceImplTest {
 
     @Autowired
     private HouseImageServiceImpl service;
-
 
     @Test
     @DisplayName("Test read all house images")
@@ -39,14 +40,26 @@ public class HouseImageServiceImplTest {
     @Test
     @DisplayName("Test save and delete house image")
     public void SaveDeleteTest() throws IOException {
+        Path path = Paths.get("E:/CV nastia + Dima/965.jpg");
+        String originalFilename = "965.jpg";
+        String contentType = "image/jpeg";
+        byte[] content = null;
 
-        MultipartFile file = (MultipartFile) new File("E:/CV nastia + Dima./123png");
+        try {
+            content = Files.readAllBytes(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        MultipartFile file = new MockMultipartFile("file", originalFilename, contentType, content);
 
         HouseImage testImage = new HouseImage(file.getBytes(), file.getOriginalFilename());
 
         service.save(testImage);
-
         int id = testImage.getId();
+
+        HouseImage actualImage = service.findById(id);
+
+        assertThat(testImage).isEqualTo(actualImage);
 
         service.delete(id);
         assertThat(service.findById(id)).isNull();
@@ -59,4 +72,4 @@ public class HouseImageServiceImplTest {
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
     }
-}*/
+}

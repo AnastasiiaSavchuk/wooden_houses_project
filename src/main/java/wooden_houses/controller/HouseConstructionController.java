@@ -31,10 +31,6 @@ public class HouseConstructionController {
     })
     @PostMapping("/createHouseConstructionInfo")
     public ResponseEntity<?> createNewHouseConstructionInfo(@RequestBody HouseConstruction constructionInfo) {
-        if (service.isExists(constructionInfo.getId())) {
-            log.error("House construction information with id " + constructionInfo.getId() + " already exists!" + constructionInfo);
-            return new ResponseEntity<>((HttpStatus.CONFLICT));
-        }
         service.save(constructionInfo);
         log.info(constructionInfo + " was created!");
         return new ResponseEntity<>(constructionInfo, HttpStatus.CREATED);

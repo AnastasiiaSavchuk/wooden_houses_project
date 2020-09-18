@@ -15,7 +15,8 @@ public class AboutCompanyServiceImpl implements AboutCompanyService {
     private AboutCompanyRepository repository;
 
     @Override
-    public AboutCompany save(AboutCompany company) { return repository.save(company);
+    public AboutCompany save(AboutCompany company) {
+        return repository.save(company);
     }
 
     @Override
