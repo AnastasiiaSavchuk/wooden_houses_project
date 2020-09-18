@@ -5,11 +5,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.HouseServices;
 import wooden_houses.service.impl.HouseServicesServiceImpl;
 
@@ -32,16 +30,14 @@ public class HouseServicesController {
                     "Some fields are incorrect input!")
     })
     @PostMapping("/createHouseService")
-    public ResponseEntity<?> createNewHouseService(@RequestBody HouseServices houseService, UriComponentsBuilder builder) {
+    public ResponseEntity<?> createNewHouseService(@RequestBody HouseServices houseService) {
         if (service.isExists(houseService.getId())) {
             log.error("House service with id " + houseService.getId() + " already exists!" + houseService);
             return new ResponseEntity<>((HttpStatus.CONFLICT));
         }
         service.save(houseService);
         log.info(houseService + " was created!");
-        HttpHeaders houseHeaders = new HttpHeaders();
-        houseHeaders.setLocation(builder.path("/houseService/{id}").buildAndExpand(houseService.getId()).toUri());
-        return new ResponseEntity<>(houseHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<>(houseService, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),

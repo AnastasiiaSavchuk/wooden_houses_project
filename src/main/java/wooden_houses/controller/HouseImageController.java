@@ -6,12 +6,10 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.HouseImage;
 import wooden_houses.service.impl.HouseImageServiceImpl;
 
@@ -39,17 +37,15 @@ public class HouseImageController {
     })
     @PostMapping("/uploadImage")
     public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image,
-                                         UriComponentsBuilder builder,
                                          HttpServletResponse response) throws IOException {
         HouseImage houseImage = new HouseImage(image.getBytes(), image.getOriginalFilename());
         service.save(houseImage);
         log.info("Images were created!");
-        HttpHeaders imageHeaders = new HttpHeaders();
-        imageHeaders.setLocation(builder.path("/houseImages/{id}").buildAndExpand(houseImage.getId()).toUri());
+
         response.setContentType("image/jpeg");
         response.getOutputStream().write(houseImage.getImage());
         response.getOutputStream().close();
-        return new ResponseEntity<>(houseImage, imageHeaders, HttpStatus.OK);
+        return new ResponseEntity<>(houseImage, HttpStatus.OK);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
@@ -92,9 +88,8 @@ public class HouseImageController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         /* List<byte[]> images = imageList.stream().map(HouseImage::getImage).collect((Collectors.toList()));*/
-
         log.info("All house images : " + imageList.stream().map(HouseImage::getImageName).collect((Collectors.toList())));
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(imageList, HttpStatus.OK);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the house images in the database"),

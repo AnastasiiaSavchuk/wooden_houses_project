@@ -5,11 +5,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.AboutCompany;
 import wooden_houses.service.impl.AboutCompanyServiceImpl;
 
@@ -32,16 +30,14 @@ public class AboutCompanyController {
                     "Some fields are incorrect input!")
     })
     @PostMapping("/createInfoAboutCompany")
-    public ResponseEntity<?> createNewInfoAboutCompany(@RequestBody AboutCompany company, UriComponentsBuilder builder) {
+    public ResponseEntity<?> createNewInfoAboutCompany(@RequestBody AboutCompany company) {
         if (service.isExists(company.getId())) {
             log.error("Information : " + company + ",  with id " + company.getId() + " already exists!");
             return new ResponseEntity<>((HttpStatus.CONFLICT));
         }
         service.save(company);
         log.info("Information : " + company + " was created!");
-        HttpHeaders companyHeaders = new HttpHeaders();
-        companyHeaders.setLocation(builder.path("/informationAboutCompany/{id}").buildAndExpand(company.getId()).toUri());
-        return new ResponseEntity<>(companyHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<>(company, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),

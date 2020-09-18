@@ -5,11 +5,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 import wooden_houses.domain.ContactInformation;
 import wooden_houses.service.impl.ContactInformationServiceImpl;
 
@@ -32,16 +30,14 @@ public class ContactUsController {
                     "Some fields are empty or incorrect input!")
     })
     @PostMapping("/createContactInfo")
-    public ResponseEntity<?> createNewContactInfo(@RequestBody ContactInformation contactInfo, UriComponentsBuilder builder) {
+    public ResponseEntity<?> createNewContactInfo(@RequestBody ContactInformation contactInfo) {
         if (service.isExists(contactInfo.getId())) {
             log.error("User contact information  with id " + contactInfo.getId() + " already exists!" + contactInfo);
             return new ResponseEntity<>((HttpStatus.CONFLICT));
         }
         service.save(contactInfo);
         log.info(contactInfo + " was created!");
-        HttpHeaders contactHeaders = new HttpHeaders();
-        contactHeaders.setLocation(builder.path("/userContactInfo/{id}").buildAndExpand(contactInfo.getId()).toUri());
-        return new ResponseEntity<>(contactHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<>(contactInfo, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),

@@ -1,12 +1,13 @@
-/*
 package wooden_houses.controller;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import wooden_houses.domain.House;
 import wooden_houses.service.impl.HouseServiceImpl;
 
@@ -19,18 +20,15 @@ public class HouseControllerTest {
 
     @Autowired
     private HouseController controller;
-
-
-    @Test
-    @DisplayName("Test read all houses")
-    public void findAllTest() {
-        ResponseEntity<List<House>> allHouses = controller.readAllHouses();
-        assertThat(allHouses).;
-    }
+    private final MockHttpServletRequest request = new MockHttpServletRequest();
+    @Autowired
+    private HouseServiceImpl service;
 
     @Test
-    @DisplayName("Test save, update and delete house")
-    public void SaveUpdateDeleteTest() {
+    @DisplayName("Test save house")
+    public void SaveUpdateDeleteTestHouse() {
+        RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(request));
+
         House testHouse = new House("house_create", "type_create", "info_creat", "story1_creat",
                 "story2_creat", "story3_creat", "story4_creat", "story5_creat",
                 "story6_creat", "story7_creat", "story8_creat", "dimensions_creat",
@@ -38,12 +36,21 @@ public class HouseControllerTest {
                 "roofPitch_creat", "feature1_creat", "feature2_creat", "purpose_creat",
                 "purposeInfo1_creat", "purposeInfo2_creat", "purposeInfo3_creat");
 
-        service.save(testHouse);
+        ResponseEntity<Object> responseEntitySave = (ResponseEntity<Object>) controller.createNewHouse(testHouse);
+        if (responseEntitySave.getStatusCodeValue() == 409) {
+            assertThat(responseEntitySave.getStatusCodeValue()).isEqualTo(409);
+        } else {
+            assertThat(responseEntitySave.getStatusCodeValue()).isEqualTo(201);
+        }
 
         int id = testHouse.getId();
 
-        House actualHouse = service.findById(id);
-        assertThat(testHouse).isEqualTo(actualHouse);
+        ResponseEntity<Object> responseEntityById = (ResponseEntity<Object>) controller.readHouseById(id);
+        if (responseEntityById.getStatusCodeValue() == 404) {
+            assertThat(responseEntityById.getStatusCodeValue()).isEqualTo(404);
+        } else {
+            assertThat(responseEntityById.getStatusCodeValue()).isEqualTo(200);
+        }
 
         House updateHouse = service.findById(id);
         updateHouse.setHouse("house_update");
@@ -67,17 +74,32 @@ public class HouseControllerTest {
         updateHouse.setPurposeInfo1("purposeInfo1_update");
         updateHouse.setPurposeInfo2("purposeInfo2_update");
         updateHouse.setPurposeInfo3("purposeInfo3_update");
-        service.update(updateHouse);
-        assertThat(updateHouse).isEqualTo(service.findById(id));
 
-        service.delete(id);
-        assertThat(service.findById(id)).isNull();
+        ResponseEntity<Object> responseEntityUpdate = (ResponseEntity<Object>) controller.updateHouseById(updateHouse, id);
+        if (responseEntityUpdate.getStatusCodeValue() == 404) {
+            assertThat(responseEntityUpdate.getStatusCodeValue()).isEqualTo(404);
+        } else {
+            assertThat(responseEntityUpdate.getStatusCodeValue()).isEqualTo(200);
+        }
+
+        ResponseEntity<Object> responseEntityDelete = (ResponseEntity<Object>) controller.deleteHouseById(id);
+        if (responseEntityDelete.getStatusCodeValue() == 404) {
+            assertThat(responseEntityUpdate.getStatusCodeValue()).isEqualTo(404);
+        } else {
+            assertThat(responseEntityDelete.getStatusCodeValue()).isEqualTo(204);
+        }
     }
 
     @Test
-    @DisplayName("Test is exists house")
-    public void isExistsTest() {
-        int id = 1;
-        Assertions.assertNotNull(service.isExists(id));
+    @DisplayName("Test read all houses")
+    public void FindAllTest() {
+        RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(request));
+
+        ResponseEntity<List<House>> responseEntityAllHouses = controller.readAllHouses();
+        if (responseEntityAllHouses.getStatusCodeValue() == 404) {
+            assertThat(responseEntityAllHouses.getStatusCodeValue()).isEqualTo(404);
+        } else {
+            assertThat(responseEntityAllHouses.getStatusCodeValue()).isEqualTo(200);
+        }
     }
-}*/
+}
