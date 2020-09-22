@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "contact_us")
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactInformation {
+public class ContactInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,7 +71,7 @@ public class ContactInformation {
     @Column(name = "others")
     private String others;
 
-    public ContactInformation(String firstName, String lastName, String email, int postCode, String address, String city, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String yourDateForConsultation, String others) {
+    public ContactInfo(String firstName, String lastName, String email, int postCode, String address, String city, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String yourDateForConsultation, String others) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

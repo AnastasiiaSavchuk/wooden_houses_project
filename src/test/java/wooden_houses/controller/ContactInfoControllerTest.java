@@ -5,22 +5,22 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
-import wooden_houses.domain.ContactInformation;
+import wooden_houses.domain.ContactInfo;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class ContactInformationControllerTest {
+public class ContactInfoControllerTest {
 
     @Autowired
-    private ContactUsController controller;
+    private ContactInfoController controller;
 
     @Test
     @DisplayName("Test save house")
     public void SaveUpdateDeleteTestHouse() {
-        ContactInformation testUserInfo = new ContactInformation("first_name_create", "last_name_create", "email@gmail.com",
+        ContactInfo testUserInfo = new ContactInfo("first_name_create", "last_name_create", "email@gmail.com",
                 75069, "address_creat", "city_creat", "country_creat", 380666666,
                 "what_are_you_interested_in_creat", "your_message_creat", "your_date_for_consultation_creat",
                 "others_creat");
@@ -47,7 +47,7 @@ public class ContactInformationControllerTest {
     @Test
     @DisplayName("Test read all houses")
     public void FindAllTest() {
-        ResponseEntity<List<ContactInformation>> responseEntityAllHouses = controller.readAllContacts();
+        ResponseEntity<List<ContactInfo>> responseEntityAllHouses = controller.readAllContacts();
         if (responseEntityAllHouses.getStatusCodeValue() != 200) {
             assertThat(responseEntityAllHouses.getStatusCodeValue()).isEqualTo(404);
         } else {

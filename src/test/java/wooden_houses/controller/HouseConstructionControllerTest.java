@@ -60,7 +60,7 @@ public class HouseConstructionControllerTest {
             assertThat(responseEntityUpdate.getStatusCodeValue()).isEqualTo(200);
         }
 
-        ResponseEntity<?> responseEntityDelete = controller.deleteHouseConstructionInfoById(555);
+        ResponseEntity<?> responseEntityDelete = controller.deleteHouseConstructionInfoById(id);
         if (responseEntityDelete.getStatusCodeValue() != 204) {
             assertThat(responseEntityDelete.getStatusCodeValue()).isEqualTo(404);
         } else {
