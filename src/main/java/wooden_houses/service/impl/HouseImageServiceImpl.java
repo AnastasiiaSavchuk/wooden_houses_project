@@ -1,6 +1,5 @@
 package wooden_houses.service.impl;
 
-import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wooden_houses.domain.HouseImage;
@@ -16,7 +15,6 @@ public class HouseImageServiceImpl implements HouseImageService {
     @Autowired
     private HouseImageRepository repository;
 
-    @SneakyThrows
     @Override
     public HouseImage save(HouseImage houseImage) {
         return repository.save(houseImage);
