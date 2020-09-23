@@ -12,6 +12,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/header.css">
 </head>
 <body>
@@ -20,17 +21,17 @@
         <div id="logo" class="pull-left">
             <h1 class="scrollto">
                 <a href="${pageContext.request.contextPath}/frontend/company">
-                    <img src="../../image/logo-black.svg" width="220" height="33" alt=""></a></h1>
+                    <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a></h1>
         </div>
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/houses">House</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">SERVICE</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">GALLERY</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">BUILDING
-                    A HOUSE</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">CONTACT</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/houses">Houses</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
+                    a house</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
                         class="fa fa-search"></i></a></li>
             </ul>

@@ -48,21 +48,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="houseImages" items="${contactInfo}">
+                <c:forEach var="infoAboutCompany" items="${contactInfo}">
                     <tr>
-                        <td>${houseImages.id}</td>
-                        <td>${houseImages.firstName}</td>
-                        <td>${houseImages.lastName}</td>
-                        <td>${houseImages.email}</td>
-                        <td>${houseImages.postCode}</td>
-                        <td>${houseImages.address}</td>
-                        <td>${houseImages.city}</td>
-                        <td>${houseImages.country}</td>
-                        <td>${houseImages.phoneNumber}</td>
-                        <td>${houseImages.whatAreYouInterestedIn}</td>
-                        <td>${houseImages.yourMessage}</td>
-                        <td>${houseImages.yourDateForConsultation}</td>
-                        <td>${houseImages.others}</td>
+                        <td>${infoAboutCompany.id}</td>
+                        <td>${infoAboutCompany.firstName}</td>
+                        <td>${infoAboutCompany.lastName}</td>
+                        <td>${infoAboutCompany.email}</td>
+                        <td>${infoAboutCompany.postCode}</td>
+                        <td>${infoAboutCompany.address}</td>
+                        <td>${infoAboutCompany.city}</td>
+                        <td>${infoAboutCompany.country}</td>
+                        <td>${infoAboutCompany.phoneNumber}</td>
+                        <td>${infoAboutCompany.whatAreYouInterestedIn}</td>
+                        <td>${infoAboutCompany.yourMessage}</td>
+                        <td>${infoAboutCompany.yourDateForConsultation}</td>
+                        <td>${infoAboutCompany.others}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
