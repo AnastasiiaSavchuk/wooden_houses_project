@@ -1,4 +1,4 @@
-package wooden_houses;
+package wooden_houses.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import wooden_houses.domain.AboutCompany;
-import wooden_houses.service.AboutCompanyService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

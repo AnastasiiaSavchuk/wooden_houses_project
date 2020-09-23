@@ -1,4 +1,4 @@
-package wooden_houses;
+package wooden_houses.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

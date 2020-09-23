@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import wooden_houses.domain.HouseImage;
+import wooden_houses.service.impl.HouseImageServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,6 +18,8 @@ public class HouseImageControllerTest {
 
     @Autowired
     private HouseImageController controller;
+    @Autowired
+    private HouseImageServiceImpl service;
 
     /*@Test
     @DisplayName("Test save and delete house image")
@@ -32,10 +35,11 @@ public class HouseImageControllerTest {
             e.printStackTrace();
         }
         MultipartFile testImage = new MockMultipartFile("file", originalFilename, contentType, content);
-        ResponseEntity<?> responseEntity = controller.uploadImage(testImage);
+        ResponseEntity<?> responseEntity = controller.uploadImage(testImage, );
         assertThat(responseEntity.getStatusCodeValue()).isEqualTo(200);
 
-        ResponseEntity<?> responseEntityDelete = controller.deleteHouseImagesById(0);
+
+        ResponseEntity<?> responseEntityDelete = controller.deleteHouseImagesById(id);
         if (responseEntityDelete.getStatusCodeValue() != 204) {
             assertThat(responseEntityDelete.getStatusCodeValue()).isEqualTo(404);
         } else {
@@ -44,9 +48,9 @@ public class HouseImageControllerTest {
     }
 
     @Test
-    @DisplayName("Test save and delete house image")
+    @DisplayName("Test find by id image")
     public void FindByIdTest() throws IOException {
-        ResponseEntity<?> responseEntityById = controller.readHouseImagesById(1);
+        ResponseEntity<?> responseEntityById = controller.readHouseImagesById(1,);
         if (responseEntityById.getStatusCodeValue() != 200) {
             assertThat(responseEntityById.getStatusCodeValue()).isEqualTo(404);
         } else {

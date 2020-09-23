@@ -1,4 +1,4 @@
-package wooden_houses;
+package wooden_houses.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -23,13 +23,6 @@ public class ContactInfoServiceImplTest {
     public void findAllTest() {
         List<ContactInfo> infoList = service.findAll();
         assertThat(infoList).isNotEmpty();
-    }
-
-    @Test
-    @DisplayName("Test read by id user contact information")
-    public void findByIdTest() {
-        int id = 1;
-        assertThat(service.findById(id)).isNotNull();
     }
 
     @Test

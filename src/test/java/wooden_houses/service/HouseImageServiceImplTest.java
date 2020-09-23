@@ -1,4 +1,4 @@
-package wooden_houses;
+package wooden_houses.service;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,10 +31,10 @@ public class HouseImageServiceImplTest {
     }
 
     @Test
-    @DisplayName("Test read by id house image")
-    public void findByIdTest() {
-        int id = 1;
-        assertThat(service.findById(id)).isNotNull();
+    @DisplayName("Test read all house ids")
+    public void findAllIdsTest() {
+        List<Integer> idsList = service.getAllIds();
+        assertThat(idsList).isNotEmpty();
     }
 
     @Test
