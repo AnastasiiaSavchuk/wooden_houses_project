@@ -1,34 +1,38 @@
 .header-text {
-    width: 700px;
+    width: 1000px;
     height: 160px;
     position: absolute;
-    margin: 200px 0 0 200px;
+    margin: 255px 0 0 190px;
     color: white;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 30px;
+    font-size: 46px;
 }
 
 .header-text .p1 {
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 70px;
+    font-size: 72px;
     text-transform: uppercase;
+    line-height: 72px;
 }
 
 .info {
-    width: 1000px;
-    height: 100%;
     position: relative;
-    margin: 0 auto;
-    padding: 15px;
-    text-align: center;
+    margin: 154px 218px 100px;
 }
 
 .info h1, .info h2 {
     font-family: 'Noto Sans SC', sans-serif;
+    font-size: 42px;
     text-transform: uppercase;
+    line-height: 55px;
+}
+
+.info h2 {
+    margin-bottom: 53px;
 }
 
 .info p {
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }

@@ -13,7 +13,7 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/company.css">
 </head>
 <body>
@@ -22,16 +22,16 @@
 <div class="main">
     <c:choose>
     <c:when test="${mode == 'COMPANY_VIEW'}">
-    <div>
-        <div class="header-text">
-            <p class="p1"><strong>Welcome to </strong></p>
-            <p class="p1"><b>HUF HAUS London</b></p>
-            <p><b>Visit us in Weybridge!</b></p>
+        <div>
+            <div class="header-text">
+                <p class="p1"><strong>Welcome to </strong></p>
+                <p class="p1"><b>HUF HAUS London</b></p>
+                <p><b>Visit us in Weybridge!</b></p>
+            </div>
+            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="1905"
+                 height="750" alt="">
         </div>
-        <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="1905"
-             height="650" alt="">
-    </div>
-    <c:forEach var="infoAboutCompany" items="${infoAboutCompany}">
+        <c:forEach var="infoAboutCompany" items="${infoAboutCompany}">
     <div class="info">
         <h1><b>${infoAboutCompany.informationName}</b></h1>
         <h2><b>${infoAboutCompany.informationType}</b></h2>
