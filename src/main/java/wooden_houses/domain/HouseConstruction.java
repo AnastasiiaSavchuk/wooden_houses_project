@@ -15,10 +15,10 @@ public class HouseConstruction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "house_construction_id")
+    @Column(name = "construction_id")
     private int id;
 
-    @Column(name = "house_construction_name")
+    @Column(name = "construction_name")
     private String name;
 
     @Lob

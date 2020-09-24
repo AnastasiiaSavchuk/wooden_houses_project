@@ -14,7 +14,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class HouseConstructionControllerTest {
+public class HousesConstructionControllerTest {
 
     private final MockHttpServletRequest request = new MockHttpServletRequest();
     @Autowired

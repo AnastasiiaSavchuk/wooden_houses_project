@@ -2,7 +2,7 @@ package wooden_houses.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import wooden_houses.domain.AboutCompany;
+import wooden_houses.domain.CompanyInfo;
 import wooden_houses.repository.AboutCompanyRepository;
 import wooden_houses.service.AboutCompanyService;
 
@@ -15,22 +15,22 @@ public class AboutCompanyServiceImpl implements AboutCompanyService {
     private AboutCompanyRepository repository;
 
     @Override
-    public AboutCompany save(AboutCompany company) {
+    public CompanyInfo save(CompanyInfo company) {
         return repository.save(company);
     }
 
     @Override
-    public AboutCompany findById(int id) {
+    public CompanyInfo findById(int id) {
         return repository.findById(id).orElse(null);
     }
 
     @Override
-    public List<AboutCompany> findAll() {
-        return (List<AboutCompany>) repository.findAll();
+    public List<CompanyInfo> findAll() {
+        return (List<CompanyInfo>) repository.findAll();
     }
 
     @Override
-    public AboutCompany update(AboutCompany company) {
+    public CompanyInfo update(CompanyInfo company) {
         return repository.save(company);
     }
 

@@ -2,36 +2,36 @@ package wooden_houses.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import wooden_houses.domain.House;
-import wooden_houses.repository.HouseRepository;
-import wooden_houses.service.HouseService;
+import wooden_houses.domain.Houses;
+import wooden_houses.repository.HousesRepository;
+import wooden_houses.service.HousesService;
 
 import java.util.List;
 
 @Service
-public class HouseServiceImpl implements HouseService {
+public class HousesServiceImpl implements HousesService {
 
     @Autowired
-    private HouseRepository repository;
+    private HousesRepository repository;
 
     @Override
-    public House save(House house) {
-        return repository.save(house);
+    public Houses save(Houses houses) {
+        return repository.save(houses);
     }
 
     @Override
-    public House findById(int id) {
+    public Houses findById(int id) {
         return repository.findById(id).orElse(null);
     }
 
     @Override
-    public List<House> findAll() {
+    public List<Houses> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public House update(House house) {
-        return repository.save(house);
+    public Houses update(Houses houses) {
+        return repository.save(houses);
     }
 
     @Override

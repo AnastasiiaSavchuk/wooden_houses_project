@@ -18,7 +18,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class HouseImageServiceImplTest {
+public class HousesImageServiceImplTest {
 
     @Autowired
     private HouseImageServiceImpl service;

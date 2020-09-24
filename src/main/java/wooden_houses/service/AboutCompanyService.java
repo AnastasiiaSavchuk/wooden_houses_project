@@ -1,18 +1,18 @@
 package wooden_houses.service;
 
-import wooden_houses.domain.AboutCompany;
+import wooden_houses.domain.CompanyInfo;
 
 import java.util.List;
 
 public interface AboutCompanyService {
 
-    AboutCompany save(AboutCompany company);
+    CompanyInfo save(CompanyInfo company);
 
-    AboutCompany findById(int id);
+    CompanyInfo findById(int id);
 
-    List<AboutCompany> findAll();
+    List<CompanyInfo> findAll();
 
-    AboutCompany update(AboutCompany company);
+    CompanyInfo update(CompanyInfo company);
 
     void delete(int id);
 

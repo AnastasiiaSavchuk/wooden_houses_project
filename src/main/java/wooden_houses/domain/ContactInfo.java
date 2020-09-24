@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
-@Table(name = "contact_us")
+@Table(name = "contact_info")
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContactInfo {
@@ -71,7 +71,9 @@ public class ContactInfo {
     @Column(name = "others")
     private String others;
 
-    public ContactInfo(String firstName, String lastName, String email, int postCode, String address, String city, String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage, String yourDateForConsultation, String others) {
+    public ContactInfo(String firstName, String lastName, String email, int postCode, String address, String city,
+                       String country, int phoneNumber, String whatAreYouInterestedIn, String yourMessage,
+                       String yourDateForConsultation, String others) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

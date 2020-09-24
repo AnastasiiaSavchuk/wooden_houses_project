@@ -8,21 +8,21 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "house")
+@Table(name = "houses")
 @AllArgsConstructor
 @NoArgsConstructor
-public class House {
+public class Houses {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "house_id")
     private int id;
 
-    @Column(name = "house")
-    private String house;
+    @Column(name = "house_name")
+    private String houseName;
 
-    @Column(name = "type")
-    private String type;
+    @Column(name = "house_type")
+    private String houseType;
 
     @Lob
     @Column(name = "info")
@@ -63,8 +63,8 @@ public class House {
     @Column(name = "dimensions")
     private String dimensions;
 
-    @Column(name = "house_footprint")
-    private String houseFootprint;
+    @Column(name = "footprint")
+    private String footprint;
 
     @Column(name = "total_gross_external_area")
     private String totalGrossExternalArea;
@@ -94,9 +94,12 @@ public class House {
     @Column(name = "purpose_infor_3")
     private String purposeInfo3;
 
-    public House(String house, String type, String info, String story1, String story2, String story3, String story4, String story5, String story6, String story7, String story8, String dimensions, String houseFootprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2, String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
-        this.house = house;
-        this.type = type;
+    public Houses(String houseName, String houseType, String info, String story1, String story2, String story3,
+                  String story4, String story5, String story6, String story7, String story8, String dimensions,
+                  String footprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2,
+                  String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
+        this.houseName = houseName;
+        this.houseType = houseType;
         this.info = info;
         this.story1 = story1;
         this.story2 = story2;
@@ -107,7 +110,7 @@ public class House {
         this.story7 = story7;
         this.story8 = story8;
         this.dimensions = dimensions;
-        this.houseFootprint = houseFootprint;
+        this.footprint = footprint;
         this.totalGrossExternalArea = totalGrossExternalArea;
         this.roofPitch = roofPitch;
         this.feature1 = feature1;
