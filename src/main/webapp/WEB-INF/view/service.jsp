@@ -43,15 +43,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="houseService" items="${houseService}">
+                <c:forEach var="house" items="${houseService}">
                 <tr>
-                    <td>${houseService.id}</td>
-                    <td>${houseService.name}</td>
-                    <td>${houseService.description}</td>
-                    <td>${houseService.part1}</td>
-                    <td>${houseService.part2}</td>
-                    <td>${houseService.part3}</td>
-                    <td>${houseService.part4}</td>
+                    <td>${house.id}</td>
+                    <td>${house.name}</td>
+                    <td>${house.description}</td>
+                    <td>${house.part1}</td>
+                    <td>${house.part2}</td>
+                    <td>${house.part3}</td>
+                    <td>${house.part4}</td>
                     </c:forEach>
                 </tbody>
             </table>

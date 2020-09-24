@@ -13,80 +13,64 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/house.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div style="margin: 15px; font-size: 14px; color: green;" class="navbar-header">Spring MVC -Logos</div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="/frontend/houses">All Houses</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container">
-
-    <c:choose>
-        <c:when test="${mode == 'HOUSE_VIEW'}">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>House</th>
-                    <th>Type</th>
-                    <th>Info</th>
-                    <th>Story1</th>
-                    <th>Story2</th>
-                    <th>Story3</th>
-                    <th>Story4</th>
-                    <th>Story5</th>
-                    <th>Story6</th>
-                    <th>Story7</th>
-                    <th>dimensions</th>
-                    <th>houseFootprint</th>
-                    <th>totalGrossExternalArea</th>
-                    <th>roofPitch</th>
-                    <th>feature1</th>
-                    <th>feature2</th>
-                    <th>purpose</th>
-                    <th>purposeInfo1</th>
-                    <th>purposeInfo2</th>
-                    <th>purposeInfo3</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="houseService" items="${house}">
-                    <tr>
-                        <td>${houseService.id}</td>
-                        <td>${houseService.house}</td>
-                        <td>${houseService.type}</td>
-                        <td>${houseService.info}</td>
-                        <td>${houseService.story1}</td>
-                        <td>${houseService.story2}</td>
-                        <td>${houseService.story3}</td>
-                        <td>${houseService.story4}</td>
-                        <td>${houseService.story5}</td>
-                        <td>${houseService.story6}</td>
-                        <td>${houseService.story7}</td>
-                        <td>${houseService.story8}</td>
-                        <td>${houseService.dimensions}</td>
-                        <td>${houseService.houseFootprint}</td>
-                        <td>${houseService.totalGrossExternalArea}</td>
-                        <td>${houseService.roofPitch}</td>
-                        <td>${houseService.feature1}</td>
-                        <td>${houseService.feature2}</td>
-                        <td>${houseService.purpose}</td>
-                        <td>${houseService.purposeInfo1}</td>
-                        <td>${houseService.purposeInfo2}</td>
-                        <td>${houseService.purposeInfo3}</td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </c:when>
-    </c:choose>
+<c:choose>
+    <c:when test="${mode == 'HOUSE_VIEW'}">
+        <div>
+            <div class="header-text">
+                <p class="header-p"><b>Be inspired by our dream houses</b></p>
+            </div>
+            <img src="../../image/house_header_ART_5.jpg" width="100%" height="555" alt="">
+        </div>
+        <c:forEach var="house" items="${house}">
+            <div id="houses">
+                <div class="col-sm-4">
+                    <img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__1.jpg" width="345" height="230"
+                         alt="">
+                </div>
+                <div id="shortInfo">
+                    <h2>${house.house}</h2>
+                    <h2>${housee.type}</h2>
+                    <div><p>${house.feature1}</p></div>
+                    <div><p>${house.feature2}</p></div>
+                    <div><p>${house.roofPitch}</p></div>
+                    <div><p>${house.houseFootprint}</p></div>
+                    <div>
+                        <button><a href="house/${house.id}">To the project</a></button>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
+        <%--<c:forEach var="house" items="${house}">
+                        <td>${house.id}</td>
+                        <td>${house.house}</td>
+                        <td>${house.type}</td>
+                        <td>${house.info}</td>
+                        <td>${house.story1}</td>
+                        <td>${house.story2}</td>
+                        <td>${house.story3}</td>
+                        <td>${house.story4}</td>
+                        <td>${house.story5}</td>
+                        <td>${house.story6}</td>
+                        <td>${house.story7}</td>
+                        <td>${house.story8}</td>
+                        <td>${house.dimensions}</td>
+                        <td>${house.houseFootprint}</td>
+                        <td>${house.totalGrossExternalArea}</td>
+                        <td>${house.roofPitch}</td>
+                        <td>${house.feature1}</td>
+                        <td>${house.feature2}</td>
+                        <td>${house.purpose}</td>
+                        <td>${house.purposeInfo1}</td>
+                        <td>${house.purposeInfo2}</td>
+                        <td>${house.purposeInfo3}</td>
+                </c:forEach>--%>
+    </c:when>
+</c:choose>
 </div>
 
 <!-- Optional JavaScript -->

@@ -13,7 +13,7 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/company.css">
 </head>
 <body>
@@ -21,28 +21,27 @@
 
 <div class="main">
     <c:choose>
-    <c:when test="${mode == 'COMPANY_VIEW'}">
+        <c:when test="${mode == 'COMPANY_VIEW'}">
         <div>
             <div class="header-text">
-                <p class="p1"><strong>Welcome to </strong></p>
-                <p class="p1"><b>HUF HAUS London</b></p>
+                <p class="header-p"><strong>Welcome to </strong></p>
+                <p class="header-p"><b>HUF HAUS London</b></p>
                 <p><b>Visit us in Weybridge!</b></p>
             </div>
-            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="1905"
-                 height="750" alt="">
+            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="100%" height="745" alt="">
         </div>
         <c:forEach var="infoAboutCompany" items="${infoAboutCompany}">
-    <div class="info">
-        <h1><b>${infoAboutCompany.informationName}</b></h1>
-        <h2><b>${infoAboutCompany.informationType}</b></h2>
-        <p>${infoAboutCompany.information1}</p>
-        <p>${infoAboutCompany.information2}</p>
-        <p>${infoAboutCompany.information3}</p>
-        <p>${infoAboutCompany.information4}</p>
-        <p>${infoAboutCompany.information5}</p>
-        <p>${infoAboutCompany.information6}</p>
-        <p>${infoAboutCompany.information7}</p>
-        <p>${infoAboutCompany.information8}</p>
+        <div id="company">
+            <h1><b>${infoAboutCompany.informationName}</b></h1>
+            <h2><b>${infoAboutCompany.informationType}</b></h2>
+            <p>${infoAboutCompany.information1}</p>
+            <p>${infoAboutCompany.information2}</p>
+            <p>${infoAboutCompany.information3}</p>
+            <p>${infoAboutCompany.information4}</p>
+            <p>${infoAboutCompany.information5}</p>
+            <p>${infoAboutCompany.information6}</p>
+            <p>${infoAboutCompany.information7}</p>
+            <p>${infoAboutCompany.information8}</p>
     </div>
     </c:forEach>
     </c:when>

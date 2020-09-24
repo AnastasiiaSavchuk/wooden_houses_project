@@ -3,6 +3,7 @@ package wooden_houses.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import wooden_houses.service.impl.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +31,14 @@ public class FrontendController {
         request.setAttribute("mode", "HOUSE_VIEW");
         return "dream-house";
     }
+
+    @GetMapping("/frontend/house/{id}")
+    public String showHouseById(HttpServletRequest request, @PathVariable("id") int id) {
+        request.setAttribute("house", houseService.findById(id));
+        request.setAttribute("mode", "HOUSE_VIEW");
+        return "houseById";
+    }
+
 
     @GetMapping("/frontend/company")
     public String showAllCompanyInfo(HttpServletRequest request) {

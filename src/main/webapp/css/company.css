@@ -8,30 +8,30 @@
     font-size: 46px;
 }
 
-.header-text .p1 {
+.header-text .header-p {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 72px;
     text-transform: uppercase;
     line-height: 72px;
 }
 
-.info {
+#company {
     position: relative;
     margin: 154px 218px 100px;
 }
 
-.info h1, .info h2 {
+#company h1, #company h2 {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 42px;
     text-transform: uppercase;
     line-height: 55px;
 }
 
-.info h2 {
+#company h2 {
     margin-bottom: 53px;
 }
 
-.info p {
+#company p {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
     margin-bottom: 20px;

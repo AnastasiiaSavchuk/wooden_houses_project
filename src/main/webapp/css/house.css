@@ -1,0 +1,9 @@
+
+.header-text {
+    position: absolute;
+    margin: 320px 0 0 190px;
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 56px;
+    text-transform: uppercase;
+}
