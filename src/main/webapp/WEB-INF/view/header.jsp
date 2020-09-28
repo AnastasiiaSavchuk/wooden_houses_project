@@ -27,11 +27,11 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/houses">Houses</a></li>
+                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
-                    a houses</a></li>
+                    a house</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></li>
                 <li class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
                         class="fa fa-search"></i></a></li>

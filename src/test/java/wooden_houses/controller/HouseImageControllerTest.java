@@ -14,7 +14,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-public class HousesImageControllerTest {
+public class HouseImageControllerTest {
 
     @Autowired
     private HouseImageController controller;

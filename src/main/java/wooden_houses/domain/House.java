@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name = "houses")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Houses {
+public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -94,10 +94,10 @@ public class Houses {
     @Column(name = "purpose_infor_3")
     private String purposeInfo3;
 
-    public Houses(String houseName, String houseType, String info, String story1, String story2, String story3,
-                  String story4, String story5, String story6, String story7, String story8, String dimensions,
-                  String footprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2,
-                  String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
+    public House(String houseName, String houseType, String info, String story1, String story2, String story3,
+                 String story4, String story5, String story6, String story7, String story8, String dimensions,
+                 String footprint, String totalGrossExternalArea, String roofPitch, String feature1, String feature2,
+                 String purpose, String purposeInfo1, String purposeInfo2, String purposeInfo3) {
         this.houseName = houseName;
         this.houseType = houseType;
         this.info = info;

@@ -18,7 +18,7 @@ public class FrontendController {
     @Autowired
     private HouseConstructionServiceImpl constructionService;
     @Autowired
-    private HousesServiceImpl houseService;
+    private HouseServiceImpl houseService;
     @Autowired
     private HouseImageServiceImpl imageService;
     @Autowired

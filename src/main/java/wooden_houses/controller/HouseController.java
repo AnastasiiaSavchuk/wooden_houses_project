@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import wooden_houses.domain.Houses;
-import wooden_houses.service.impl.HousesServiceImpl;
+import wooden_houses.domain.House;
+import wooden_houses.service.impl.HouseServiceImpl;
 
 import java.util.List;
 import java.util.Objects;
@@ -17,11 +17,11 @@ import java.util.Objects;
 import static javax.servlet.http.HttpServletResponse.*;
 
 @RestController
-public class HousesController {
+public class HouseController {
 
-    private static final Logger log = Logger.getLogger(HousesController.class);
+    private static final Logger log = Logger.getLogger(HouseController.class);
     @Autowired
-    private HousesServiceImpl service;
+    private HouseServiceImpl service;
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
             @ApiResponse(code = SC_CONFLICT, message = "House was already created!"),
@@ -30,10 +30,10 @@ public class HousesController {
                     "Some fields are incorrect input!")
     })
     @PostMapping("/createHouse")
-    public ResponseEntity<?> createNewHouse(@RequestBody Houses houses) {
-        service.save(houses);
-        log.info(houses + " was created!");
-        return new ResponseEntity<>(houses, HttpStatus.CREATED);
+    public ResponseEntity<?> createNewHouse(@RequestBody House house) {
+        service.save(house);
+        log.info(house + " was created!");
+        return new ResponseEntity<>(house, HttpStatus.CREATED);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
@@ -43,13 +43,13 @@ public class HousesController {
     @GetMapping("house/{id}")
     public ResponseEntity<?> readHouseById(@PathVariable("id") int id) {
         log.info("Looking for a house by id " + id);
-        Houses houses = service.findById(id);
-        if (Objects.isNull(houses)) {
+        House house = service.findById(id);
+        if (Objects.isNull(house)) {
             log.error("House with id " + id + " not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        log.info("House with id " + id + " : " + houses);
-        return new ResponseEntity<>(houses, HttpStatus.OK);
+        log.info("House with id " + id + " : " + house);
+        return new ResponseEntity<>(house, HttpStatus.OK);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
@@ -57,18 +57,18 @@ public class HousesController {
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found any houses in the database!"),
     })
     @ApiOperation(value = "Retrieves information about all houses!",
-            response = Houses.class,
+            response = House.class,
             responseContainer = "List")
     @GetMapping("/house")
-    public ResponseEntity<List<Houses>> readAllHouses() {
+    public ResponseEntity<List<House>> readAllHouses() {
         log.info("Looking for all houses from database!");
-        List<Houses> housesList = service.findAll();
-        if (housesList.isEmpty()) {
+        List<House> houseList = service.findAll();
+        if (houseList.isEmpty()) {
             log.info("Records not found!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        log.info("All houses : " + housesList);
-        return new ResponseEntity<>(housesList, HttpStatus.OK);
+        log.info("All houses : " + houseList);
+        return new ResponseEntity<>(houseList, HttpStatus.OK);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok"),
@@ -78,16 +78,16 @@ public class HousesController {
                     "Some fields are incorrect input")
     })
     @PutMapping("/updateHouse/{id}")
-    public ResponseEntity<?> updateHouseById(@RequestBody Houses houses, @PathVariable("id") int id) {
+    public ResponseEntity<?> updateHouseById(@RequestBody House house, @PathVariable("id") int id) {
         log.info("Updating house with id : " + id);
         if (!service.isExists(id)) {
-            log.error("House with id " + houses.getId() + " doesn't exists!");
+            log.error("House with id " + house.getId() + " doesn't exists!");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        houses.setId(id);
-        service.update(houses);
-        log.info("House was updated into" + houses);
-        return new ResponseEntity<>(houses, HttpStatus.OK);
+        house.setId(id);
+        service.update(house);
+        log.info("House was updated into" + house);
+        return new ResponseEntity<>(house, HttpStatus.OK);
     }
 
     @ApiResponses(value = {@ApiResponse(code = SC_NO_CONTENT, message = "Not found the house in the database"),

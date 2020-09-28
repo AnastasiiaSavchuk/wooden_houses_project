@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div style="margin: 15px; font-size: 14px; color: green;" class="navbar-header">Spring MVC -Logos</div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/frontend/houses">All Houses</a></li>
+            <li class="active"><a href="/frontend/house">All Houses</a></li>
         </ul>
     </div>
 </nav>

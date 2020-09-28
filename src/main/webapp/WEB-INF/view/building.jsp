@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
-    <title>Dream houses</title>
+    <title>Dream house</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div style="margin: 15px; font-size: 14px; color: green;" class="navbar-header">Spring MVC -Logos</div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/frontend/houses">All Houses</a></li>
+            <li class="active"><a href="/frontend/house">All Houses</a></li>
         </ul>
     </div>
 </nav>
