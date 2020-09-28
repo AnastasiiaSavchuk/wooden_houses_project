@@ -3,16 +3,16 @@ package wooden_houses.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wooden_houses.domain.CompanyInfo;
-import wooden_houses.repository.AboutCompanyRepository;
-import wooden_houses.service.AboutCompanyService;
+import wooden_houses.repository.CompanyInfoRepository;
+import wooden_houses.service.CompanyInfoService;
 
 import java.util.List;
 
 @Service
-public class AboutCompanyServiceImpl implements AboutCompanyService {
+public class CompanyInfoServiceImpl implements CompanyInfoService {
 
     @Autowired
-    private AboutCompanyRepository repository;
+    private CompanyInfoRepository repository;
 
     @Override
     public CompanyInfo save(CompanyInfo company) {

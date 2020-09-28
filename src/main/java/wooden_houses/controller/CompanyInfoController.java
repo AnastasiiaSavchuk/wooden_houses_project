@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import wooden_houses.domain.CompanyInfo;
-import wooden_houses.service.impl.AboutCompanyServiceImpl;
+import wooden_houses.service.impl.CompanyInfoServiceImpl;
 
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ import static javax.servlet.http.HttpServletResponse.*;
 public class CompanyInfoController {
 
     @Autowired
-    private AboutCompanyServiceImpl service;
+    private CompanyInfoServiceImpl service;
     private static final Logger log = Logger.getLogger(CompanyInfoController.class);
 
     @ApiResponses(value = {@ApiResponse(code = SC_OK, message = "Ok!"),
@@ -29,7 +29,7 @@ public class CompanyInfoController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input!")
     })
-    @PostMapping("/createInfoAboutCompany")
+    @PostMapping("/createCompanyInfo")
     public ResponseEntity<?> createNewInfoAboutCompany(@RequestBody CompanyInfo company) {
         service.save(company);
         log.info("Information : " + company + " was created!");
@@ -40,7 +40,7 @@ public class CompanyInfoController {
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found the information about company in the database!"),
     })
-    @GetMapping("/infoAboutCompany/{id}")
+    @GetMapping("/companyInfo/{id}")
     public ResponseEntity<?> readInfoAboutCompanyById(@PathVariable("id") int id) {
         log.info("Looking for information about company by id " + id);
         CompanyInfo company = service.findById(id);
@@ -61,7 +61,7 @@ public class CompanyInfoController {
     @ApiOperation(value = "Retrieves all information about company!",
             response = CompanyInfo.class,
             responseContainer = "List")
-    @GetMapping("/infoAboutCompany")
+    @GetMapping("/companyInfo")
     public ResponseEntity<List<CompanyInfo>> readAllInfoAboutCompany() {
         log.info("Looking for all houses from database!");
         List<CompanyInfo> houseList = service.findAll();
@@ -79,7 +79,7 @@ public class CompanyInfoController {
             @ApiResponse(code = SC_INTERNAL_SERVER_ERROR, message = "Validation error occurred. " +
                     "Some fields are incorrect input")
     })
-    @PutMapping("/updateInfoAboutCompany/{id}")
+    @PutMapping("/updateCompanyInfo/{id}")
     public ResponseEntity<?> updateHouseById(@RequestBody CompanyInfo company, @PathVariable("id") int id) {
         log.info("Updating the information about company with id : " + id);
         if (!service.isExists(id)) {
@@ -96,7 +96,7 @@ public class CompanyInfoController {
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found information about company in the database!"),
     })
-    @DeleteMapping("deleteInfoAboutCompany/{id}")
+    @DeleteMapping("deleteCompanyInfo/{id}")
     public ResponseEntity<?> deleteInfoAboutCompanyById(@PathVariable("id") int id) {
         log.info("Deleting the information about company with id " + id);
         if (Objects.isNull(service.findById(id))) {

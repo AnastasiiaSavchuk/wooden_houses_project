@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import wooden_houses.domain.CompanyInfo;
-import wooden_houses.service.impl.AboutCompanyServiceImpl;
+import wooden_houses.service.impl.CompanyInfoServiceImpl;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class CompanyInfoControllerTest {
     @Autowired
     private CompanyInfoController controller;
     @Autowired
-    private AboutCompanyServiceImpl service;
+    private CompanyInfoServiceImpl service;
 
     @Test
     @DisplayName("Test save, update and delete info about company")

@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CompanyInfoServiceImplTest {
 
     @Autowired
-    private AboutCompanyService service;
+    private CompanyInfoService service;
 
     @Test
     @DisplayName("Test save, update and delete info about company")

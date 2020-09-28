@@ -3,7 +3,7 @@ package wooden_houses.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wooden_houses.domain.ContactInfo;
-import wooden_houses.repository.ContactInformationRepository;
+import wooden_houses.repository.ContactInfoRepository;
 import wooden_houses.service.ContactInfoService;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class ContactInfoServiceImpl implements ContactInfoService {
 
     @Autowired
-    private ContactInformationRepository repository;
+    private ContactInfoRepository repository;
 
     @Override
     public ContactInfo save(ContactInfo contactInfo) {

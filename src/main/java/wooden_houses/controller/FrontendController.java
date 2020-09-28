@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 public class FrontendController {
 
     @Autowired
-    private AboutCompanyServiceImpl companyService;
+    private CompanyInfoServiceImpl companyService;
     @Autowired
     private ContactInfoServiceImpl contactService;
     @Autowired
@@ -25,11 +25,11 @@ public class FrontendController {
     private HouseServicesServiceImpl servicesService;
 
 
-    @GetMapping("/frontend/houses")
+    @GetMapping("/frontend/house")
     public String showAllHouse(HttpServletRequest request) {
         request.setAttribute("house", houseService.findAll());
         request.setAttribute("mode", "HOUSE_VIEW");
-        return "dream-house";
+        return "dream-houses";
     }
 
     @GetMapping("/frontend/house/{id}")
@@ -39,10 +39,9 @@ public class FrontendController {
         return "houseById";
     }
 
-
     @GetMapping("/frontend/company")
     public String showAllCompanyInfo(HttpServletRequest request) {
-        request.setAttribute("infoAboutCompany", companyService.findAll());
+        request.setAttribute("companyInfo", companyService.findAll());
         request.setAttribute("mode", "COMPANY_VIEW");
         return "company";
     }

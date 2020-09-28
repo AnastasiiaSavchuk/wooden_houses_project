@@ -4,7 +4,7 @@ import wooden_houses.domain.CompanyInfo;
 
 import java.util.List;
 
-public interface AboutCompanyService {
+public interface CompanyInfoService {
 
     CompanyInfo save(CompanyInfo company);
 

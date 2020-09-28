@@ -37,12 +37,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -56,12 +56,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -75,12 +75,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -94,12 +94,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -113,12 +113,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -132,12 +132,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -151,12 +151,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -170,12 +170,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -190,12 +190,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -210,12 +210,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h2>${house.type}</h2>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -229,12 +229,12 @@
                                  alt="">
                         </div>
                         <div class="shortInfo">
-                            <h2>${house.house}</h2>
-                            <h3>${house.type}</h3>
+                            <h2>${house.houseName}</h2>
+                            <h4>${house.housetype}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.houseFootprint}</p></div>
+                            <div><p>${house.footprint}</p></div>
                             <div>
                                 <button><a href="house/${house.id}">To the project</a></button>
                             </div>
@@ -244,30 +244,6 @@
 
             </c:forEach>
         </div>
-        <%--<c:forEach var="house" items="${house}">
-                        <td>${house.id}</td>
-                        <td>${house.house}</td>
-                        <td>${house.type}</td>
-                        <td>${house.info}</td>
-                        <td>${house.story1}</td>
-                        <td>${house.story2}</td>
-                        <td>${house.story3}</td>
-                        <td>${house.story4}</td>
-                        <td>${house.story5}</td>
-                        <td>${house.story6}</td>
-                        <td>${house.story7}</td>
-                        <td>${house.story8}</td>
-                        <td>${house.dimensions}</td>
-                        <td>${house.houseFootprint}</td>
-                        <td>${house.totalGrossExternalArea}</td>
-                        <td>${house.roofPitch}</td>
-                        <td>${house.feature1}</td>
-                        <td>${house.feature2}</td>
-                        <td>${house.purpose}</td>
-                        <td>${house.purposeInfo1}</td>
-                        <td>${house.purposeInfo2}</td>
-                        <td>${house.purposeInfo3}</td>
-                </c:forEach>--%>
     </c:when>
 </c:choose>
 </div>

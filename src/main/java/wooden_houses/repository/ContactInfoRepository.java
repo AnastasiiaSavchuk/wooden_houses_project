@@ -2,8 +2,8 @@ package wooden_houses.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import wooden_houses.domain.CompanyInfo;
+import wooden_houses.domain.ContactInfo;
 
 @Repository
-public interface AboutCompanyRepository extends CrudRepository<CompanyInfo, Integer> {
+public interface ContactInfoRepository extends CrudRepository<ContactInfo, Integer> {
 }
