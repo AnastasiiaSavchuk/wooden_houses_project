@@ -38,7 +38,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -114,7 +114,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -152,7 +152,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -171,7 +171,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -211,7 +211,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>
@@ -230,7 +230,7 @@
                         </div>
                         <div class="shortInfo">
                             <h2>${house.houseName}</h2>
-                            <h4>${house.housetype}</h4>
+                            <h4>${house.houseType}</h4>
                             <div><p>${house.feature1}</p></div>
                             <div><p>${house.feature2}</p></div>
                             <div><p>${house.roofPitch}</p></div>

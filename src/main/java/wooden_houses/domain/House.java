@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "houses")
+@Table(name = "house")
 @AllArgsConstructor
 @NoArgsConstructor
 public class House {
