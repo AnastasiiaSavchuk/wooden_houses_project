@@ -10,39 +10,65 @@
 
 #main {
     position: relative;
-    margin: 100px 190px;
+    margin: 78px 15px 78px 185px;
 }
 
 #main .allHouse {
     display: inline-block;
-    margin: 0 32px 32px 0;
+    margin: 0 28px 28px 0;
 }
 
-#main .allHouse:hover {
+#main .allHouse div img {
+    width: 360px;
+    height: 245px;
+}
+
+.allHouse a, .allHouse a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+#main .allHouse:hover, #main .allHouse button:hover {
     box-shadow: 0 0 6px #bfbfbf;
 }
 
+#main .allHouse button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+}
+
 .shortInfo {
-    padding: 20px 30px 30px;
+    padding: 35px 20px;
 }
 
-.shortInfo h2 {
+.shortInfo h2, .shortInfo h4 {
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 23px;
+    font-weight: 700;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
-.shortInfo h3 {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.shortInfo h4 {
+    margin: -5px 0 25px 0;
     text-transform: lowercase !important;
 }
 
+.shortInfo p {
+    border-left: 4px solid #44b827;
+    padding-left: 5px;
+    margin-left: 15px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
+.allHouse button {
+    position: relative;
+    margin: 0 0 30px;
+    padding: 11px 15px;
+    width: 196px;
+    height: 43px;
 
-
-
+}

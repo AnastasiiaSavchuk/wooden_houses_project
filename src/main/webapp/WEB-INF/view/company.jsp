@@ -29,7 +29,7 @@
                 <p class="header-p">HUF HAUS London</p>
                 <p>Visit us in Weybridge!</p>
             </div>
-            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="100%" height="745" alt="">
+            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="100%" height="863" alt="">
         </div>
         <div id="company">
             <c:forEach var="companyInfo" items="${companyInfo}">

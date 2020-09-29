@@ -26,222 +26,230 @@
             <div class="header-text">
                 <p class="header-p">Be inspired by our dream house</p>
             </div>
-            <img src="../../image/house_header_ART_5.jpg" width="100%" height="555" alt="">
+            <img src="../../image/house_header_ART_5.jpg" width="100%" height="580" alt="">
         </div>
         <div id="main">
             <c:forEach var="house" items="${house}">
                 <c:if test="${house.id == 1}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__2.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__2.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 2}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/2-Modum_8_sample_4/MODUM_8_sample_4_1.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/2-Modum_8_sample_4/MODUM_8_sample_4_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 3}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/3-Modum_7_sample_2/MODUM_7_sample_2_3.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/3-Modum_7_sample_2/MODUM_7_sample_2_3.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 4}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/4-Art_3_sample_2/Art_3_sample_2_2.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/4-Art_3_sample_2/Art_3_sample_2_2.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 5}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/5-Modum_10_sample_1/MODUM_10_sample_1_1.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/5-Modum_10_sample_1/MODUM_10_sample_1_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 6}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/6-Art_5_sample_4/Art_5_sample_4_1.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/6-Art_5_sample_4/Art_5_sample_4_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 7}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/7-Modum_15_sample_8/MODUM_15_sample_8_1.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/7-Modum_15_sample_8/MODUM_15_sample_8_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 8}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/8-Art_3_sample_5/ART_3_sample_5_1.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/8-Art_3_sample_5/ART_3_sample_5_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 9}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/9-extention_sample_1/Extension_sample_1_4.jpg" width="345"
-                                 height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/9-extention_sample_1/Extension_sample_1_4.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 10}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/10-Art_Bungalow_sample_3/Art_Bungalow_sample_3_1.jpg" width="345"
-                                 height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/10-Art_Bungalow_sample_3/Art_Bungalow_sample_3_1.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
                 <c:if test="${house.id == 11}">
                     <div class="allHouse">
-                        <div>
-                            <img src="../../image/11-Art_5_sample_6/Art_5_sample_6_2.jpg" width="345" height="230"
-                                 alt="">
-                        </div>
-                        <div class="shortInfo">
-                            <h2>${house.houseName}</h2>
-                            <h4>${house.houseType}</h4>
-                            <div><p>${house.feature1}</p></div>
-                            <div><p>${house.feature2}</p></div>
-                            <div><p>${house.roofPitch}</p></div>
-                            <div><p>${house.footprint}</p></div>
+                        <a href="house/${house.id}">
                             <div>
-                                <button><a href="house/${house.id}">To the project</a></button>
+                                <img src="../../image/11-Art_5_sample_6/Art_5_sample_6_2.jpg" alt="">
                             </div>
-                        </div>
+                            <div class="shortInfo">
+                                <h2><b>${house.houseName}</b></h2>
+                                <h4>${house.houseType}</h4>
+                                <div><p>${house.feature1}</p></div>
+                                <div><p>${house.feature2}</p></div>
+                                <div><p>${house.roofPitch}</p></div>
+                                <div><p>${house.footprint}</p></div>
+                            </div>
+                            <div class="button">
+                                <button>To the project</button>
+                            </div>
+                        </a>
                     </div>
                 </c:if>
-
             </c:forEach>
         </div>
     </c:when>
