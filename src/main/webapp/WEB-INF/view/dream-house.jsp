@@ -20,19 +20,19 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<c:choose>
-    <c:when test="${mode == 'HOUSE_VIEW'}">
-        <div>
-            <div class="header-text">
-                <p class="header-p">Be inspired by our dream house</p>
+<div id="main">
+    <c:choose>
+        <c:when test="${mode == 'HOUSE_VIEW'}">
+            <div>
+                <div class="header-text">
+                    <p class="header-p">Be inspired by our dream house</p>
+                </div>
+                <img src="../../image/house_header_ART_5.jpg" width="100%" height="580" alt="">
             </div>
-            <img src="../../image/house_header_ART_5.jpg" width="100%" height="580" alt="">
-        </div>
-        <div id="main">
-            <c:forEach var="house" items="${house}">
-                <c:if test="${house.id == 1}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+            <div id="houses">
+                <c:forEach var="house" items="${house}">
+                    <c:if test="${house.id == 1}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__2.jpg" alt="">
                             </div>
@@ -44,15 +44,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 2}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 2}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/2-Modum_8_sample_4/MODUM_8_sample_4_1.jpg" alt="">
                             </div>
@@ -64,15 +64,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 3}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 3}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/3-Modum_7_sample_2/MODUM_7_sample_2_3.jpg" alt="">
                             </div>
@@ -84,15 +84,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 4}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 4}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/4-Art_3_sample_2/Art_3_sample_2_2.jpg" alt="">
                             </div>
@@ -104,15 +104,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 5}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 5}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/5-Modum_10_sample_1/MODUM_10_sample_1_1.jpg" alt="">
                             </div>
@@ -124,15 +124,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 6}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 6}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/6-Art_5_sample_4/Art_5_sample_4_1.jpg" alt="">
                             </div>
@@ -144,15 +144,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 7}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 7}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/7-Modum_15_sample_8/MODUM_15_sample_8_1.jpg" alt="">
                             </div>
@@ -164,15 +164,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 8}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 8}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/8-Art_3_sample_5/ART_3_sample_5_1.jpg" alt="">
                             </div>
@@ -184,15 +184,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 9}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 9}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/9-extention_sample_1/Extension_sample_1_4.jpg" alt="">
                             </div>
@@ -204,15 +204,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 10}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 10}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/10-Art_Bungalow_sample_3/Art_Bungalow_sample_3_1.jpg" alt="">
                             </div>
@@ -224,15 +224,15 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-                <c:if test="${house.id == 11}">
-                    <div class="allHouse">
-                        <a href="house/${house.id}">
+                        </div>
+                    </c:if>
+                    <c:if test="${house.id == 11}">
+                        <div class="allHouse">
                             <div>
                                 <img src="../../image/11-Art_5_sample_6/Art_5_sample_6_2.jpg" alt="">
                             </div>
@@ -244,16 +244,47 @@
                                 <div><p>${house.roofPitch}</p></div>
                                 <div><p>${house.footprint}</p></div>
                             </div>
-                            <div class="button">
-                                <button>To the project</button>
+                            <div>
+                                <a href="house/${house.id}">
+                                    <button>To the project</button>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </c:if>
-            </c:forEach>
+                        </div>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </c:when>
+    </c:choose>
+    <div>
+        <h1>Be inspired by our HUF dream homes</h1>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                            class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="https://twitter.com/intent/tweet?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                            class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="whatsapp://send?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS%20https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F>"><i
+                            class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="https://www.pinterest.com/pin/create/link/?url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F&media=&description=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS"><i
+                            class="fa fa-pinterest-p"></i></a></li>
+                <li>
+                    <a href="mailto:?subject=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&body=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                            class="fa fa-envelope"></i></a></li>
+            </ul>
         </div>
-    </c:when>
-</c:choose>
+    </div>
+    <div>
+        <h3>Dream homes at a glance</h3>
+        <p>You have already found your desired plot and look for the most suitable house size? We would like to take
+            this opportunity to present you several construction projects in different sizes per square meter.
+            Experience the various options that a HUF house offer you!</p>
+        <p>Our examples serve as a first idea - every HUF house is unique; designed to meet all personal requirements
+            and positioned perfectly within the environment and topography of a plot.</p>
+    </div>
 </div>
 
 <!-- Optional JavaScript -->

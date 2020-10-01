@@ -10,11 +10,11 @@ body {
     width: 1000px;
     height: 160px;
     position: absolute;
-    margin: 255px 0 0 190px;
+    margin: 360px 0 0 185px;
     color: white;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 900;
 }
 
 .header-text .header-p {
