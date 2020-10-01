@@ -255,37 +255,24 @@
             </div>
         </c:when>
     </c:choose>
-    <div>
-        <h1>Be inspired by our HUF dream homes</h1>
-        <div>
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                            class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li>
-                    <a href="https://twitter.com/intent/tweet?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                            class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li>
-                    <a href="whatsapp://send?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS%20https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F>"><i
-                            class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-                <li>
-                    <a href="https://www.pinterest.com/pin/create/link/?url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F&media=&description=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS"><i
-                            class="fa fa-pinterest-p"></i></a></li>
-                <li>
-                    <a href="mailto:?subject=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&body=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                            class="fa fa-envelope"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <h3>Dream homes at a glance</h3>
-        <p>You have already found your desired plot and look for the most suitable house size? We would like to take
-            this opportunity to present you several construction projects in different sizes per square meter.
-            Experience the various options that a HUF house offer you!</p>
-        <p>Our examples serve as a first idea - every HUF house is unique; designed to meet all personal requirements
-            and positioned perfectly within the environment and topography of a plot.</p>
-    </div>
 </div>
+<%--<ul>
+    <li>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+    <li>
+        <a href="https://twitter.com/intent/tweet?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li>
+        <a href="whatsapp://send?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS%20https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F>"><i
+                class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+    <li>
+        <a href="https://www.pinterest.com/pin/create/link/?url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F&media=&description=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS"><i
+                class="fa fa-pinterest-p"></i></a></li>
+    <li>
+        <a href="mailto:?subject=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&body=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
+                class="fa fa-envelope"></i></a></li>
+</ul>--%>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
