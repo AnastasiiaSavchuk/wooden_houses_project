@@ -45,3 +45,40 @@ body {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+#info-2 {
+    margin: 130px 0;
+}
+
+.info-2-ul {
+    width: 600px;
+    float: left;
+    margin-right: 200px;
+}
+
+#info-2 h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#info-2 i, #info-3 i {
+    color: #44b827;
+}
+
+#info-2 li, #info-3 li {
+    padding: 3px 0;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    list-style: none;
+}
+
+.nav-menu img {
+    width: 360px;
+    height: 417px;
+}
+
+.nav-menu {
+    display: inline-block;
+    margin: 5px;
+}
