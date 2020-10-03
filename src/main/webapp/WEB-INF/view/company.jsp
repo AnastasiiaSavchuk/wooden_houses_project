@@ -20,63 +20,55 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<div class="main">
-    <c:choose>
-        <c:when test="${mode == 'COMPANY_VIEW'}">
-            <div>
-                <div class="header-text">
-                    <h1>Welcome to </h1>
-                    <h1>HUF HAUS London</h1>
-                    <p>Visit us in Weybridge!</p>
-                </div>
-                <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="100%" height="820" alt="">
-            </div>
-            <div id="company">
-                <c:forEach var="companyInfo" items="${companyInfo}">
-                    <c:if test="${companyInfo.id == 1}">
-                        <div id="info-1">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
-                            <p>${companyInfo.info1}</p>
-                            <p>${companyInfo.info2}</p>
-                            <p>${companyInfo.info3}</p>
-                            <p>${companyInfo.info4}</p>
-                            <p>${companyInfo.info5}</p>
-                            <p>${companyInfo.info6}</p>
-                            <p>${companyInfo.info7}</p>
-                            <p>${companyInfo.info8}</p>
+<c:choose>
+    <c:when test="${mode == 'COMPANY_VIEW'}">
+        <div id="company">
+            <c:forEach var="companyInfo" items="${companyInfo}">
+                <c:if test="${companyInfo.id == 1}">
+                    <div id="info-1">
+                        <div class="start-photo">
+                            <h1>Welcome to<br>HUF HAUS London<br><span>Visit us in Weybridge!</span></h1>
                         </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 2}">
-                        <div id="info-2">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <ul>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info8}</li>
-                            </ul>
-                        </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 3}">
-                        <div id="info-3">
-                            <ul>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</li>
-                                <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</li>
-                                <li>${companyInfo.info8}</li>
-                            </ul>
-                        </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 4}">
+                        <h1><b>${companyInfo.infoName}</b></h1>
+                        <h2><b>${companyInfo.infoType}</b></h2>
+                        <p>${companyInfo.info1}</p>
+                        <p>${companyInfo.info2}</p>
+                        <p>${companyInfo.info3}</p>
+                        <p>${companyInfo.info4}</p>
+                        <p>${companyInfo.info5}</p>
+                        <p>${companyInfo.info6}</p>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 2}">
+                    <div id="info-2">
+                        <h1><b>${companyInfo.infoName}</b></h1>
+                        <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info8}</li>
+                        </ul>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 3}">
+                    <div id="info-3">
+                        <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</li>
+                        </ul>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 4}">
+                    <div id="info-4">
                         <div class="menu">
                             <div class="quick-menu">
                                 <a href="${pageContext.request.contextPath}/frontend/gallery"><img
@@ -107,9 +99,12 @@
                                 </a></div>
                             </div>
                         </div>
-                        <div id="info-4">
+                        <div class="middle-photo">
+                            <h1>Glass. Light. Character.</h1>
+                        </div>
+                        <div>
                             <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
+                            <h4><b>${companyInfo.infoType}</b></h4>
                             <p>${companyInfo.info1}</p>
                             <p>${companyInfo.info2}</p>
                             <p>${companyInfo.info3}</p>
@@ -119,67 +114,55 @@
                             <p>${companyInfo.info7}</p>
                             <p>${companyInfo.info8}</p>
                         </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 5}">
-                        <div id="info-5">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
-                            <p>${companyInfo.info1}</p>
-                            <p>${companyInfo.info2}</p>
-                            <p>${companyInfo.info3}</p>
-                            <p>${companyInfo.info4}</p>
-                            <p>${companyInfo.info5}</p>
-                            <p>${companyInfo.info6}</p>
-                            <p>${companyInfo.info7}</p>
-                            <p>${companyInfo.info8}</p>
-                        </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 6}">
-                        <div id="info-6">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
-                            <p>${companyInfo.info1}</p>
-                            <p>${companyInfo.info2}</p>
-                            <p>${companyInfo.info3}</p>
-                            <p>${companyInfo.info4}</p>
-                            <p>${companyInfo.info5}</p>
-                            <p>${companyInfo.info6}</p>
-                            <p>${companyInfo.info7}</p>
-                            <p>${companyInfo.info8}</p>
-                        </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 7}">
-                        <div id="info-7">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
-                            <p>${companyInfo.info1}</p>
-                            <p>${companyInfo.info2}</p>
-                            <p>${companyInfo.info3}</p>
-                            <p>${companyInfo.info4}</p>
-                            <p>${companyInfo.info5}</p>
-                            <p>${companyInfo.info6}</p>
-                            <p>${companyInfo.info7}</p>
-                            <p>${companyInfo.info8}</p>
-                        </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 8}">
-                        <div id="info-8">
-                            <h1><b>${companyInfo.infoName}</b></h1>
-                            <h2><b>${companyInfo.infoType}</b></h2>
-                            <p>${companyInfo.info1}</p>
-                            <p>${companyInfo.info2}</p>
-                            <p>${companyInfo.info3}</p>
-                            <p>${companyInfo.info4}</p>
-                            <p>${companyInfo.info5}</p>
-                            <p>${companyInfo.info6}</p>
-                            <p>${companyInfo.info7}</p>
-                            <p>${companyInfo.info8}</p>
-                        </div>
-                    </c:if>
-                </c:forEach>
-            </div>
-        </c:when>
-    </c:choose>
-</div>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 5}">
+                    <div id="info-5">
+                        <h1><b>${companyInfo.infoName}</b></h1>
+                        <h2><b>${companyInfo.infoType}</b></h2>
+                        <p>${companyInfo.info1}</p>
+                        <p>${companyInfo.info2}</p>
+                        <p>${companyInfo.info3}</p>
+                        <p>${companyInfo.info4}</p>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 6}">
+                    <div id="info-6">
+                        <h2><b>${companyInfo.infoType}</b></h2>
+                        <p>${companyInfo.info1}</p>
+                        <p>${companyInfo.info2}</p>
+                        <p>${companyInfo.info3}</p>
+                        <p>${companyInfo.info4}</p>
+                        <p>${companyInfo.info5}</p>
+                        <p>${companyInfo.info6}</p>
+                        <p>${companyInfo.info7}</p>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 7}">
+                    <div id="info-7">
+                        <h2><b>${companyInfo.infoType}</b></h2>
+                        <p>${companyInfo.info1}</p>
+                        <p>${companyInfo.info2}</p>
+                        <p>${companyInfo.info3}</p>
+                        <p>${companyInfo.info4}</p>
+                        <p>${companyInfo.info5}</p>
+                        <p>${companyInfo.info6}</p>
+                    </div>
+                </c:if>
+                <c:if test="${companyInfo.id == 8}">
+                    <div id="info-8">
+                        <h2><b>${companyInfo.infoType}</b></h2>
+                        <p>${companyInfo.info1}</p>
+                        <p>${companyInfo.info2}</p>
+                        <p>${companyInfo.info3}</p>
+                        <p>${companyInfo.info4}</p>
+                        <p>${companyInfo.info5}</p>
+                        <p>${companyInfo.info6}</p>
+                    </div>
+                </c:if>
+            </c:forEach>
+        </div>
+    </c:when>
+</c:choose>
 </body>
 </html>

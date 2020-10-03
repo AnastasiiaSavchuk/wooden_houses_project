@@ -1,63 +1,61 @@
-#main {
+#company {
     margin-top: 70px;
 }
 
-.header-text {
-    position: absolute;
-    margin: 360px 0 0 185px;
-    color: white;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 44px;
-    font-weight: 900;
-}
-
-.header-text h1 {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 72px;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 72px;
-}
-
-#company {
-    margin-left: 215px;
-}
-
-#info-1 h1 {
-    margin-top: 154px;
+#company h1 {
+    margin: 0 215px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 42px;
     text-transform: uppercase;
-    line-height: 55px;
 }
 
-#info-1 h2 {
-    margin-bottom: 53px;
+#company h2 {
+    margin: 0 215px 50px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 42px;
     text-transform: uppercase;
-    line-height: 55px;
+    line-height: 65px;
 }
 
-#info-1 p {
+#company p {
+    margin: 0 215px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    margin: 0 215px 20px 0;
+}
+
+#info-1 .start-photo {
+    background-image: url("../image/aboutCompany/1_Header_House_Riverview.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 130px;
+}
+
+#info-1 .start-photo h1 {
+    position: relative;
+    padding-top: 290px;
+    min-height: 720px;
+    background: transparent;
+    color: white;
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 74px;
+}
+
+#info-1 .start-photo span {
+    color: white;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: none;
+}
+
+#info-1 p {
+    padding-bottom: 20px;
 }
 
 #info-2 h1 {
-    right: 215px;
-    margin: 120px 215px 50px 0;
+    margin: 80px 0 50px;
     text-align: center;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 42px;
-    text-transform: uppercase;
-    line-height: 55px;
-}
-
-#info-3 {
-    margin: -225px 215px 120px 700px;
 }
 
 #info-2 i, #info-3 i {
@@ -65,11 +63,20 @@
 }
 
 #info-2 li, #info-3 li {
+    margin: 0 215px;
     padding-bottom: 3px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
     font-weight: 300;
     list-style: none;
+}
+
+#info-3 {
+    margin: -225px 0 120px 700px;
+}
+
+.menu {
+    margin-left: 215px;
 }
 
 .quick-menu {
@@ -85,7 +92,7 @@
 .quick-menu button {
     position: relative;
     left: 82px;
-    margin: 30px 0;
+    margin: 30px 0 130px;
     padding: 9px 15px;
     width: 196px;
     height: 43px;
@@ -105,4 +112,40 @@
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
+}
+
+#info-4 .middle-photo {
+    background-image: url("../image/aboutCompany/6_ART_3_von_HUF_HAUS.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#info-4 .middle-photo h1 {
+    padding: 200px 0 !important;
+    position: relative;
+    min-height: 550px;
+    background: transparent;
+    text-align: center;
+    color: #ffffff;
+    font-size: 74px;
+    font-weight: 700;
+}
+
+#info-4 h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#info-4 h4 {
+    margin: 0 215px 20px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#info-5 h1 {
+    margin-top: 130px;
+    text-align: center;
+    text-transform: none;
+    font-size: 24px;
 }

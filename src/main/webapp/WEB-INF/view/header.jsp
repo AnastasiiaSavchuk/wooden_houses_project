@@ -20,9 +20,8 @@
 <header id="header">
     <div>
         <div id="logo" class="pull-left">
-            <h1 class="scrollto">
                 <a href="${pageContext.request.contextPath}/frontend/company">
-                    <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a></h1>
+                    <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a>
         </div>
 
         <nav id="nav-menu-container">
