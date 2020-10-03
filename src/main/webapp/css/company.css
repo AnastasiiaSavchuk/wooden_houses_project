@@ -1,14 +1,8 @@
-body {
-    position: relative;
-}
-
 #main {
     margin-top: 70px;
 }
 
 .header-text {
-    width: 1000px;
-    height: 160px;
     position: absolute;
     margin: 360px 0 0 185px;
     color: white;
@@ -17,48 +11,53 @@ body {
     font-weight: 900;
 }
 
-.header-text .header-p {
+.header-text h1 {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 72px;
+    font-weight: 900;
     text-transform: uppercase;
     line-height: 72px;
 }
 
 #company {
-    position: relative;
-    margin: 154px 218px 100px;
+    margin-left: 215px;
 }
 
-#company h1, #company h2 {
+#info-1 h1 {
+    margin-top: 154px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 42px;
     text-transform: uppercase;
     line-height: 55px;
 }
 
-#company h2 {
+#info-1 h2 {
     margin-bottom: 53px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    line-height: 55px;
 }
 
-#company p {
+#info-1 p {
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
-    margin-bottom: 20px;
-}
-
-#info-2 {
-    margin: 130px 0;
-}
-
-.info-2-ul {
-    width: 600px;
-    float: left;
-    margin-right: 200px;
+    font-weight: 300;
+    margin: 0 215px 20px 0;
 }
 
 #info-2 h1 {
+    right: 215px;
+    margin: 120px 215px 50px 0;
     text-align: center;
-    margin-bottom: 50px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    line-height: 55px;
+}
+
+#info-3 {
+    margin: -225px 215px 120px 700px;
 }
 
 #info-2 i, #info-3 i {
@@ -66,19 +65,44 @@ body {
 }
 
 #info-2 li, #info-3 li {
-    padding: 3px 0;
+    padding-bottom: 3px;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
     font-weight: 300;
     list-style: none;
 }
 
-.nav-menu img {
-    width: 360px;
-    height: 417px;
+.quick-menu {
+    display: inline-block;
+    margin-right: 30px;
 }
 
-.nav-menu {
-    display: inline-block;
-    margin: 5px;
+.quick-menu img {
+    width: 360px;
+    height: 415px;
+}
+
+.quick-menu button {
+    position: relative;
+    left: 82px;
+    margin: 30px 0;
+    padding: 9px 15px;
+    width: 196px;
+    height: 43px;
+    border: 2px solid #262626;
+    text-align: center;
+}
+
+.quick-menu button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+}
+
+.quick-menu a, .quick-menu a:hover {
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
 }

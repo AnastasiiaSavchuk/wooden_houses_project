@@ -25,8 +25,8 @@
         <c:when test="${mode == 'COMPANY_VIEW'}">
             <div>
                 <div class="header-text">
-                    <p class="header-p">Welcome to </p>
-                    <p class="header-p">HUF HAUS London</p>
+                    <h1>Welcome to </h1>
+                    <h1>HUF HAUS London</h1>
                     <p>Visit us in Weybridge!</p>
                 </div>
                 <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" width="100%" height="820" alt="">
@@ -49,8 +49,7 @@
                     </c:if>
                     <c:if test="${companyInfo.id == 2}">
                         <div id="info-2">
-                        <h1><b>${companyInfo.infoName}</b></h1>
-                        <div class="info-2-ul">
+                            <h1><b>${companyInfo.infoName}</b></h1>
                             <ul>
                                 <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</li>
                                 <li><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</li>
@@ -76,39 +75,38 @@
                                 <li>${companyInfo.info8}</li>
                             </ul>
                         </div>
-                        </div>
-                        <div class="nav-menu">
-                            <div class="gallery">
-                                <div><a href="${pageContext.request.contextPath}/frontend/gallery"><img
-                                        src="../../image/aboutCompany/2_Gallery.jpg" alt=""></a></div>
+                    </c:if>
+                    <c:if test="${companyInfo.id == 4}">
+                        <div class="menu">
+                            <div class="quick-menu">
+                                <a href="${pageContext.request.contextPath}/frontend/gallery"><img
+                                        src="../../image/aboutCompany/2_Gallery.jpg" alt=""></a>
                                 <div><a href="${pageContext.request.contextPath}/frontend/gallery">
                                     <button>Gallery</button>
                                 </a></div>
                             </div>
-                            <div class="houses">
-                                <div><a href="${pageContext.request.contextPath}/frontend/house"><img
-                                        src="../../image/aboutCompany/3_HUF_Haus_Finder.jpg" alt=""></a></div>
+                            <div class="quick-menu">
+                                <a href="${pageContext.request.contextPath}/frontend/house"><img
+                                        src="../../image/aboutCompany/3_HUF_Haus_Finder.jpg" alt=""></a>
                                 <div><a href="${pageContext.request.contextPath}/frontend/house">
                                     <button>HUF Houses Finder</button>
                                 </a></div>
                             </div>
-                            <div class="service">
-                                <div><a href="${pageContext.request.contextPath}/frontend/service"><img
-                                        src="../../image/aboutCompany/4_Show-House.jpg" alt=""></a></div>
+                            <div class="quick-menu">
+                                <a href="${pageContext.request.contextPath}/frontend/service"><img
+                                        src="../../image/aboutCompany/4_Show-House.jpg" alt=""></a>
                                 <div><a href="${pageContext.request.contextPath}/frontend/service">
                                     <button>Show service</button>
                                 </a></div>
                             </div>
-                            <div class="building">
-                                <div><a href="${pageContext.request.contextPath}/frontend/building_a_house"><img
-                                        src="../../image/aboutCompany/5_steps_building_house.jpg" alt=""></a></div>
+                            <div class="quick-menu">
+                                <a href="${pageContext.request.contextPath}/frontend/building_a_house"><img
+                                        src="../../image/aboutCompany/5_steps_building_house.jpg" alt=""></a>
                                 <div><a href="${pageContext.request.contextPath}/frontend/building_a_house">
                                     <button>Six steps to dream home</button>
                                 </a></div>
                             </div>
                         </div>
-                    </c:if>
-                    <c:if test="${companyInfo.id == 4}">
                         <div id="info-4">
                             <h1><b>${companyInfo.infoName}</b></h1>
                             <h2><b>${companyInfo.infoType}</b></h2>
