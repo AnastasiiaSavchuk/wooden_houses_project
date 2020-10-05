@@ -1,11 +1,39 @@
-//плавна заміна фото в хедері
-let slideIndex = 0;
-showSlides();
+//зміна слайда вибором кнопки
+let slideIndex = 1;
+showOneSlide(slideIndex);
 
-function showSlides() {
+function currentSlide(n) {
+    showOneSlide(slideIndex = n);
+}
+
+function showOneSlide(n) {
     let i;
     let slides = document.getElementsByClassName("start-photo");
-    let underscores = document.getElementsByClassName("underscore");
+    let currentDots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < currentDots.length; i++) {
+        currentDots[i].className = currentDots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    currentDots[slideIndex - 1].className += " active";
+}
+
+
+//плавна заміна фото кожні 5 секунд
+showNextSlides();
+
+function showNextSlides() {
+    let i;
+    let slides = document.getElementsByClassName("start-photo");
+    let dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -13,12 +41,12 @@ function showSlides() {
     if (slideIndex > slides.length) {
         slideIndex = 1
     }
-    for (i = 0; i < underscores.length; i++) {
-        underscores[i].className = underscores[i].className.replace(" active", "");
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    underscores[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 6000); // Change image every 2 seconds
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showNextSlides, 5000); // Change image every 5 seconds
 }
 
 //плавне відкривання тексту
