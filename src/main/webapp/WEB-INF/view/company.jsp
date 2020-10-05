@@ -31,40 +31,32 @@
                                 <h1>Welcome to<br>HUF HAUS London<br><span>Visit us in Weybridge!</span></h1>
                                 <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" alt="" width="2560"
                                      height="720">
-                                <div style="text-align:center">
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                </div>
                             </div>
                             <div class="start-photo">
                                 <h1>In Harmony<br><span>Discovery nature. Evry day</span></h1>
                                 <img src="../../image/aboutCompany/2_Header-HUF-Haus-ART-6.jpg" alt="" width="2560"
                                      height="720">
-                                <div style="text-align:center">
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                </div>
                             </div>
                             <div class="start-photo">
                                 <h1>In Harmony<br><span>In the front row of nature's theatre</span></h1>
                                 <img src="../../image/aboutCompany/3_Header_HUF_Haus_ART_3.jpg" alt="" width="2560"
                                      height="720">
-                                <div style="text-align:center">
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                    <span class="underscore"></span>
-                                </div>
                             </div>
                         </div>
-                        <h1>${companyInfo.infoName}<br>${companyInfo.infoType}</h1>
-                        <p>${companyInfo.info1}</p>
-                        <p>${companyInfo.info2}</p>
-                        <p>${companyInfo.info3}</p>
-                        <p>${companyInfo.info4}</p>
-                        <p>${companyInfo.info5}</p>
-                        <p>${companyInfo.info6}</p>
+                        <div style="text-align: center; margin-top: -2.5%;">
+                            <button class="dot" onclick="currentSlide(1)"></button>
+                            <button class="dot" onclick="currentSlide(2)"></button>
+                            <button class="dot" onclick="currentSlide(3)"></button>
+                        </div>
+                        <div style="margin-top: 10%">
+                            <h1>${companyInfo.infoName}<br>${companyInfo.infoType}</h1>
+                            <p>${companyInfo.info1}</p>
+                            <p>${companyInfo.info2}</p>
+                            <p>${companyInfo.info3}</p>
+                            <p>${companyInfo.info4}</p>
+                            <p>${companyInfo.info5}</p>
+                            <p>${companyInfo.info6}</p>
+                        </div>
                     </div>
                 </c:if>
                 <c:if test="${companyInfo.id == 2}">

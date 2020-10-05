@@ -1,5 +1,9 @@
+#company {
+    margin-top: 70px;
+}
+
 #company h1 {
-    margin: 3% 10% 3%;
+    margin: 4% 10% 3%;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 42px;
     font-weight: 700;
@@ -23,25 +27,30 @@
 /* Slideshow container */
 .slideshow {
     max-width: 100%;
+    position: relative;
     margin: auto;
 }
 
 /* The dots/bullets/indicators */
-.underscore {
-    height: 2px;
+.dot {
+    height: 3px;
     width: 50px;
-    background-color: #e6e6e6;
-    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0 5px;
+    background: #e6e6e6;
+    border: none;
+    outline: none !important;
     transition: background-color 0.6s ease;
 }
 
 .active {
-    background-color: #44b827;
+    background: #44b827;
 }
 
 .start-photo img {
     max-width: 100%;
-    max-height: 820px;
+    max-height: 750px;
     height: auto;
 }
 
@@ -155,7 +164,5 @@
 
 /* On smaller screens, decrease text size налаштування малого екрану*/
 @media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px
-    }
+
 }
