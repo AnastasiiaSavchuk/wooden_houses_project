@@ -22,18 +22,17 @@
         <a href="${pageContext.request.contextPath}/frontend/company">
             <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a>
     </div>
-
     <nav id="nav-menu-container">
-        <ul class="nav-menu">
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></li>
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></li>
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></li>
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
-                a house</a></li>
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></li>
-            <li class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
-                    class="fa fa-search"></i></a></li>
-        </ul>
+        <div class="nav-menu">
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
+                a house</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
+                    class="fa fa-search"></i></a></p>
+        </div>
     </nav>
 </div>
 

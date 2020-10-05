@@ -1,53 +1,55 @@
+body {
+    position: absolute;
+}
+
 #header {
     width: 100%;
-    height: 6.5%;
+    height: 70px;
     position: fixed;
     top: 0;
     background-color: #fff;
-    box-shadow: 5px 0px 15px #c3c3c3;
+    box-shadow: 5px 0 15px #c3c3c3;
 }
 
 #header #logo img {
     position: relative;
-    margin: 16px 0 16px 100px;
+    margin: 17px 0 15px 50px;
 }
 
 #nav-menu-container {
     float: right;
     position: relative;
-    padding: 22px 150px 22px 0;
+    padding: 0 100px 27px 0;
 }
 
-.nav-menu > li {
-    float: left;
-    margin-left: 5px;
-}
-
-.nav-menu li {
+.nav-menu p {
     position: relative;
-    white-space: nowrap;
-}
-
-.nav-menu * {
-    outline: none;
-    border: none;
-    margin: 0;
-    padding: 0 5px;
-    list-style: none;
+    float: left;
 }
 
 .nav-menu a {
+    width: 100%;
+    position: relative;
+    padding: 23px 17px;
+    display: block;
+    outline: none;
+    overflow: hidden;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
     color: #262626;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
+
 }
 
-.nav-menu a:hover {
-    color: #44b827 !important;
-    /*border-bottom: 2px solid #44b827;*/
+.nav-menu p a:hover {
+    border-bottom: 2px solid #44b827;
+}
+
+.nav-menu p a:active {
+    border-bottom: 2px solid #44b827;
 }
 
 #mobile-nav-toggle {
@@ -97,20 +99,20 @@ body.mobile-nav-active #mobile-nav {
     transition: 0.4s;
 }
 
-#mobile-nav ul {
+#mobile-nav .nav-menu {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-#mobile-nav ul li {
+#mobile-nav .nav-menu p {
     position: relative;
 }
 
-#mobile-nav ul li a {
+#mobile-nav .nav-menu p a {
     width: 100%;
     position: relative;
-    padding: 10px 22px 10px 15px;
+    padding: 10px 25px;
     display: block;
     outline: none;
     overflow: hidden;
@@ -120,13 +122,18 @@ body.mobile-nav-active #mobile-nav {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border-bottom: 2px solid transparent;
 }
 
-#mobile-nav ul li a:hover {
-    color: #44b827;
+#mobile-nav .nav-menu p a:hover {
+    border-bottom: 2px solid #44b827;
 }
 
-@media (max-width: 1168px) {
+#mobile-nav .nav-menu p a:active {
+    border-bottom: 2px solid #44b827;
+}
+
+@media (max-width: 1048px) {
     #nav-menu-container {
         display: none;
     }
