@@ -19,15 +19,6 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div style="margin: 15px; font-size: 14px; color: green;" class="navbar-header">Spring MVC -Logos</div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="/frontend/house">All Houses</a></li>
-        </ul>
-    </div>
-</nav>
-
 <div class="container">
 
     <c:choose>
