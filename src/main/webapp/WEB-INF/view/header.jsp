@@ -17,27 +17,25 @@
     <link rel="stylesheet" href="../../css/header.css">
 </head>
 <body>
-<header id="header">
-    <div>
-        <div id="logo" class="pull-left">
-                <a href="${pageContext.request.contextPath}/frontend/company">
-                    <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a>
-        </div>
-
-        <nav id="nav-menu-container">
-            <ul class="nav-menu">
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
-                    a house</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></li>
-                <li class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
-                        class="fa fa-search"></i></a></li>
-            </ul>
-        </nav>
+<div id="header">
+    <div id="logo" class="pull-left">
+        <a href="${pageContext.request.contextPath}/frontend/company">
+            <img class="logo" src="../../image/logo-black.svg" width="210" height="30" alt=""></a>
     </div>
-</header>
+
+    <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></li>
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></li>
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></li>
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building
+                a house</a></li>
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/frontend/contacts">Contact</a></li>
+            <li class="menu-active"><a href="${pageContext.request.contextPath}/search.jsp"><i
+                    class="fa fa-search"></i></a></li>
+        </ul>
+    </nav>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
