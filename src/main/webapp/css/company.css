@@ -27,13 +27,12 @@
 /* Slideshow container */
 .slideshow {
     max-width: 100%;
-    position: relative;
     margin: auto;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-    height: 3px;
+    height: 2px;
     width: 50px;
     position: relative;
     padding: 0;
@@ -56,7 +55,7 @@
 
 #info-1 .start-photo h1 {
     position: absolute;
-    padding-top: 16%;
+    padding-top: 11.5%;
     background: transparent;
     color: white;
     font-size: 74px;
@@ -71,24 +70,22 @@
     text-transform: none;
 }
 
-#info-1 p, #info-5 p, #info-6 p, #info-7 p, #info-8 p {
-    padding-top: 1%;
+#info-1 p, #info-5 p, #info-7 p, #info-8 p {
+    padding-bottom: 1%;
 }
 
-#info-2 h1 {
-    text-align: center;
-}
-
-#info-2 i, #info-3 i {
+.list-1 i {
     color: #44b827;
 }
 
-#info-3 {
-    margin: -225px 0 120px 700px;
+.list-1 {
+    margin-left: 11%;
+    display: inline-flex;
 }
 
 .menu {
     margin-left: 11%;
+    margin-top: 5%;
 }
 
 .quick-menu {
@@ -102,9 +99,7 @@
 }
 
 .quick-menu button {
-    position: relative;
-    left: 82px;
-    margin: 30px 0;
+    margin: 30px 82px;
     padding: 9px 15px;
     width: 196px;
     height: 43px;
@@ -126,10 +121,13 @@
     text-decoration: none;
 }
 
-#info-4 .middle-photo {
+.middle-photo {
     background-image: url("../image/aboutCompany/6_ART_3_von_HUF_HAUS.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
 }
 
 #info-4 .middle-photo h1 {
@@ -141,10 +139,6 @@
     color: #ffffff;
     font-size: 74px;
     font-weight: 700;
-}
-
-#info-4 h1 {
-    text-align: center;
 }
 
 #info-5 h1 {
@@ -159,10 +153,4 @@
     font-size: 32px;
     font-weight: 700;
     background: #e6e6e6;
-}
-
-
-/* On smaller screens, decrease text size налаштування малого екрану*/
-@media only screen and (max-width: 300px) {
-
 }

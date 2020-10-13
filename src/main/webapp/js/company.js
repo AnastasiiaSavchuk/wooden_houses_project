@@ -26,7 +26,6 @@ function showOneSlide(n) {
     currentDots[slideIndex - 1].className += " active";
 }
 
-
 //плавна заміна фото кожні 5 секунд
 showNextSlides();
 

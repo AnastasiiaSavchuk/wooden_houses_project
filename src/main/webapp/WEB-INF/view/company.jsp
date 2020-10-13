@@ -60,31 +60,29 @@
                     </div>
                 </c:if>
                 <c:if test="${companyInfo.id == 2}">
+                    <h1 style="text-align: center">${companyInfo.infoName}</h1>
+                    <div class="list-1">
                     <div id="info-2">
-                        <h1>${companyInfo.infoName}</h1>
-                        <div>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info8}</p>
-                        </div>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info8}</p>
                     </div>
                 </c:if>
                 <c:if test="${companyInfo.id == 3}">
                     <div id="info-3">
-                        <div>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</p>
-                            <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</p>
-                        </div>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info3}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info4}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</p>
+                    </div>
                     </div>
                 </c:if>
                 <c:if test="${companyInfo.id == 4}">
@@ -132,7 +130,7 @@
                 </c:if>
                 <c:if test="${companyInfo.id == 5}">
                     <div id="info-5">
-                        <h1>${companyInfo.infoName}</h1>
+                        <h1 style="text-align: center">${companyInfo.infoName}</h1>
                         <button class="accordion">${companyInfo.infoType}</button>
                         <div class="panel">
                             <p>${companyInfo.info1}</p>
