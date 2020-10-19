@@ -121,7 +121,7 @@
                             <h1>Glass. Light. Character.</h1>
                         </div>
                         <div>
-                            <h1>${companyInfo.infoName}</h1>
+                            <h1 style="text-align: center">${companyInfo.infoName}</h1>
                             <h2>${companyInfo.infoType}</h2>
                             <p>${companyInfo.info1}</p>
                             <p>${companyInfo.info2}</p>
@@ -130,7 +130,7 @@
                 </c:if>
                 <c:if test="${companyInfo.id == 5}">
                     <div id="info-5">
-                        <h1 style="text-align: center">${companyInfo.infoName}</h1>
+                        <h1 style="text-align: center;text-transform: none;font-size: 24px;">${companyInfo.infoName}</h1>
                         <button class="accordion">${companyInfo.infoType}</button>
                         <div class="panel">
                             <p>${companyInfo.info1}</p>

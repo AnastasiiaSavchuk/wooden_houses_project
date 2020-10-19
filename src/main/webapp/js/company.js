@@ -48,7 +48,7 @@ function showNextSlides() {
     setTimeout(showNextSlides, 5000); // Change image every 5 seconds
 }
 
-//плавне відкривання тексту
+//акордеон - плавне відкривання тексту
 let acc = document.getElementsByClassName("accordion");
 let i;
 

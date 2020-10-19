@@ -40,7 +40,7 @@
     background: #e6e6e6;
     border: none;
     outline: none !important;
-    transition: background-color 0.6s ease;
+    transition: background-color 2s ease;
 }
 
 .active {
@@ -70,7 +70,7 @@
     text-transform: none;
 }
 
-#info-1 p, #info-5 p, #info-7 p, #info-8 p {
+#info-1 p, .panel p {
     padding-bottom: 1%;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .list-1 {
-    margin-left: 11%;
+    margin: 0 11%;
     display: inline-flex;
 }
 
@@ -141,16 +141,41 @@
     font-weight: 700;
 }
 
-#info-5 h1 {
-    text-align: center;
-    text-transform: none;
-    font-size: 24px;
+.accordion {
+    margin: 0 10%;
+    padding: 1% 2%;
+    width: 80%;
+    text-align: left;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: #ededed;
+    border: none;
+    outline: none !important;
+    transition: background .5s ease;
 }
 
-#info-5 button, #info-6 button, #info-7 button, #info-8 button {
-    margin: 0 11%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    background: #e6e6e6;
+.accordion:after {
+    content: '\2295';
+    color: #262626;
+    float: right;
+    margin-left: 2%;
+}
+
+.accordion:hover {
+    background: #d9d9d9;
+    border: none;
+    outline: none !important;
+}
+
+.active:after {
+    content: "\2297";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
