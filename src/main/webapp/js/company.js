@@ -1,5 +1,5 @@
 //зміна слайда вибором кнопки
-let slideIndex = 1;
+let slideIndex = 0;
 showOneSlide(slideIndex);
 
 function currentSlide(n) {
@@ -20,10 +20,10 @@ function showOneSlide(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < currentDots.length; i++) {
-        currentDots[i].className = currentDots[i].className.replace(" active", "");
+        currentDots[i].className = currentDots[i].className.replace(" activeDot", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    currentDots[slideIndex - 1].className += " active";
+    currentDots[slideIndex - 1].className += " activeDot";
 }
 
 //плавна заміна фото кожні 5 секунд
@@ -41,10 +41,10 @@ function showNextSlides() {
         slideIndex = 1
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" activeDot", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    dots[slideIndex - 1].className += " activeDot";
     setTimeout(showNextSlides, 5000); // Change image every 5 seconds
 }
 

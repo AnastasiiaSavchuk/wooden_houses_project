@@ -61,7 +61,6 @@
                 </c:if>
                 <c:if test="${companyInfo.id == 2}">
                     <h1 style="text-align: center">${companyInfo.infoName}</h1>
-                    <div class="list-1">
                     <div id="info-2">
                         <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info1}</p>
                         <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info2}</p>
@@ -82,7 +81,6 @@
                         <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info5}</p>
                         <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info6}</p>
                         <p><i class="fa fa-check" aria-hidden="true"></i> ${companyInfo.info7}</p>
-                    </div>
                     </div>
                 </c:if>
                 <c:if test="${companyInfo.id == 4}">
@@ -118,7 +116,7 @@
                             </div>
                         </div>
                         <div class="middle-photo">
-                            <h1>Glass. Light. Character.</h1>
+                            <h1 style="text-align: center">Glass. Light. Character.</h1>
                         </div>
                         <div>
                             <h1 style="text-align: center">${companyInfo.infoName}</h1>

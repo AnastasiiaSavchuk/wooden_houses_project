@@ -43,7 +43,7 @@
     transition: background-color 2s ease;
 }
 
-.active {
+.activeDot {
     background: #44b827;
 }
 
@@ -74,13 +74,17 @@
     padding-bottom: 1%;
 }
 
-.list-1 i {
+#info-2 i, #info-3 i {
     color: #44b827;
 }
 
-.list-1 {
-    margin: 0 11%;
-    display: inline-flex;
+#info-2 {
+    float: left;
+    margin: 0 15% 0 8%;
+}
+
+#info-3 {
+    margin: 0 0 0 6%;
 }
 
 .menu {
@@ -135,7 +139,6 @@
     position: relative;
     min-height: 550px;
     background: transparent;
-    text-align: center;
     color: #ffffff;
     font-size: 74px;
     font-weight: 700;
@@ -158,6 +161,8 @@
 .accordion:after {
     content: '\2295';
     color: #262626;
+    font-size: 35px;
+    font-weight: lighter;
     float: right;
     margin-left: 2%;
 }
