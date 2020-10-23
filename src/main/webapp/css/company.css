@@ -1,42 +1,40 @@
-#company {
-    margin-top: 70px;
+#slideHeader {
+    margin: 70px 0;
 }
 
-#company h1 {
-    margin: 4% 10% 3%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 42px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-#company h2 {
-    margin: 3% 10% 3%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#company p {
-    margin: 0 10%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* Slideshow container */
 .slideshow {
     max-width: 100%;
     margin: auto;
 }
 
-/* The dots/bullets/indicators */
+.start-photo img {
+    max-width: 100%;
+    max-height: 750px;
+    height: auto;
+}
+
+.start-photo h1 {
+    position: absolute;
+    padding: 16% 10%;
+    background: transparent;
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 74px !important;
+    font-weight: 900 !important;
+    line-height: 74px !important;
+}
+
+.start-photo span {
+    color: white;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: none;
+}
+
 .dot {
+    margin: 0 0.5% 0 0;
     height: 2px;
     width: 50px;
-    position: relative;
-    padding: 0;
-    margin: 0 5px;
     background: #e6e6e6;
     border: none;
     outline: none !important;
@@ -47,27 +45,29 @@
     background: #44b827;
 }
 
-.start-photo img {
-    max-width: 100%;
-    max-height: 750px;
-    height: auto;
+.main {
+    margin: 0 10%;
 }
 
-#info-1 .start-photo h1 {
-    position: absolute;
-    padding-top: 11.5%;
-    background: transparent;
-    color: white;
-    font-size: 74px;
-    font-weight: 900;
-    line-height: 74px;
+.main h1 {
+    padding: 5% 0 3%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-#info-1 .start-photo span {
-    color: white;
-    font-size: 44px;
-    font-weight: 900;
-    text-transform: none;
+.main h2 {
+    padding-bottom: 2%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main p {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 #info-1 p, .panel p {
@@ -80,21 +80,18 @@
 
 #info-2 {
     float: left;
-    margin: 0 15% 0 8%;
+    margin-right: 17%;
 }
 
-#info-3 {
-    margin: 0 0 0 6%;
-}
-
-.menu {
-    margin-left: 11%;
-    margin-top: 5%;
+#middleNav {
+    clear: both;
+    padding: 5%;
+    text-align: center;
 }
 
 .quick-menu {
     display: inline-block;
-    margin-right: 30px;
+    padding-right: 1.5%;
 }
 
 .quick-menu img {
@@ -134,20 +131,21 @@
     background-size: cover;
 }
 
-#info-4 .middle-photo h1 {
+.middle-photo h1 {
     padding: 10% 0 !important;
-    position: relative;
     min-height: 550px;
     background: transparent;
     color: #ffffff;
-    font-size: 74px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 72px;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .accordion {
-    margin: 0 10%;
-    padding: 1% 2%;
-    width: 80%;
+    padding: 1.5% 2% 0.7%;
+    width: 100%;
     text-align: left;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 28px;
@@ -161,8 +159,8 @@
 .accordion:after {
     content: '\2295';
     color: #262626;
-    font-size: 35px;
-    font-weight: lighter;
+    font-size: 40px;
+    font-weight: 200;
     float: right;
     margin-left: 2%;
 }

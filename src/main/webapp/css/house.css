@@ -3,40 +3,88 @@ body {
 }
 
 #main {
-    margin-top: 70px;
+    margin: 0 10%;
 }
 
-.header-text {
-    position: absolute;
-    margin: 320px 0 0 190px;
-    color: white;
+#main h1 {
+    margin: 0 10%;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 55px;
+    font-size: 23px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-#houses {
-    position: relative;
-    margin: 78px 15px 78px 185px;
+#main h2 {
+    margin: 0 10%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-#houses .allHouse {
+#main p {
+    margin: 0 10%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.slideshow {
+    max-width: 100%;
+    margin: auto;
+}
+
+.start-photo img {
+    max-width: 100%;
+    max-height: 580px;
+    height: auto;
+}
+
+.start-photo h1 {
+    position: absolute;
+    padding-top: 13.5%;
+    background: transparent;
+    color: white;
+    font-size: 55px !important;
+    line-height: 74px !important;
+}
+
+.dot {
+    margin: 0 0.5% 6% 0;
+    height: 2px;
+    width: 50px;
+    position: relative;
+    padding: 0;
+    background: #e6e6e6;
+    border: none;
+    outline: none !important;
+    transition: background-color 2s ease;
+}
+
+.activeDot {
+    background: #44b827;
+}
+
+#showHouse {
+    margin: 0 10%;
+}
+
+.allHouse {
     display: inline-block;
     margin: 0 28px 28px 0;
 }
 
-#houses .allHouse div img {
+.allHouse div img {
     width: 360px;
     height: 245px;
 }
 
-#houses .allHouse:hover, #houses .allHouse button:hover {
+.allHouse:hover, #houses .allHouse button:hover {
     box-shadow: 0 0 6px #bfbfbf;
 
 }
 
-#houses .allHouse button:hover {
+.allHouse button:hover {
     background-color: #44b827;
     border-color: #44b827;
     outline: none;

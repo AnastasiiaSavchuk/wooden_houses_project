@@ -23,22 +23,31 @@
 <div id="main">
     <c:choose>
         <c:when test="${mode == 'HOUSE_VIEW'}">
-            <div>
-                <div class="header-text">
-                    <p class="header-p">Be inspired by our dream house</p>
+            <div class="slideshow">
+                <div class="start-photo">
+                    <h1>Be inspired by our dream house</h1>
+                    <img src="../../image/dream_house/1_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
+                         height="580">
                 </div>
-                <img src="../../image/house_header_ART_5.jpg" width="100%" height="580" alt="">
+                <div class="start-photo">
+                    <img src="../../image/dream_house/2_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
+                         height="580">
+                </div>
             </div>
-            <div id="houses">
+            <div style="text-align: center; margin-top: -2.5%;">
+                <button class="dot" onclick="currentSlide(1)"></button>
+                <button class="dot" onclick="currentSlide(2)"></button>
+            </div>
+            <div id="showHouse">
                 <c:forEach var="house" items="${house}">
                     <c:if test="${house.id == 1}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__2.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -52,13 +61,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 2}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/2-Modum_8_sample_4/MODUM_8_sample_4_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -72,13 +81,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 3}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/3-Modum_7_sample_2/MODUM_7_sample_2_3.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -92,13 +101,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 4}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/4-Art_3_sample_2/Art_3_sample_2_2.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -112,13 +121,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 5}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/5-Modum_10_sample_1/MODUM_10_sample_1_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -132,13 +141,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 6}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/6-Art_5_sample_4/Art_5_sample_4_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -152,13 +161,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 7}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/7-Modum_15_sample_8/MODUM_15_sample_8_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -172,13 +181,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 8}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/8-Art_3_sample_5/ART_3_sample_5_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -192,13 +201,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 9}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/9-extention_sample_1/Extension_sample_1_4.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -212,13 +221,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 10}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/10-Art_Bungalow_sample_3/Art_Bungalow_sample_3_1.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -232,13 +241,13 @@
                         </div>
                     </c:if>
                     <c:if test="${house.id == 11}">
-                        <div class="allHouse">
+                        <div class="aboutHouse">
                             <div>
                                 <img src="../../image/11-Art_5_sample_6/Art_5_sample_6_2.jpg" alt="">
                             </div>
                             <div class="shortInfo">
-                                <h2><b>${house.houseName}</b></h2>
-                                <h4>${house.houseType}</h4>
+                                <h1>${house.houseName}</h1>
+                                <h2>${house.houseType}</h2>
                                 <div><p>${house.feature1}</p></div>
                                 <div><p>${house.feature2}</p></div>
                                 <div><p>${house.roofPitch}</p></div>
@@ -287,5 +296,6 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+<script src="../../js/slideShow_accordion.js"></script>
 </body>
 </html>
