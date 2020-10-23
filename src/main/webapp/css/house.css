@@ -1,33 +1,6 @@
-body {
-    position: relative;
+#slideHeader {
+    margin: 70px 0;
 }
-
-#main {
-    margin: 0 10%;
-}
-
-#main h1 {
-    margin: 0 10%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-#main h2 {
-    margin: 0 10%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#main p {
-    margin: 0 10%;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
-
 
 .slideshow {
     max-width: 100%;
@@ -36,25 +9,24 @@ body {
 
 .start-photo img {
     max-width: 100%;
-    max-height: 580px;
+    max-height: 600px;
     height: auto;
 }
 
 .start-photo h1 {
     position: absolute;
-    padding-top: 13.5%;
+    padding: 18% 10%;
     background: transparent;
     color: white;
-    font-size: 55px !important;
-    line-height: 74px !important;
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .dot {
-    margin: 0 0.5% 6% 0;
+    margin-right: 0.5%;
     height: 2px;
     width: 50px;
-    position: relative;
-    padding: 0;
     background: #e6e6e6;
     border: none;
     outline: none !important;
@@ -65,52 +37,34 @@ body {
     background: #44b827;
 }
 
-#showHouse {
-    margin: 0 10%;
+#main {
+    margin: 5% 5% 0 10%;
 }
 
-.allHouse {
-    display: inline-block;
-    margin: 0 28px 28px 0;
-}
-
-.allHouse div img {
-    width: 360px;
-    height: 245px;
-}
-
-.allHouse:hover, #houses .allHouse button:hover {
-    box-shadow: 0 0 6px #bfbfbf;
-
-}
-
-.allHouse button:hover {
-    background-color: #44b827;
-    border-color: #44b827;
-    outline: none;
-}
-
-.shortInfo {
-    padding: 35px 20px;
-}
-
-.shortInfo h2, .shortInfo h4 {
+#main h1 {
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 23px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-.shortInfo h4 {
-    margin: -5px 0 25px 0;
-    text-transform: lowercase !important;
+#main h2 {
+    margin-bottom: 10%;
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 0.5px;
+
 }
 
-.shortInfo p {
+#main p {
     border-left: 4px solid #44b827;
-    padding-left: 5px;
-    margin-left: 15px;
+    margin-left: 8%;
+    padding-left: 2%;
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
@@ -118,19 +72,41 @@ body {
     text-transform: uppercase;
 }
 
-.allHouse button {
-    position: relative;
-    left: 82px;
-    margin: 0 0 30px;
-    padding: 9px 15px;
+#main img {
+    width: 360px;
+    height: 245px;
+}
+
+#main .aboutHouse {
+    display: inline-block;
+    margin: 0 1.5% 2% 0;
+}
+
+.aboutHouse:hover {
+    box-shadow: 0 0 6px #bfbfbf;
+}
+
+.aboutHouse button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+}
+
+.shortInfo {
+    margin: 10% 5%;
+}
+
+.aboutHouse button {
+    margin: 10%;
+    padding: 2% 10%;
     width: 196px;
     height: 43px;
     border: 2px solid #262626;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
 }
 
-.allHouse a, .allHouse a:hover {
+.aboutHouse a, .aboutHouse a:hover {
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 14px;

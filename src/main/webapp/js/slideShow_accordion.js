@@ -24,7 +24,6 @@ function showOneSlide(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     currentDots[slideIndex - 1].className += " activeDot";
-    setTimeout(showNextSlides, 5000); // Change image every 5 seconds
 }
 
 //плавна заміна фото кожні 5 секунд

@@ -11,6 +11,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+
 <div id="slideHeader">
     <div class="slideshow">
         <div class="start-photo">
@@ -35,6 +36,7 @@
         <button class="dot" onclick="currentSlide(3)"></button>
     </div>
 </div>
+
 <div class="main">
     <c:choose>
     <c:when test="${mode == 'COMPANY_VIEW'}">
@@ -76,6 +78,7 @@
         </c:if>
     </c:forEach>
 </div>
+
 <div id="middleNav">
     <div class="quick-menu">
         <a href="${pageContext.request.contextPath}/frontend/gallery"><img
@@ -110,6 +113,7 @@
         </a>
     </div>
 </div>
+
 <div class="middle-photo">
     <h1 style="text-align: center">Glass. Light. Character.</h1>
 </div>
