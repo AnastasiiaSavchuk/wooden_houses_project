@@ -1,10 +1,7 @@
-#slideHeader {
-    margin: 70px 0;
-}
-
 .slideshow {
     max-width: 100%;
     margin: auto;
+    padding-top: 70px;
 }
 
 .start-photo img {
@@ -47,7 +44,7 @@
 }
 
 .main {
-    margin: 0 10%;
+    margin: 5% 10% 0;
 }
 
 .main h1 {

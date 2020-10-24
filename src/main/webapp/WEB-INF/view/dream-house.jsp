@@ -12,22 +12,20 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<div id="slideHeader">
-    <div class="slideshow">
-        <div class="start-photo">
-            <h1>Be inspired by our dream house</h1>
-            <img src="../../image/dream_house/1_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
-                 height="600">
-        </div>
-        <div class="start-photo">
-            <img src="../../image/dream_house/2_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
-                 height="600">
-        </div>
+<div class="slideshow">
+    <div class="start-photo">
+        <h1>Be inspired by our dream house</h1>
+        <img src="../../image/dream_house/1_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
+             height="600">
     </div>
-    <div style="text-align: center; margin-top: -2.5%;">
-        <button class="dot" onclick="currentSlide(1)"></button>
-        <button class="dot" onclick="currentSlide(2)"></button>
+    <div class="start-photo">
+        <img src="../../image/dream_house/2_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
+             height="600">
     </div>
+</div>
+<div style="text-align: center; margin-top: -2.5%;">
+    <button class="dot" onclick="currentSlide(1)"></button>
+    <button class="dot" onclick="currentSlide(2)"></button>
 </div>
 
 <div id="main">
@@ -276,6 +274,6 @@
                 class="fa fa-envelope"></i></a></li>
 </ul>--%>
 
-<script src="../../js/slideShow_accordion.js"></script>
+<script src="../../js/slideShow.js"></script>
 </body>
 </html>

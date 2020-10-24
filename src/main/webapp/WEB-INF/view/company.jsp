@@ -12,29 +12,27 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 
-<div id="slideHeader">
-    <div class="slideshow">
-        <div class="start-photo">
-            <h1>Welcome to<br>HUF HAUS London<br><span>Visit us in Weybridge!</span></h1>
-            <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" alt="" width="100%"
-                 height="720">
-        </div>
-        <div class="start-photo">
-            <h1>In Harmony<br><span>Discovery nature. Evry day</span></h1>
-            <img src="../../image/aboutCompany/2_Header-HUF-Haus-ART-6.jpg" alt="" width="100%"
-                 height="720">
-        </div>
-        <div class="start-photo">
-            <h1>In Harmony<br><span>In the front row of nature's theatre</span></h1>
-            <img src="../../image/aboutCompany/3_Header_HUF_Haus_ART_3.jpg" alt="" width="2560"
-                 height="720">
-        </div>
+<div class="slideshow">
+    <div class="start-photo">
+        <h1>Welcome to<br>HUF HAUS London<br><span>Visit us in Weybridge!</span></h1>
+        <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" alt="" width="100%"
+             height="720">
     </div>
-    <div style="text-align: center; margin-top: -2.5%;">
-        <button class="dot" onclick="currentSlide(1)"></button>
-        <button class="dot" onclick="currentSlide(2)"></button>
-        <button class="dot" onclick="currentSlide(3)"></button>
+    <div class="start-photo">
+        <h1>In Harmony<br><span>Discovery nature. Evry day</span></h1>
+        <img src="../../image/aboutCompany/2_Header-HUF-Haus-ART-6.jpg" alt="" width="100%"
+             height="720">
     </div>
+    <div class="start-photo">
+        <h1>In Harmony<br><span>In the front row of nature's theatre</span></h1>
+        <img src="../../image/aboutCompany/3_Header_HUF_Haus_ART_3.jpg" alt="" width="2560"
+             height="720">
+    </div>
+</div>
+<div style="text-align: center; margin-top: -2.5%;">
+    <button class="dot" onclick="currentSlide(1)"></button>
+    <button class="dot" onclick="currentSlide(2)"></button>
+    <button class="dot" onclick="currentSlide(3)"></button>
 </div>
 
 <div class="main">
@@ -187,6 +185,7 @@
     </c:choose>
 </div>
 
-<script src="../../js/slideShow_accordion.js"></script>
+<script src="../../js/slideShow.js"></script>
+<script src="../../js/accordion.js"></script>
 </body>
 </html>
