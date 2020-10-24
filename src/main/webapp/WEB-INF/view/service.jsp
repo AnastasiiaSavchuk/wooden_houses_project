@@ -14,10 +14,10 @@
 
 <div class="slideshow">
     <div class="start-photo">
-        <img src="../../image/service/1_header.jpg" alt="" width="100%" height="720">
+        <img src="../../image/service/1_header.jpg" alt="" width="2560" height="720">
     </div>
     <div class="start-photo">
-        <img src="../../image/service/2_header.jpg" alt="" width="100%" height="720">
+        <img src="../../image/service/2_header.jpg" alt="" width="2560" height="720">
     </div>
     <div class="start-photo">
         <img src="../../image/service/3_header.jpg" alt="" width="2560" height="720">
