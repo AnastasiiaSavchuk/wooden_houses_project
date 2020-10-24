@@ -15,12 +15,10 @@
 <div class="slideshow">
     <div class="start-photo">
         <h1>Be inspired by our dream house</h1>
-        <img src="../../image/dream_house/1_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
-             height="600">
+        <img src="../../image/dream_house/1_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%" height="600">
     </div>
     <div class="start-photo">
-        <img src="../../image/dream_house/2_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%"
-             height="600">
+        <img src="../../image/dream_house/2_house_Header_HUF_Haus_ART_5.jpg" alt="" width="100%" height="600">
     </div>
 </div>
 <div style="text-align: center; margin-top: -2.5%;">

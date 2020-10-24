@@ -32,11 +32,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="companyInfo" items="${houseImages}">
+                <c:forEach var="house" items="${houseImages}">
                     <tr>
-                        <td>${companyInfo.id}</td>
-                        <td>${companyInfo.image}</td>
-                        <td>${companyInfo.imageName}</td>
+                        <td>${house.id}</td>
+                        <td>${house.image}</td>
+                        <td>${house.imageName}</td>
                     </tr>
                 </c:forEach>
                 </tbody>

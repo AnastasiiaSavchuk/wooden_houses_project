@@ -41,21 +41,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach var="companyInfo" items="${contactInfo}">
+                <c:forEach var="house" items="${contactInfo}">
                     <tr>
-                        <td>${companyInfo.id}</td>
-                        <td>${companyInfo.firstName}</td>
-                        <td>${companyInfo.lastName}</td>
-                        <td>${companyInfo.email}</td>
-                        <td>${companyInfo.postCode}</td>
-                        <td>${companyInfo.address}</td>
-                        <td>${companyInfo.city}</td>
-                        <td>${companyInfo.country}</td>
-                        <td>${companyInfo.phoneNumber}</td>
-                        <td>${companyInfo.whatAreYouInterestedIn}</td>
-                        <td>${companyInfo.yourMessage}</td>
-                        <td>${companyInfo.yourDateForConsultation}</td>
-                        <td>${companyInfo.others}</td>
+                        <td>${house.id}</td>
+                        <td>${house.firstName}</td>
+                        <td>${house.lastName}</td>
+                        <td>${house.email}</td>
+                        <td>${house.postCode}</td>
+                        <td>${house.address}</td>
+                        <td>${house.city}</td>
+                        <td>${house.country}</td>
+                        <td>${house.phoneNumber}</td>
+                        <td>${house.whatAreYouInterestedIn}</td>
+                        <td>${house.yourMessage}</td>
+                        <td>${house.yourDateForConsultation}</td>
+                        <td>${house.others}</td>
                     </tr>
                 </c:forEach>
                 </tbody>

@@ -9,27 +9,20 @@
 }
     2
 {
-    "name": "Services",
-    "part1": "Spaces, styles and trends require modifications. HUF HAUS has a ServiceART team who can assist you, to allow your home to re-adjust to your changing requirements. Whether you built an original HUF house or acquired one, our aim is to modernise it without losing its original character.",
-    "part2": "If you have any questions please do not hesitate to contact us via email serviceart@huf-haus.com or via the contact form."
-}
-    3
-{
     "name": "Modernisation",
     "part1": "Bath modernisation",
     "part2": "Floor coverings for contemporary living",
     "part3": "Exclusive room / furniture concepts",
     "part4": "wellness areas"
 }
-    4
+    3
 {
     "name": "Energy/Technology",
     "part1": "Energetic roof modernisation",
-    "part2": "Controlled aeration and ventilation",
-    "part3": "Solar and photovoltaic systems",
-    "part4": "Burglar alarm systems"
+    "part2": "Solar and photovoltaic systems",
+    "part3": "Burglar alarm systems"
 }
-    5
+    4
 {
     "name": "Extensions and Conversions",
     "part1": "Extensions",
@@ -37,7 +30,7 @@
     "part3": "Garage and carport facilities",
     "part4": "Floor plan redesign"
 }
-    6
+    5
 {
     "name": "Service for existing HUF properties",
     "part1": "Customer service visit / quality check",
@@ -45,7 +38,7 @@
     "part3": "Energy consulting",
     "part4": "Cleaning"
 }
-    7
+    6
 {
     "name": "Maintenance painting",
     "part1": "Improvement of constructive wood protection",
@@ -53,13 +46,20 @@
     "part3": "Interior painting",
     "part4": "Crack treatment according to Din 68 800"
 }
-    8
+    7
 {
     "name": "Sun protection",
     "part1": "Subsequent blinds",
     "part2": "Awning",
     "part3": "Weather station / wind and sun monitor",
     "part4": "Conversion of roller shutters"
+}
+    8
+
+{
+    "name": "Services",
+    "part1": "Spaces, styles and trends require modifications. HUF HAUS has a ServiceART team who can assist you, to allow your home to re-adjust to your changing requirements. Whether you built an original HUF house or acquired one, our aim is to modernise it without losing its original character.",
+    "part2": "Whether you built an original HUF house or acquired one, our aim is to modernise it without losing its original character."
 }
     9
 {

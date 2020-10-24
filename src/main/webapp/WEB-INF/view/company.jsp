@@ -15,12 +15,12 @@
 <div class="slideshow">
     <div class="start-photo">
         <h1>Welcome to<br>HUF HAUS London<br><span>Visit us in Weybridge!</span></h1>
-        <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" alt="" width="100%"
+        <img src="../../image/aboutCompany/1_Header_House_Riverview.jpg" alt="" width="2560"
              height="720">
     </div>
     <div class="start-photo">
         <h1>In Harmony<br><span>Discovery nature. Evry day</span></h1>
-        <img src="../../image/aboutCompany/2_Header-HUF-Haus-ART-6.jpg" alt="" width="100%"
+        <img src="../../image/aboutCompany/2_Header-HUF-Haus-ART-6.jpg" alt="" width="2560"
              height="720">
     </div>
     <div class="start-photo">
