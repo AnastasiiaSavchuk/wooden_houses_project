@@ -25,20 +25,21 @@
 }
 
 .main {
-    margin: 5% 10% 0;
+    margin: 7.5% 10% 0;
 }
 
 .main h1 {
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 900;
     text-transform: uppercase;
 }
 
 .main h2 {
+    margin-bottom: 1%;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .main p {
@@ -46,3 +47,44 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+.main #info-1 {
+    padding-bottom: 2%;
+    float: left;
+    margin-right: 14%;
+}
+
+#info-1 h1 {
+    margin-bottom: 30%;
+}
+
+#info-1 button {
+    margin-bottom: 15%;
+    padding: 2%;
+    width: 196px;
+    height: 43px;
+    border: 2px solid #262626;
+    text-align: center;
+}
+
+#info-1 button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+    color: white;
+}
+
+.serviceMenu {
+    clear: both;
+    display: inline-block;
+    margin-top: 5%;
+}
+
+#main img {
+    width: 360px;
+    height: 245px;
+}
+
+
+
+

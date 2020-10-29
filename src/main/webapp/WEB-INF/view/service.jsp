@@ -36,27 +36,32 @@
         <c:if test="${house.id == 1}">
             <div id="info-1">
                 <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
-                <p>${house.part1}</p>
-                <p>${house.part2}</p>
-                <p>${house.part3}</p>
-                <p>${house.part4}</p>
+                <a href="${pageContext.request.contextPath}/frontend/contacts">
+                    <button>Contact us</button>
+                </a><br>
+                <a href="#" onclick="window.open('../../siteContent/ServiceART_Flyer_GB.pdf', '_blank')">
+                    <button>Flyer</button>
+                </a>
             </div>
         </c:if>
         <c:if test="${house.id == 2}">
             <div id="info-2">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <h2>${house.description}</h2>
+                <p>${house.part1}</p>
+                <p>${house.part2}
+                    <a href="#" onclick="window.open('../../siteContent/ServiceART_Flyer_GB.pdf', '_blank')"
+                       style="color: #44b827; font-weight: 700">download your ServiceART flyer</a> here.</p>
+                <p>${house.part3} <a href="mailto: serviceart@huf-hause.com" style="color: #44b827; font-weight: 700">serviceart@huf-haus.com</a>
+                    or via the <a href="${pageContext.request.contextPath}/frontend/contacts"
+                                  style="color: #44b827; font-weight: 700">contact form</a>.</p>
             </div>
         </c:if>
         <c:if test="${house.id == 3}">
-            <div id="info-3">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
@@ -64,9 +69,11 @@
             </div>
         </c:if>
         <c:if test="${house.id == 4}">
-            <div id="info-4">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
@@ -74,9 +81,11 @@
             </div>
         </c:if>
         <c:if test="${house.id == 5}">
-            <div id="info-5">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
@@ -84,9 +93,11 @@
             </div>
         </c:if>
         <c:if test="${house.id == 6}">
-            <div id="info-6">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
@@ -94,9 +105,23 @@
             </div>
         </c:if>
         <c:if test="${house.id == 7}">
-            <div id="info-7">
-                <h1>${house.name}</h1>
-                <h1>${house.description}</h1>
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
+                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+            </div>
+        </c:if>
+        <c:if test="${house.id == 8}">
+            <div class="serviceMenu">
+                <div>
+                    <img src="../../image/service/" alt="">
+                </div>
+                <h2>${house.name}</h2>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
@@ -107,21 +132,12 @@
 </div>
 
 <div class="middle-photo">
-    <h1 style="text-align: center">Glass. Light. Character.</h1>
+    <h1 style="text-align: center">Longlasting Happiness</h1>
+    <button>Flyer</button>
 </div>
 
 <div class="main">
     <c:forEach var="house" items="${houseService}">
-        <c:if test="${house.id == 8}">
-            <div id="info-8">
-                <h1>${house.name}</h1>
-                <h2>${house.description}</h2>
-                <p>${house.part1}</p>
-                <p>${house.part2}</p>
-                <p>${house.part3}</p>
-                <p>${house.part4}</p>
-            </div>
-        </c:if>
         <c:if test="${house.id == 9}">
             <div id="info-9">
                 <h1>${house.name}</h1>
@@ -140,7 +156,22 @@
                 <p>${house.part2}</p>
                 <p>${house.part3}</p>
                 <p>${house.part4}</p>
+            </div>
+        </c:if>
+        <c:if test="${house.id == 11}">
+            <div id="info-11">
+                <h1>${house.name}</h1>
+                <p>${house.description}</p>
+                <p>${house.part1}</p>
+                <p>${house.part2}</p>
+                <p>${house.part3}</p>
+                <p>${house.part4}</p>
+            </div>
+        </c:if>
+        <c:if test="${house.id == 12}">
+            <div id="info-12">
 
+                <h2>${house.description}</h2>
             </div>
         </c:if>
     </c:forEach>

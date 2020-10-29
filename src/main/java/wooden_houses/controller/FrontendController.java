@@ -29,7 +29,7 @@ public class FrontendController {
     public String showAllHouse(HttpServletRequest request) {
         request.setAttribute("house", houseService.findAll());
         request.setAttribute("mode", "HOUSE_VIEW");
-        return "dream-house";
+        return "dream-houses";
     }
 
     @GetMapping("/frontend/house/{id}")
