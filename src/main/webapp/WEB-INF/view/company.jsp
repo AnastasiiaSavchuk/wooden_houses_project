@@ -77,43 +77,51 @@
     </c:forEach>
 </div>
 
-<div id="middleNav">
-    <div class="quick-menu">
-        <a href="${pageContext.request.contextPath}/frontend/gallery"><img
-                src="../../image/aboutCompany/2_Gallery.jpg" alt="">
+<div class="middleNav">
+    <div class="quickMenu">
+        <a href="${pageContext.request.contextPath}/frontend/gallery">
+            <img src="../../image/aboutCompany/2_Gallery.jpg" alt="">
             <div>
-                <button>Gallery</button>
+                <a href="${pageContext.request.contextPath}/frontend/gallery">
+                    <button>Gallery</button>
+                </a>
             </div>
         </a>
     </div>
-    <div class="quick-menu">
-        <a href="${pageContext.request.contextPath}/frontend/house"><img
-                src="../../image/aboutCompany/3_HUF_Haus_Finder.jpg" alt="">
+    <div class="quickMenu">
+        <a href="${pageContext.request.contextPath}/frontend/house">
+            <img src="../../image/aboutCompany/3_HUF_Haus_Finder.jpg" alt="">
             <div>
-                <button>HUF Houses Finder</button>
+                <a href="${pageContext.request.contextPath}/frontend/house">
+                    <button>HUF Houses Finder</button>
+                </a>
             </div>
         </a>
     </div>
-    <div class="quick-menu">
-        <a href="${pageContext.request.contextPath}/frontend/service"><img
-                src="../../image/aboutCompany/4_Show-House.jpg" alt="">
+    <div class="quickMenu">
+        <a href="${pageContext.request.contextPath}/frontend/service">
+            <img src="../../image/aboutCompany/4_Show-House.jpg" alt="">
             <div>
-                <button>Show service</button>
+                <a href="${pageContext.request.contextPath}/frontend/service">
+                    <button>Show service</button>
+                </a>
             </div>
         </a>
     </div>
-    <div class="quick-menu">
-        <a href="${pageContext.request.contextPath}/frontend/building_a_house"><img
-                src="../../image/aboutCompany/5_steps_building_house.jpg" alt="">
+    <div class="quickMenu">
+        <a href="${pageContext.request.contextPath}/frontend/building_a_house">
+            <img src="../../image/aboutCompany/5_steps_building_house.jpg" alt="">
             <div>
-                <button>Six steps to dream home</button>
+                <a href="${pageContext.request.contextPath}/frontend/building_a_house">
+                    <button>Six steps to dream home</button>
+                </a>
             </div>
         </a>
     </div>
 </div>
 
 <div class="middle-photo">
-    <h1 style="text-align: center">Glass. Light. Character.</h1>
+    <h1>Glass. Light. Character.</h1>
 </div>
 
 <div class="main">

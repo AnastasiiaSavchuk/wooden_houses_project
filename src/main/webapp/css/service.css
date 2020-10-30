@@ -18,10 +18,12 @@
     border: none;
     outline: none !important;
     transition: background-color 2s ease;
+    cursor: pointer;
 }
 
 .activeDot {
     background: #44b827;
+    cursor: pointer;
 }
 
 .main {
@@ -29,61 +31,128 @@
 }
 
 .main h1 {
+    color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 40px;
     font-weight: 900;
     text-transform: uppercase;
 }
 
-.main h2 {
+.main h2, .middleNav h2 {
     margin-bottom: 1%;
+    color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 24px;
     font-weight: 700;
 }
 
-.main p {
+.main p, .middleNav p {
+    color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 16px;
     font-weight: 300;
 }
 
-.main #info-1 {
-    padding-bottom: 2%;
+.main #info-1, .main #info-9, .main #info-11 {
     float: left;
     margin-right: 14%;
 }
 
 #info-1 h1 {
-    margin-bottom: 30%;
+    margin-bottom: 20%;
 }
 
-#info-1 button {
-    margin-bottom: 15%;
-    padding: 2%;
+#info-1 button, .serviceMenu button {
+    margin: 5% 0;
     width: 196px;
     height: 43px;
     border: 2px solid #262626;
-    text-align: center;
+    cursor: pointer;
 }
 
-#info-1 button:hover {
+#info-1 button:hover, .serviceMenu button:hover, .middle-photo button:hover {
     background-color: #44b827;
     border-color: #44b827;
     outline: none;
     color: white;
+    transition: background-color 1s ease;
 }
 
-.serviceMenu {
+.middleNav {
+    margin: 5% 8%;
     clear: both;
-    display: inline-block;
-    margin-top: 5%;
+    text-align: center;
 }
 
-#main img {
-    width: 360px;
-    height: 245px;
+.middleNav .serviceMenu {
+    display: inline-block;
+    margin-right: 4%;
 }
+
+.serviceMenu img {
+    width: 430px;
+    height: 325px;
+}
+
+.shortInfo h2 {
+    text-align: left;
+    margin: 5% 0;
+}
+
+.shortInfo i {
+    color: #44b827;
+    padding-right: 1%;
+
+}
+
+.shortInfo p {
+    padding-left: 6%;
+    text-align: left;
+}
+
+.middle-photo {
+    height: 100%;
+    background: url("../image/service/midle-foto_HUF_Bungalow_and_Extension_UK__21.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
+.shadow {
+    min-height: 550px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.middle-photo h1 {
+    padding: 10% 0 2%;
+    color: #ffffff;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.middle-photo button {
+    width: 196px;
+    height: 43px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.main #info-9 {
+    padding-bottom: 5%;
+}
+
+.main #info-10 {
+    margin-bottom: 5%;
+}
+
+.main #info-11 {
+    clear: both;
+}
+
+
 
 
 

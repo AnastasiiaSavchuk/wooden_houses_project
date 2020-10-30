@@ -26,7 +26,7 @@
     <button class="dot" onclick="currentSlide(2)"></button>
 </div>
 
-<div id="main">
+<div class="main">
     <c:choose>
         <c:when test="${mode == 'HOUSE_VIEW'}">
             <c:forEach var="house" items="${house}">

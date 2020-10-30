@@ -22,11 +22,11 @@ function showNextSlide() {
 }
 
 //зміна слайда вибором кнопки
-var slideIndex = 1;
-showSlide(slideIndex);
+
+showSlide(slideNextIndex);
 
 function currentSlide(n) {
-    showSlide(slideIndex = n);
+    showSlide(slideNextIndex = n);
 }
 
 function showSlide(n) {
@@ -34,10 +34,10 @@ function showSlide(n) {
     var slides = document.getElementsByClassName("start-photo");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
-        slideIndex = 1
+        slideNextIndex = 1
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideNextIndex = slides.length
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -45,6 +45,6 @@ function showSlide(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" activeDot", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " activeDot";
+    slides[slideNextIndex - 1].style.display = "block";
+    dots[slideNextIndex - 1].className += " activeDot";
 }

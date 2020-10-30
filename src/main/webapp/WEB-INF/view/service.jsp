@@ -56,84 +56,133 @@
                                   style="color: #44b827; font-weight: 700">contact form</a>.</p>
             </div>
         </c:if>
+    </c:forEach>
+</div>
+
+<div class="middleNav">
+    <c:forEach var="house" items="${houseService}">
         <c:if test="${house.id == 3}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/4-modernisation.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
         <c:if test="${house.id == 4}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/5-energy.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
         <c:if test="${house.id == 5}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/6-extensions.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
         <c:if test="${house.id == 6}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/7-service.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
         <c:if test="${house.id == 7}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/8-maintenance.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
         <c:if test="${house.id == 8}">
             <div class="serviceMenu">
                 <div>
-                    <img src="../../image/service/" alt="">
+                    <img src="../../image/service/9-sun%20protection.jpg" alt="">
                 </div>
-                <h2>${house.name}</h2>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
-                <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                <div class="shortInfo">
+                    <h2>${house.name}</h2>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part1}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part2}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part3}</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i>${house.part4}</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/frontend/contacts">
+                        <button>Contact Us</button>
+                    </a>
+                </div>
             </div>
         </c:if>
     </c:forEach>
 </div>
 
 <div class="middle-photo">
-    <h1 style="text-align: center">Longlasting Happiness</h1>
-    <button>Flyer</button>
+    <div class="shadow">
+        <h1>Longlasting Happiness</h1>
+        <button>Flyer</button>
+    </div>
 </div>
 
 <div class="main">
@@ -141,37 +190,30 @@
         <c:if test="${house.id == 9}">
             <div id="info-9">
                 <h1>${house.name}</h1>
-                <h2>${house.description}</h2>
-                <p>${house.part1}</p>
-                <p>${house.part2}</p>
-                <p>${house.part3}</p>
-                <p>${house.part4}</p>
             </div>
         </c:if>
         <c:if test="${house.id == 10}">
             <div id="info-10">
-                <h1>${house.name}</h1>
-                <h2>${house.description}</h2>
                 <p>${house.part1}</p>
                 <p>${house.part2}</p>
-                <p>${house.part3}</p>
-                <p>${house.part4}</p>
             </div>
         </c:if>
         <c:if test="${house.id == 11}">
             <div id="info-11">
-                <h1>${house.name}</h1>
-                <p>${house.description}</p>
-                <p>${house.part1}</p>
-                <p>${house.part2}</p>
-                <p>${house.part3}</p>
-                <p>${house.part4}</p>
+                <div>
+                    <img src="../../image/service/10_Franz-Huf.jpg" alt="">
+                </div>
+                <p style="padding: 2%; font-weight: 500">${house.description}</p>
             </div>
         </c:if>
         <c:if test="${house.id == 12}">
             <div id="info-12">
-
-                <h2>${house.description}</h2>
+                <h1>${house.name}</h1>
+                <p>${house.description}</p>
+                <p>${house.part1}</p>
+                <p style="font-weight: 900"> ${house.part2}</p>
+                <p>${house.part3}</p>
+                <p>${house.part4}</p>
             </div>
         </c:if>
     </c:forEach>

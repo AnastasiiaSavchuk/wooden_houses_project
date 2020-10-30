@@ -12,7 +12,7 @@
 
 .start-photo h1 {
     position: absolute;
-    padding: 18% 10%;
+    padding: 18% 10% 0;
     background: transparent;
     color: white;
     font-size: 55px;
@@ -28,17 +28,19 @@
     border: none;
     outline: none !important;
     transition: background-color 2s ease;
+    cursor: pointer;
 }
 
 .activeDot {
     background: #44b827;
+    cursor: pointer;
 }
 
-#main {
+.main {
     margin: 5% 5% 0 10%;
 }
 
-#main h1 {
+.main h1 {
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 23px;
@@ -47,7 +49,7 @@
     text-transform: uppercase;
 }
 
-#main h2 {
+.main h2 {
     margin-bottom: 10%;
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
@@ -58,7 +60,7 @@
 
 }
 
-#main p {
+.main p {
     border-left: 4px solid #44b827;
     margin-left: 8%;
     padding-left: 2%;
@@ -69,12 +71,20 @@
     text-transform: uppercase;
 }
 
-#main img {
+.main a {
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.main img {
     width: 360px;
     height: 245px;
 }
 
-#main .aboutHouse {
+.main .aboutHouse {
     display: inline-block;
     margin: 0 1.5% 2% 0;
 }
@@ -83,31 +93,24 @@
     box-shadow: 0 0 6px #bfbfbf;
 }
 
-.aboutHouse button:hover {
-    background-color: #44b827;
-    border-color: #44b827;
-    outline: none;
-    color: white;
-}
-
 .shortInfo {
     margin: 10% 5%;
 }
 
 .aboutHouse button {
     margin: 10%;
-    padding: 2% 10%;
     width: 196px;
     height: 43px;
     border: 2px solid #262626;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-.aboutHouse a, .aboutHouse a:hover {
-    color: #333333;
-    font-family: 'Noto Sans SC', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
+.aboutHouse button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+    color: white;
+    transition: background-color 1s ease;
 }

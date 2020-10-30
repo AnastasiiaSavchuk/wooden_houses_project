@@ -12,7 +12,7 @@
 
 .start-photo h1 {
     position: absolute;
-    padding: 16% 10%;
+    padding: 16% 10% 0;
     background: transparent;
     color: white;
     font-family: 'Noto Sans SC', sans-serif;
@@ -37,10 +37,12 @@
     border: none;
     outline: none !important;
     transition: background-color 2s ease;
+    cursor: pointer;
 }
 
 .activeDot {
     background: #44b827;
+    cursor: pointer;
 }
 
 .main {
@@ -81,39 +83,40 @@
     margin-right: 17%;
 }
 
-#middleNav {
+.middleNav {
     clear: both;
     padding: 5%;
     text-align: center;
 }
 
-.quick-menu {
+.quickMenu {
     display: inline-block;
     padding-right: 1.5%;
 }
 
-.quick-menu img {
+.quickMenu img {
     width: 360px;
     height: 415px;
 }
 
-.quick-menu button {
+.quickMenu button {
     margin: 30px 82px;
     padding: 9px 15px;
     width: 196px;
     height: 43px;
     border: 2px solid #262626;
-    text-align: center;
+    cursor: pointer;
 }
 
-.quick-menu button:hover {
+.quickMenu button:hover {
     background-color: #44b827;
     border-color: #44b827;
     outline: none;
     color: white;
+    transition: background-color 1s ease;
 }
 
-.quick-menu a, .quick-menu a:hover {
+.quickMenu a {
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 14px;
@@ -122,12 +125,10 @@
 }
 
 .middle-photo {
-    background-image: url("../image/aboutCompany/6_ART_3_von_HUF_HAUS.jpg");
+    background: url("../image/aboutCompany/6_ART_3_von_HUF_HAUS.jpg") no-repeat fixed center;
     height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
 }
 
 .middle-photo h1 {
