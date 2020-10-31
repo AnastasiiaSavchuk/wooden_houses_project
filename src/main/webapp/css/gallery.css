@@ -1,0 +1,62 @@
+body {
+    background-color: #262626;
+}
+
+.start-photo img {
+    max-width: 100%;
+    margin: auto;
+    padding-top: 70px;
+    max-height: 820px;
+    height: auto;
+}
+
+.start-photo h1 {
+    position: absolute;
+    padding: 22% 10% 0;
+    background: transparent;
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 74px;
+    text-transform: uppercase;
+}
+
+.start-photo span {
+    color: white;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: none;
+}
+
+.main {
+    padding: 4% 0.2%;
+    background-color: #262626;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+}
+
+.main img {
+    margin-top: 1.5%;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .main {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 1%;
+    }
+
+    .main img {
+        margin-top: 3%;
+    }
+}
+

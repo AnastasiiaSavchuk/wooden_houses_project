@@ -62,8 +62,6 @@ public class FrontendController {
 
     @GetMapping("/frontend/gallery")
     public String showAllImages(HttpServletRequest request) {
-        request.setAttribute("houseImages", imageService.findAll());
-        request.setAttribute("mode", "GALLERY_VIEW");
         return "gallery";
     }
 
