@@ -12,13 +12,13 @@ body {
 
 .start-photo h1 {
     position: absolute;
-    padding: 22% 10% 0;
+    margin: 22% 10% 0;
     background: transparent;
     color: white;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 74px;
     font-weight: 900;
-    line-height: 74px;
+    line-height: 64px;
     text-transform: uppercase;
 }
 
@@ -30,33 +30,188 @@ body {
 }
 
 .main {
-    padding: 4% 0.2%;
+    padding: 4% 2%;
     background-color: #262626;
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
+    text-align: center;
 }
 
-.main img {
-    margin-top: 1.5%;
-    vertical-align: middle;
+.main .mini {
+    display: inline-block;
+    margin: 0.2%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .main {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-        padding: 0 1%;
+.main .big {
+    display: inline-block;
+    margin: 0.2%;
+}
+
+.main .mini img {
+    width: 445px;
+    height: 285px;
+}
+
+.main .big img {
+    width: 900px;
+    height: 680px;
+}
+
+@media screen and (max-width: 1919px) {
+    .main .mini img {
+        width: 400px;
+        height: 245px;
     }
 
-    .main img {
-        margin-top: 3%;
+    .main .big img {
+        width: 810px;
+        height: 610px;
+    }
+
+}
+
+@media screen and (max-width: 1735px) {
+    .main .mini img {
+        width: 360px;
+        height: 205px;
+    }
+
+    .main .big img {
+        width: 730px;
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 1565px) {
+    .main .mini img {
+        width: 326px;
+        height: 165px;
+    }
+
+    .main .big img {
+        width: 660px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1395px) {
+    .main .mini img {
+        width: 286px;
+        height: 185px;
+    }
+
+    .main .big img {
+        width: 580px;
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    .start-photo h1 {
+        font-size: 70px;
+        line-height: 60px;
+    }
+
+    .start-photo span {
+        font-size: 35px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 480px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main .mini img, .main .big img {
+        width: 440px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 1011px) {
+    .start-photo h1 {
+        font-size: 55px;
+        line-height: 45px;
+    }
+
+    .start-photo span {
+        font-size: 28px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 400px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 843px) {
+    .start-photo h1 {
+        font-size: 40px;
+        line-height: 30px;
+    }
+
+    .start-photo span {
+        font-size: 20px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 320px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .start-photo h1 {
+        font-size: 35px;
+        line-height: 25px;
+    }
+
+    .start-photo span {
+        font-size: 20px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 240px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .main .mini img, .main .big img {
+        width: 400px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    .start-photo h1 {
+        font-size: 25px;
+        line-height: 15px;
+    }
+
+    .start-photo span {
+        font-size: 15px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .start-photo h1 {
+        font-size: 25px;
+        line-height: 15px;
+    }
+
+    .start-photo span {
+        font-size: 15px;
+    }
+
+    .main .mini img, .main .big img {
+        width: 150px;
+        height: 100px;
     }
 }
 
