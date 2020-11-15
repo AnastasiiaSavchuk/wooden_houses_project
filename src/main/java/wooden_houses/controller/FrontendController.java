@@ -25,14 +25,14 @@ public class FrontendController {
     private HouseServicesServiceImpl servicesService;
 
 
-    @GetMapping("/frontend/house")
+    @GetMapping("/frontend/dream_houses")
     public String showAllHouse(HttpServletRequest request) {
         request.setAttribute("house", houseService.findAll());
-        request.setAttribute("mode", "HOUSE_VIEW");
+        request.setAttribute("mode", "HOUSES_VIEW");
         return "dream-houses";
     }
 
-    @GetMapping("/frontend/house/{id}")
+    @GetMapping("/frontend/dream_house/{id}")
     public String showHouseById(HttpServletRequest request, @PathVariable("id") int id) {
         request.setAttribute("house", houseService.findById(id));
         request.setAttribute("mode", "HOUSE_VIEW");
@@ -57,7 +57,7 @@ public class FrontendController {
     public String showAllConstructionInfo(HttpServletRequest request) {
         request.setAttribute("houseConstructionInfo", constructionService.findAll());
         request.setAttribute("mode", "BUILDING_VIEW");
-        return "building";
+        return "building-a-house";
     }
 
     @GetMapping("/frontend/gallery")

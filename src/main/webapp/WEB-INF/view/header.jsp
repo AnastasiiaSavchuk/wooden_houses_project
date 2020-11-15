@@ -24,7 +24,7 @@
     </div>
     <nav id="nav-menu-container">
         <div class="nav-menu">
-            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/house">Houses</a></p>
+            <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/dream_houses">Houses</a></p>
             <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/service">Service</a></p>
             <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/gallery">Gallery</a></p>
             <p class="menu-active"><a href="${pageContext.request.contextPath}/frontend/building_a_house">Building

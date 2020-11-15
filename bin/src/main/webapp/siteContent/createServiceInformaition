@@ -1,0 +1,82 @@
+        house services
+    1
+{
+    "name": "Service"
+}
+    2
+{
+    "description": "Always depend on ServiceART!",
+    "part1": "However, even with this conscious practice you should find any minor faults or imperfections, ServiceART are here to assist you. ServiceART provide speedy, flexible and reliable service thought the warranty period of your home and beyond.",
+    "part2": "Life is full of changes, sometimes planned, sometimes not. It is important to have a reliable partner to continually provide great service even after you move into your dream home. Please check out the wide range of services we have to offer.",
+    "part3": "If you have any questions please do not hesitate to contact us via Email"
+}
+    3
+{
+    "name": "Modernisation",
+    "part1": "Bath modernisation",
+    "part2": "Floor coverings for contemporary living",
+    "part3": "Exclusive room / furniture concepts",
+    "part4": "wellness areas"
+}
+    4
+{
+    "name": "Energy/Technology",
+    "part1": "Energetic roof modernisation",
+    "part2": "Solar and photovoltaic systems",
+    "part3": "Burglar alarm systems"
+}
+    5
+{
+    "name": "Extensions and Conversions",
+    "part1": "Extensions",
+    "part2": "Penthouse extension / dormer",
+    "part3": "Garage and carport facilities",
+    "part4": "Floor plan redesign"
+}
+    6
+{
+    "name": "Service for existing HUF properties",
+    "part1": "Customer service visit / quality check",
+    "part2": "Door and window check",
+    "part3": "Energy consulting",
+    "part4": "Cleaning"
+}
+    7
+{
+    "name": "Maintenance painting",
+    "part1": "Improvement of constructive wood protection",
+    "part2": "Exterior painting",
+    "part3": "Interior painting",
+    "part4": "Crack treatment according to Din 68 800"
+}
+    8
+{
+    "name": "Sun protection",
+    "part1": "Subsequent blinds",
+    "part2": "Awning",
+    "part3": "Weather station / wind and sun monitor",
+    "part4": "Conversion of roller shutters"
+}
+    9
+
+{
+    "name": "Services"
+}
+    10
+{
+    "part1": "Spaces, styles and trends require modifications. HUF HAUS has a ServiceART team who can assist you, to allow your home to re-adjust to your changing requirements. Whether you built an original HUF house or acquired one, our aim is to modernise it without losing its original character.",
+    "part2": "Whether you built an original HUF house or acquired one, our aim is to modernise it without losing its original character."
+}
+    11
+{
+    "description": "Franz Huf - Pioneer for modern timber framed architecture"
+}
+    12
+{
+    "name": "Traditional service",
+    "description": "It is greatly important to HUF HAUS that special levels of care are maintained, way beyond the handover.  We follow a long standing company protocol that consists of periodical house checks, catering to fresh home desires and the orgainsing of annual HUF Club events- keeping clients’ needs at the forefront of our care.",
+    "part1": "Franz HUF set the precedence for continual customer care and highlights the importance of ongoing contact with each client:",
+    "part2": "'I made a point, where possible, of visiting each client after hand over. Not just out of courtesy but it interested me to see how people bring their homes to life with their individual living and design.'",
+    "part3": "Franz Huf viewed himself, and the company, as reliable companions who would fulfil the clients’ wishes for a dream home. In 1980 the department Customer Service was officially formed, delivering clients the best possible service.",
+    "part4": "In 1985 Customer Service grew and added a new department –'WMA' (Werterhaltung, Modernisierung, An-und Umbauten). This new department was responsible for maintaining, upgrading and all renovations to clients HUF homes. In 2011 Customer Service and WMA were combined to form 'ServiceArt'; the new department to seamlessly control the entire operation."
+}

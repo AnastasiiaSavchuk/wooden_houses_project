@@ -28,7 +28,7 @@
 
 <div class="main">
     <c:choose>
-        <c:when test="${mode == 'HOUSE_VIEW'}">
+        <c:when test="${mode == 'HOUSES_VIEW'}">
             <c:forEach var="house" items="${house}">
                 <c:if test="${house.id == 1}">
                     <div class="aboutHouse">
@@ -44,7 +44,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -64,7 +64,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -84,7 +84,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -104,7 +104,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -144,7 +144,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -164,7 +164,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -184,7 +184,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -204,7 +204,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -224,7 +224,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -244,7 +244,7 @@
                             <div><p>${house.footprint}</p></div>
                         </div>
                         <div style="text-align: center">
-                            <a href="house/${house.id}">
+                            <a href="dream_house/${house.id}">
                                 <button>To the project</button>
                             </a>
                         </div>
@@ -254,23 +254,6 @@
         </c:when>
     </c:choose>
 </div>
-<%--<ul>
-    <li>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-    <li>
-        <a href="https://twitter.com/intent/tweet?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                class="fa fa-twitter" aria-hidden="true"></i></a></li>
-    <li>
-        <a href="whatsapp://send?text=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS%20https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F>"><i
-                class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-    <li>
-        <a href="https://www.pinterest.com/pin/create/link/?url=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F&media=&description=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS"><i
-                class="fa fa-pinterest-p"></i></a></li>
-    <li>
-        <a href="mailto:?subject=%E2%96%B7%20Dream%20House%202020%20%7C%20HUF%20Houses%20at%20a%20glance%20%7C%20HUF%20HAUS&body=https%3A%2F%2Fwww.huf-haus.com%2Fen-uk%2Fdream-house%2F"><i
-                class="fa fa-envelope"></i></a></li>
-</ul>--%>
 
 <script src="../../js/slideShow.js"></script>
 </body>

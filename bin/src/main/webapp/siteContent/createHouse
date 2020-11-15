@@ -1,0 +1,215 @@
+        House
+    1
+{
+    "houseName": "MODUM BUNGALOW",
+    "houseType": "sample 7",
+    "info": "Single-storey sophistication",
+    "story1": "The story behind the house",
+    "story2": "By choosing to build a one-storey bungalow, this family  with two children created an easy-access home with many advantages.",
+    "story3": "Without the roof ridge determining the layout of the house, the family had great flexibility in designing their home. Since the home has no stairs to manoeuvre, it will remain accessible even as the owners advance in years.",
+    "story4": "Solid oak floorboards look charmingly rustic and offer a perfect contrast to the sophisticated furniture and high gloss kitchen from StilART.",
+    "dimensions": "see floorplan",
+    "footprint": "175.45 m² / 1889 sqft",
+    "totalGrossExternalArea": "175.45 m² / 1.889 sqft",
+    "roofPitch": "Flat roof",
+    "feature1": "Single-storey",
+    "feature2": "One level",
+    "purpose": "Open-plan space",
+    "purposeInfo1": "The living room features light wooden boards and opens out onto the patio, extending the interior space outwards.",
+    "purposeInfo2": "The large kitchen offers enough space for the entire family to come together."
+}
+    2
+{
+    "houseName": "MODUM 8",
+    "houseType": "sample 4",
+    "info": "Plenty of personal space",
+    "story1": "The story behind the house",
+    "story2": "It is not just the unobstructed views of the outdoors that enthral the owners of this MODUM 8. The ebony-coloured post-and-beam home fits perfectly into its surroundings and provides the ideal stage for the interior design.",
+    "story3": "The outdoor seating area can be accessed from the comfortable living room where the owners can survey the garden and enjoy the great outdoors. The first floor provides plenty of room for an impressive collection of sneakers and also boasts a wellness treat:  an integrated StilART sauna constructed with millimetre  precision.",
+    "story4": "The smart home control system guarantees  additional comfort and convenience.",
+    "dimensions": "10.10 m x 12.50 m + alcove",
+    "footprint": "136.09 m² / 1.465 sqft",
+    "totalGrossExternalArea": "398.43 m² / 4.289 sqft",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Wellness area",
+    "feature2": "Third-row-property",
+    "purpose": "Nature peeks in everywhere",
+    "purposeInfo1": "Whether in the dining room, the sauna or in the expansive living room area with its vaulted ceiling opening to the first floor – nature peeks in everywhere.",
+    "purposeInfo2": "The bright  rooms feel light and airy, while bold reds set a vibrant contrast to the neutral tones of the timber, white walls and green foliage."
+}
+    3
+{
+    "houseName": "MODUM 7",
+    "houseType": "sample 2",
+    "info": "Intelligent space to realise your potential",
+    "story1": "The story behind the house",
+    "dimensions": "8.90 m x 12.50 m",
+    "footprint": "111.25 m² / 1.197 sqft",
+    "totalGrossExternalArea": "222.50 m² / 2.395 sqft",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Compact house",
+    "feature2": "Elegant wooden floors",
+    "purpose": "Optimum utilisation of space",
+    "purposeInfo1": "The house’s modular planning structure has made it possible to create a spacious living area, where it is easy to forget that the house’s external dimensions are rather compact. With sophisticated coat rack fittings and cleverly planned utility rooms, the ground floor space is put to optimum use. In this way plenty of high-quality living space is provided, where non-conformists have room to thrive.",
+    "purposeInfo2": "The bedrooms that are open in the direction of the roof ridge, with their large glazed surfaces, show how compact rooms can be reconceptualised.  The striking post-and-beam construction creates a dramatic contrast to the light fittings. It gives the rooms charm and atmosphere. "
+}
+    4
+{
+    "houseName": "ART 3",
+    "houseType": "sample 2",
+    "info": "Artful design for the climate conscious",
+    "story1": "This family of three achieved their dream of owning an envi-ronmentally friendly home integrated into nature. The house  is bathed in natural light while their photovoltaic system converts sunlight into electricity. The superior insulation  and efficiency of the house means additional fossil fuel energy sources are not required.",
+    "story2": "A charging point for electric cars prepares this house for the environmental demands of the twenty-first century. The ground floor offers inviting spaces  for dining and living.",
+    "story3": "The custom-designed StilART kitchen, featuring a collection of antique coffee mills, makes cooking  a joy. The second bedroom with its en-suite bathroom can be used by a young child, a teenager, or by guests, adapting easily to changing needs. The tranquil first floor is a quiet haven. Further to the bedrooms, the expansive walk-in dressing room and the bathroom, there is a comfortable gallery – a peaceful space to relax and unwind.",
+    "dimensions": "9.40 m x 13.60 m + alcove",
+    "footprint": "138.24 m² / 1.488 sqft",
+    "totalGrossExternalArea": "266.08 m2 / 2.864 sqft",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "PV panels",
+    "feature2": "E-car charging station",
+    "purpose": "Open-plan living",
+    "purposeInfo1": "The ground floor with its light, friendly dining area and open-plan kitchen is the perfect place to socialise as a family.",
+    "purposeInfo2": "From the spacious gallery to the beautifully landscaped garden, this home offers an array of popular spaces for every member of the family."
+}
+    5
+{
+    "houseName": "MODUM 10",
+    "houseType": "sample 1",
+    "info": "Architecture with a hospitable flair",
+    "story1": "The story behind the house",
+    "story2": "What immediately strikes anyone paying Malou and Claude a visit is that the entrance is on the eaves side giving the timber framed house a particularly streamlined silhouette. The path to the front door is lined by flowers and bushes in beautiful shades of turquoise, these offer a first indication of the interior colour scheme.",
+    "story3": "'The fact that we opted for HUF HAUS was certainly also down to the fact that we, too, run a family company in the third generation, also with the active support of our children ... the fourth generation so to speak', is how the couple explain their sense of solidarity with the house manufacturer from Westerwald. Whilst the family operates its business from its real estate agency, the home functions as an oasis of calm. Malou, who also works part time as a physiotherapist, uses the light and quiet rooms in the HUF house to treat her patients.",
+    "dimensions": "12,50 m x 13,70 m + alove",
+    "footprint": "177,61 m² / 1.911 sqft",
+    "totalGrossExternalArea": "526,88 m² / 5.669 sqft",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Wellness oasis",
+    "feature2": "Spacious floorplan",
+    "purpose": "Relax indoors and outdoors",
+    "purposeInfo1": "The upper floor hosts four bedrooms and two bathrooms, all designed to suit the functional and specific needs of the Family. For the Lady of the house, a bath was top on the priority list while her husband set his sights firmly on a sauna with views of the great outdoors.",
+    "purposeInfo2": "A swim and spa area in the garden featuring a counter-current system and massage jets means wellbeing is maintained and developed while healthy exercise is guaranteed. As the couple enjoy these activities, they can peacefully unwind while soaking up the wonderful view of their Home.",
+    "purposeInfo3": "'We worked on the garden design together and were very hands on…We couldn't be happier with our private green oasis', concludes the family."
+}
+    6
+{
+    "houseName": "ART 5",
+    "houseType": "sample 4",
+    "info": "Luxurious green paradise in the city",
+    "story1": "Pure luxury!",
+    "story2": "A private paradise was created in the heart of Berlin  as a retreat to abandon the stresses of city life. When planning and designing their new home, these clients set their priorities on maximising transparency, fluid transitions and perfectly made-to-measure StilART furniture.",
+    "story3": "The finished house features a custom-made kitchen, walk-in wardrobe, soothing spa bathroom and a harmonious colour palette. Blackberry accents are tastefully introduced around the home, creating interesting highlights and tying the overall design together. The American jukebox sits beneath the striking centre-piece staircase and adds a personal focal point and retro touch.",
+    "story4": "The hard-working couple made the journey to their perfect dream house totally stress-free by com-missioning the HUF company Garten ART to design and complete the external landscape of their garden. GartenART developed a landscaping concept with  spacious timber patio decking, and an external sauna that faces the garden and the heated pool. The perfect idyll in Germany's bustling capital!",
+    "dimensions": "12.40 m x 12.40 m + alcove",
+    "footprint": "160.96 m² / 1.731 sqft",
+    "totalGrossExternalArea": "314.72 m² / 3.388 sqft",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Infinity outdoor pool",
+    "feature2": "Garden by gartenart",
+    "purpose": "Suitable furniture concept",
+    "purposeInfo1": "The kitchen, also inspired by the colour scheme in the Riverview show house in London, was designed by StilART and coordinates perfectly with the timber framed architecture.",
+    "purposeInfo2": "Shades of blackberry can be found both in the glass façade behind the kitchen block and in the interior and sets an exciting colour tone.",
+    "purposeInfo3": "'My favourite place is the dining table. From here I have everything in view!', enthuses the house resident. And his wife? Her dreams came true with the StilART walk-in dressing room, adjacent to the bedroom and overlooking the spa."
+}
+    7
+{
+    "houseName": "MODUM 15",
+    "houseType": "sample 8",
+    "info": "Floating architectural splendour",
+    "story1": "Exceptional location",
+    "story2": "Travelling along the world famous and historic River Thames, you expect to see historic treasures and breathtaking views of the vibrant London metropolis. What you might not expect to find along this 215-mile-long river, are the distinctive timber frame contemporary HUF HAUS homes peppered here and there on the riverbank. Made of wood and glass with a distinctive architectural style, these captivating homes never fail to catch the eye.",
+    "story3": "Elegant delicacy of the timber frame house",
+    "story4": "Inside the house, the River Thames becomes part of the living experience. It is viewed from nearly every room and is experienced differently with every change of season or weather. Even the time of day affects the mood of the landscape, making the interaction of the house with its surroundings vibrant and everchanging.",
+    "story5": "The home retains signature HUF house open spaces and flowing transitions but is augmented in the middle with the added dimension of a vertical open space in the form of a vaulted ceiling above the dining area. The grand effect of the generous twenty-foot-high space is also enjoyed from the adjoining kitchen, living room and study, as well as the first-floor gallery which overlooks the dining area.",
+    "story6": "Opening the space vertically in the dining room also means that the entire façade, which is fully glazed over two floors, becomes a stunning source of light that illuminates the whole house.",
+    "dimensions": "see floorplan",
+    "footprint": "193.81 m² / 2.086 sqft",
+    "totalGrossExternalArea": "387.62 m² / 4.172 sqft",
+    "roofPitch": "Flat roof",
+    "feature1": "River view",
+    "feature2": "Open living / dining area",
+    "purpose": "Garden design",
+    "purposeInfo1": "The homeowners knew that the garden would play an important part of the lived experience of their Huf house, and therefore sought a considered and harmonic approach. The realised vision of landscape architect, Philip Nash enhances the living spaces of the home.",
+    "purposeInfo2": "Glazed panels slide open allowing a seamless transition to the adjoining raised terrace, thereby extending the living space to the outside. Sitting several feet above the ground, the terrace is edged with a visually unobtrusive glass railing which is stylistically in keeping with the house.",
+    "purposeInfo3": "The grounds are lined with plants and shrubs that form an attractive composition and give the garden focal points of vitality all year round. In the evenings, a light system installed below the raised foundation makes the house appear to hover majestically, emphasising its ethereal beauty."
+}
+    8
+{
+    "houseName": "ART 3",
+    "houseType": "sample 5",
+    "info": "Passion for design",
+    "story1": "For design lovers",
+    "story2": "Before, Natalie and Daniel were living in a bungalow for ten years - a building from the 60s designed in Bauhausstil, which was very spacious with 150 square meters.'We were very lucky to be able to live in our grandparents' house. We were quite spoiled!'",
+    "story3": "Why did they decide to build a timber frame house?",
+    "story4": "'That is how life works...a process without standstill. At some point the house became too small for us and it was too close to the big city. An extension or annexe were also not possible. So we started to look around for alternatives.'",
+    "story5": "Open rooms with lots of light",
+    "story6": "Natalie always wanted a modern timber frame house with a gable roof and floor-to-ceiling windows, preferably completely made of glass; with a loft character, open rooms, lots of light and as few doors as possible. 'Where I can look outside from everywhere without being seen'.",
+    "story7": "With the HUF house ART 3 a dream has come true for the couple. As an interior lover, furnishing was the most wonderufl part for Natalie - in her new home she has realized herself in the best possible way...",
+    "dimensions": "14.60 m x 9.40 m",
+    "footprint": "149.52 m²",
+    "totalGrossExternalArea": "",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Interio-design",
+    "feature2": "Kitchen from Italy",
+    "purpose": "Reduced design",
+    "purposeInfo1": "'The reduced modern, but also striking timber frame construction needs few decoration objects.",
+    "purposeInfo2": "An open floor plan does not tolerate a lot of furniture. We bought most of our furniture new or somehow adapted the pieces.",
+    "purposeInfo3": "A few eye-catchers, such as our beautiful painting in the living room or selected large solitary objects, such as the concrete amphora'."
+}
+    9
+{
+    "houseName": "EXTENSION",
+    "houseType": "sample 1",
+    "info": "Historical cottage meets transparent TIMBERFRAME house",
+    "story1": "The history of the house",
+    "story2": "In front of the timbered entrance gate you can already catch a glimpse of the beautiful 17th century cottage, which was built in England in traditional architecture with red bricks. A stream splashes quietly and a happy pair of ducks make their rounds in the idyllic natural oasis. 'Careful head retraction,' is the motto for tall people, because the historic building has classically low ceilings with visible beams. The kitchen with its cosy wooden parquet flooring allows you to enter the HUF extension as a matter of course. The floor-deep glazing makes it look like an outdoor sitting area in the garden. Here is the transparent living room and the bathroom of the happy owners. The building owners fought for a long time for the building permit for the annex to the listed building, but their persistence was more than worth it.",
+    "dimensions": "9.40 m x 6.90 m",
+    "footprint": "52.25 m²",
+    "totalGrossExternalArea": "41.04 m²",
+    "roofPitch": "Flat roof",
+    "feature1": "Panorama view",
+    "feature2": "Extension",
+    "purpose": "Tradition meets modern",
+    "purposeInfo1": "A HUF extension in classical TIMBERFRAME architecture to an existing, typically English cottage, which is under monument protection.",
+    "purposeInfo2": "The WOW effect couldn't be bigger - true to the motto 'opposites attract each other', the dark grey HUF house nestles against the cottage and looks quite natural.",
+    "purposeInfo3": "The combination of historical architecture and ultra-modern TIMBERFRAME architecture creates a surprisingly harmonious picture through the exciting contrast between old and new."
+}
+    10
+{
+    "houseName": "ART bungalow",
+    "houseType": "sample 3",
+    "story1": "The story behind the house",
+    "story2": "The architectural philosophy of HUF HAUS has always stood for an open and spacious living concept with harmonious transitions. Open-plan ground floors are striking features of the timber-framed projects.",
+    "story3": "The transparent construction allows the boundaries between inside and outside to literally blur, so there are no visual limits.",
+    "story4": "The intuitive operation of the house takes place via a smart home control based on KNX.",
+    "story5": "Special requirements - intelligent soultions",
+    "story6": "A wheelchair-accessible floor plan is characterized by generous traffic areas that offer maximum freedom of movement for people with mobility impairments.",
+    "story7": "The flexible timber-framed architecture of HUF HAUS is predestined for planning open living concepts. Swing-free transitions from room to room and doors with a clear passage width of 90 cm are a matter of course in every HUF building. The example shows an entrance door of 1.20 m - this clear width can also be implemented on request.",
+    "story8": "Accessible showers, special sanitary equipment or the user-friendly operation of light switches or other operating elements - the experienced HUF architects individually plan according to the wishes and needs of the clients.",
+    "dimensions": "16.00 m x 11.50 m",
+    "footprint": "217,89 m²",
+    "totalGrossExternalArea": "155.04 m²",
+    "roofPitch": "Grable roof 30°",
+    "feature1": "Barrier-free",
+    "feature2": "Roof glazing",
+    "purpose": "A feeling of airness",
+    "purposeInfo1": "The residents benefit from even more airness in this HUF bungalow with a pitch roof.",
+    "purposeInfo2": "Residents can enjoy their garden by stepping outside through the sliding door with a clearance width of 2.24 m."
+}
+    11
+{
+    "houseName": "ART 5",
+    "houseType": "sample 6",
+    "info": "Transcending borders",
+    "story1": "The story behind the house",
+    "story2": "Having previously lived in an appartment, moving into a HUF house was the fulfilment of a dream for this family who value nature as an integrated part of daily life. Spread over 158 m², their single-storey home offers everything they need. The two bedrooms and a generously proportioned bathroom lie to one side of the house, while an open living and dining area flow seamlessly into the kitchen space.",
+    "story3": "The desire to visually invite nature into their home influenced their decision to build a one-storey house where the entire ground level has direct access to the Japanese-inspired garden.",
+    "dimensions": "12.40 m x 12.40 m + alcove",
+    "footprint": "158.56 m² / 1.707 sqft",
+    "totalGrossExternalArea": "317.12 m² / 3.413 sqft",
+    "roofPitch": "Roof glazing",
+    "feature1": "Barrier-free",
+    "feature2": "Glazed gable",
+    "purpose": "The airiness of the rooms",
+    "purposeInfo1": "The residents had been searching for their dream house for three years.",
+    "purposeInfo2": "This search fortunately came to an end one day when they visited a glass HUF HAUS bungalow that instantly sparked their interest with. the airiness of the rooms,the spacious lines of sight and everything flush with the floor and accessible."
+}

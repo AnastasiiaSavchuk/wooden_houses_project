@@ -1,0 +1,44 @@
+.slideshow {
+    max-width: 100%;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.start-photo img {
+    max-width: 100%;
+    max-height: 750px;
+    height: auto;
+}
+
+.main {
+    margin: 7.5% 10% 0;
+}
+
+.main h1 {
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main h2 {
+    margin-bottom: 1%;
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main p {
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#info-1 {
+    width: 600px;
+    height: 400px;
+    float: left;
+}

@@ -1,0 +1,208 @@
+.slideshow {
+    max-width: 100%;
+    margin: auto;
+    padding-top: 70px;
+}
+
+.start-photo img {
+    max-width: 100%;
+    max-height: 750px;
+    height: auto;
+}
+
+.start-photo h1 {
+    position: absolute;
+    padding: 16% 10% 0;
+    background: transparent;
+    color: white;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 74px;
+    text-transform: uppercase;
+}
+
+.start-photo span {
+    color: white;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: none;
+}
+
+.dot {
+    margin-right: 0.5%;
+    height: 2px;
+    width: 50px;
+    background: #e6e6e6;
+    border: none;
+    outline: none !important;
+    transition: background-color 2s ease;
+    cursor: pointer;
+}
+
+.activeDot {
+    background: #44b827;
+    cursor: pointer;
+}
+
+.main {
+    margin: 5% 10% 0;
+}
+
+.main h1 {
+    padding: 5% 0 3%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main h2 {
+    padding-bottom: 2%;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main p {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#info-1 p, .panel p {
+    padding-bottom: 1%;
+}
+
+#info-2 i, #info-3 i {
+    color: #44b827;
+}
+
+#info-2 {
+    float: left;
+    margin-right: 17%;
+}
+
+.middleNav {
+    clear: both;
+    padding: 5%;
+    text-align: center;
+}
+
+.quickMenu {
+    display: inline-block;
+    padding-right: 1.5%;
+}
+
+.quickMenu img {
+    width: 360px;
+    height: 415px;
+}
+
+.quickMenu button {
+    margin: 30px 82px;
+    padding: 9px 15px;
+    width: 196px;
+    height: 43px;
+    border: 2px solid #262626;
+    cursor: pointer;
+}
+
+.quickMenu button:hover {
+    background-color: #44b827;
+    border-color: #44b827;
+    outline: none;
+    color: white;
+    transition: background-color 1s ease;
+}
+
+.quickMenu a {
+    color: #333333;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.middle-photo {
+    background: url("../image/aboutCompany/6_ART_3_von_HUF_HAUS.jpg") no-repeat fixed center;
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+.middle-photo h1 {
+    padding: 10% 0 !important;
+    min-height: 550px;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.accordion {
+    padding: 1.5% 2% 0.7%;
+    width: 100%;
+    text-align: left;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: #ededed;
+    border: none;
+    outline: none !important;
+    transition: background .5s ease;
+}
+
+.accordion:after {
+    content: '\2295';
+    color: #262626;
+    font-size: 40px;
+    font-weight: 200;
+    float: right;
+    margin-left: 2%;
+}
+
+.accordion:hover {
+    background: #d9d9d9;
+    border: none;
+    outline: none !important;
+}
+
+.active:after {
+    content: "\2297";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
