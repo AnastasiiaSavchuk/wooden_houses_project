@@ -7,14 +7,6 @@
     <title>Dream house by id</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
-          rel="stylesheet">
     <link rel="stylesheet" href="../../css/houseById.css">
 </head>
 <body>
@@ -22,39 +14,26 @@
 <div>
     <h2>${house.houseName}</h2>
     <h4>${house.houseType}</h4>
-    <td>${house.info}</td>
-    <td>${house.story1}</td>
-    <td>${house.story2}</td>
-    <td>${house.story3}</td>
-    <td>${house.story4}</td>
-    <td>${house.story5}</td>
-    <td>${house.story6}</td>
-    <td>${house.story7}</td>
-    <td>${house.story8}</td>
-    <td>${house.dimensions}</td>
-    <td>${house.footprint}</td>
-    <td>${house.totalGrossExternalArea}</td>
-    <td>${house.roofPitch}</td>
-    <td>${house.feature1}</td>
-    <td>${house.feature2}</td>
-    <td>${house.purpose}</td>
-    <td>${house.purposeInfo1}</td>
-    <td>${house.purposeInfo2}</td>
-    <td>${house.purposeInfo3}</td>
+    <p>${house.info}</p>
+    <p>${house.story1}</p>
+    <p>${house.story2}</p>
+    <p>${house.story3}</p>
+    <p>${house.story4}</p>
+    <p>${house.story5}</p>
+    <p>${house.story6}</p>
+    <p>${house.story7}</p>
+    <p>${house.story8}</p>
+    <p>${house.dimensions}</p>
+    <p>${house.footprint}</p>
+    <p>${house.totalGrossExternalArea}</p>
+    <p>${house.roofPitch}</p>
+    <p>${house.feature1}</p>
+    <p>${house.feature2}</p>
+    <p>${house.purpose}</p>
+    <p>${house.purposeInfo1}</p>
+    <p>${house.purposeInfo2}</p>
+    <p>${house.purposeInfo3}</p>
 </div>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </body>
 </html>
