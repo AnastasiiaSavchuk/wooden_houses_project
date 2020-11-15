@@ -26,12 +26,6 @@
                     <div id="info-1">
                         <h1>${houseConstructionInfo.name}</h1>
                         <h1>${houseConstructionInfo.description1}</h1>
-                    </div>
-                </c:if>
-                <c:if test="${houseConstructionInfo.id == 2}">
-                    <div id="info-2">
-                        <h1>${houseConstructionInfo.name}</h1>
-                        <p>${houseConstructionInfo.description1}</p>
                         <p>${houseConstructionInfo.description2}</p>
                         <p>${houseConstructionInfo.description3}</p>
                         <p>${houseConstructionInfo.description4}</p>
@@ -41,10 +35,22 @@
                         <p>${houseConstructionInfo.description8}</p>
                     </div>
                 </c:if>
+                <c:if test="${houseConstructionInfo.id == 2}">
+                    <div id="info-2">
+                        <p>${houseConstructionInfo.description1}</p>
+                        <p>${houseConstructionInfo.description2}</p>
+                        <p>${houseConstructionInfo.description3}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i>${houseConstructionInfo.description4}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i>${houseConstructionInfo.description5}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i>${houseConstructionInfo.description6}</p>
+                        <p><i class="fa fa-check" aria-hidden="true"></i>${houseConstructionInfo.description7}</p>
+                        <p>${houseConstructionInfo.description8}</p>
+                    </div>
+                </c:if>
 
                 <c:if test="${houseConstructionInfo.id == 3}">
                     <div id="info-3">
-                        <h1>${houseConstructionInfo.name}</h1>
+                        <h2>${houseConstructionInfo.name}</h2>
                         <p>${houseConstructionInfo.description1}</p>
                         <p>${houseConstructionInfo.description2}</p>
                         <p>${houseConstructionInfo.description3}</p>
@@ -216,15 +222,9 @@
                             <div class="image">
                                 <div>
                                     <img src="../../image/building/3.1_art.jpg" alt="">
-                                    <div class="name">
-                                        <p>art</p>
-                                    </div>
                                 </div>
                                 <div>
                                     <img src="../../image/building/3.2_modum.jpg" alt="">
-                                    <div class="name">
-                                        <p>modum</p>
-                                    </div>
                                 </div>
                             </div>
                             <div class="shortInfo">

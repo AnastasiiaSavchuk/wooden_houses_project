@@ -144,6 +144,7 @@
 }
 
 .accordion {
+    margin-bottom: 1%;
     padding: 1.5% 2% 0.7%;
     width: 100%;
     text-align: left;

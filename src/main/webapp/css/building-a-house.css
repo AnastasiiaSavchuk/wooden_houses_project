@@ -17,8 +17,8 @@
 .main h1 {
     color: #333333;
     font-family: 'Noto Sans SC', sans-serif;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 38px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -38,7 +38,116 @@
 }
 
 #info-1 {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 390px;
     float: left;
+}
+
+#info-2 i {
+    color: #44b827;
+    padding-right: 1%;
+    padding-left: 2%;
+}
+
+#info-3 {
+    margin: 5% 0;
+}
+
+.constructionStage img {
+    width: 765px;
+    height: 399px;
+    float: left;
+    margin-right: 2%;
+}
+
+.constructionStage h1 {
+    padding: 3% 0;
+}
+
+.constructionStage .shortInfo {
+    padding-bottom: 12%;
+}
+
+
+#info-4 {
+    clear: both;
+}
+
+.accordion {
+    margin-bottom: 1%;
+    padding: 1% 2%;
+    width: 100%;
+    text-align: left;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: #ededed;
+    border: none;
+    outline: none !important;
+    transition: background .5s ease;
+}
+
+.accordion:after {
+    content: '\2295';
+    color: #262626;
+    font-size: 39px;
+    font-weight: 200;
+    float: right;
+    margin-left: 2%;
+}
+
+.accordion:hover {
+    background: #d9d9d9;
+    border: none;
+    outline: none !important;
+}
+
+.active:after {
+    content: "\2297";
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.panel .image {
+    float: left;
+    margin-right: 3%;
+}
+
+.panel img {
+    width: 557px;
+    height: 313px;
+    margin-bottom: 2%;
+}
+
+.panel .shortInfo {
+    margin: 2% 22% 0 0;
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
 }
