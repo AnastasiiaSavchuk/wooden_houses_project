@@ -181,7 +181,9 @@
 <div class="middle-photo">
     <div class="shadow">
         <h1>Longlasting Happiness</h1>
-        <button>Flyer</button>
+        <a href="#" onclick="window.open('../../siteContent/ServiceART_Flyer_GB.pdf', '_blank')">
+            <button>Flyer</button>
+        </a>
     </div>
 </div>
 
