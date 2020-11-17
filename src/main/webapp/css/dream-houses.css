@@ -96,6 +96,10 @@
     box-shadow: 0 0 6px #bfbfbf;
 }
 
+.aboutHouse a:hover {
+    text-decoration: none;
+}
+
 .shortInfo {
     margin: 10% 5%;
 }

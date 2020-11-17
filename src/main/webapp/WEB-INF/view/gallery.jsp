@@ -18,7 +18,8 @@
 </div>
 
 <div class="main">
-    <div class="mini"><img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__1.jpg" alt=""></div>
+    <div class="mini"><a href="../../image/1-Bungalow_sample_7/MODUM_Bungalow__1.jpg"><img
+            src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__1.jpg" alt=""></a></div>
     <div class="mini"><img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__2.jpg" alt=""></div>
     <div class="mini"><img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__3.jpg" alt=""></div>
     <div class="mini"><img src="../../image/1-Bungalow_sample_7/MODUM_Bungalow__4.jpg" alt=""></div>
