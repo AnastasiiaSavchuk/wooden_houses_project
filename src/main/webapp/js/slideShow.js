@@ -18,7 +18,7 @@ function showNextSlide() {
     }
     slides[slideNextIndex - 1].style.display = "block";
     dots[slideNextIndex - 1].className += " activeDot";
-    setTimeout(showNextSlide, 5000); // Change image every 5 seconds
+    setTimeout(showNextSlide, 8000); // Change image every 8 seconds
 }
 
 //зміна слайда вибором кнопки
