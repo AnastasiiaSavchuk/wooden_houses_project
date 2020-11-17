@@ -132,27 +132,44 @@
 
 <div class="main">
     <div id="info-1">
-        <h2>${house.houseName} ${house.houseType}</h2>
-        <h1>${house.info}</h1>
+        <div class="left">
+            <h2 class="line">${house.houseName} ${house.houseType}</h2>
+            <h1>${house.info}</h1>
+            <div class="socialmedia">
+                <p class="but">
+                    <a href="https://www.facebook.com/hufhaus/" target="_blank"><i class="fa fa-facebook"></i></a></p>
+                <p class="but">
+                    <a href="https://twitter.com/hufhaus?lang=en" target="_blank"><i class="fa fa-twitter"></i></a></p>
+                <p class="but">
+                    <a href="https://www.pinterest.com/search/pins/?q=HUF%20HAUS&rs=typed&term_meta[]=HUF%7Ctyped&term_meta[]=HAUS%7Ctyped"
+                       target="_blank"><i class="fa fa-pinterest-p"></i></a></p>
+                <p class="but"><a href="mailto:huf-dorf@huf-haus.com"><i class="fa fa-envelope"></i></a></p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>${house.story1}</h2>
+            <p>${house.story2}</p>
+            <p>${house.story3}</p>
+            <p>${house.story4}</p>
+            <p>${house.story5}</p>
+            <p>${house.story6}</p>
+            <p>${house.story7}</p>
+            <p>${house.story8}</p>
+        </div>
     </div>
+
     <div id="info-2">
-        <p>${house.story1}</p>
-        <p>${house.story2}</p>
-        <p>${house.story3}</p>
-        <p>${house.story4}</p>
-        <p>${house.story5}</p>
-        <p>${house.story6}</p>
-        <p>${house.story7}</p>
-        <p>${house.story8}</p>
-    </div>
-    <div id="info-3">
         <h1>More details about yhe house</h1>
-        <p>House: ${house.houseName}</p>
-        <p>Dimensions: ${house.dimensions}</p>
-        <p>Total gross external area: ${house.totalGrossExternalArea}</p>
-        <p>House footprint: ${house.footprint}</p>
-        <p>Roof pitch: ${house.roofPitch}</p>
-        <p>Features: ${house.feature1}</p>
+        <div class="left">
+            <p><span>House:</span> ${house.houseName}</p>
+            <p><span>Dimensions:</span> ${house.dimensions}</p>
+            <p><span>Total gross external area:</span> ${house.totalGrossExternalArea}</p>
+        </div>
+        <div class="right">
+            <p><span>House footprint:</span> ${house.footprint}</p>
+            <p><span>Roof pitch:</span> ${house.roofPitch}</p>
+            <p><span>Features:</span> ${house.feature1}</p>
+        </div>
     </div>
 </div>
 
@@ -224,8 +241,8 @@
 </c:if>
 
 <div class="main">
-    <div id="info-4">
-        <p>${house.purpose}</p>
+    <div id="info-3">
+        <h2>${house.purpose}</h2>
         <p>${house.purposeInfo1}</p>
         <p>${house.purposeInfo2}</p>
         <p>${house.purposeInfo3}</p>
@@ -375,7 +392,6 @@
         </div>
     </c:if>
 </div>
-
 
 <div class="photo">
     <c:if test="${house.id == 1}">

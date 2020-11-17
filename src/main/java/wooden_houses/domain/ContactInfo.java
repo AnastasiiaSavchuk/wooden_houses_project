@@ -35,7 +35,7 @@ public class ContactInfo {
     @Column(name = "email", nullable = false, length = 120)
     private String email;
 
-    @NotNull(message = "PlThis field must be filled!")
+    @NotNull(message = "This field must be filled!")
     @Column(name = "post_code", nullable = false)
     private int postCode;
 

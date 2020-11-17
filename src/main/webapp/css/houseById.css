@@ -27,10 +27,11 @@
 }
 
 .main {
-    margin: 5% 10% 0;
+    margin: 4% 10% 0;
 }
 
 .main h1 {
+    margin-bottom: 5%;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 38px;
     font-weight: 700;
@@ -50,15 +51,90 @@
 }
 
 #info-1 {
-    width: 600px;
-    float: left;
+    height: 100%;
+    display: inline-flex;
 }
 
-#info-1 h2 {
-    border-right: 4px solid #44b827;
-    font-size: 24px;
+#info-1 .left {
+    width: 35%;
+    margin-right: 20%;
+}
+
+#info-1 .right {
+    width: 65%;
+}
+
+
+#info-1 .line {
+    padding-bottom: 2%;
+    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+#info-1 .line:after {
+    content: "\007C";
+    color: #44b827;
+}
+
+#info-1 .socialmedia .but {
+    margin: 0 2% 5% 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    background: #44b827;
+}
+
+#info-1 .socialmedia .but:hover {
+    background: #3b5998;
+}
+
+#info-1 .socialmedia .but a i {
+    color: #ffffff;
+}
+
+#info-2 {
+    clear: both;
+    margin: 5% 0 5% 25%;
+}
+
+#info-2 .left {
+    float: left;
+    margin-right: 10%;
+}
+
+#info-2 span {
+    color: #44b827;
+}
+
+#info-2 p {
+    font-weight: 500;
+}
+
+.middle-photo {
+    height: 100%;
+    text-align: center;
+}
+
+.middle-photo h1 {
+    padding: 10% 0 !important;
+    min-height: 550px;
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#info-3 {
+    text-align: center;
+}
+
+#info-3 p {
+    margin: 0 !important;
 }
 
 

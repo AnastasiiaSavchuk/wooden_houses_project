@@ -1,27 +1,18 @@
 package wooden_houses.controller;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.ResponseEntity;
-import wooden_houses.domain.HouseImage;
-import wooden_houses.service.impl.HouseImageServiceImpl;
-
-import java.io.IOException;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class HouseImageControllerTest {
+/*
 
     @Autowired
     private HouseImageController controller;
     @Autowired
     private HouseImageServiceImpl service;
 
-    /*@Test
+    */
+/*@Test
     @DisplayName("Test save and delete house image")
     public void SaveDeleteTest() throws Exception {
         Path path = Paths.get("E:/CV nastia + Dima/965.jpg");
@@ -56,7 +47,8 @@ public class HouseImageControllerTest {
         } else {
             assertThat(responseEntityById.getStatusCodeValue()).isEqualTo(200);
         }
-    }*/
+    }*//*
+
 
     @Test
     @DisplayName("Test read all houses")
@@ -67,5 +59,5 @@ public class HouseImageControllerTest {
         } else {
             assertThat(responseEntityAllHouses.getStatusCodeValue()).isEqualTo(200);
         }
-    }
+    }*/
 }

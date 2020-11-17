@@ -1,26 +1,11 @@
 package wooden_houses.service;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.web.multipart.MultipartFile;
-import wooden_houses.domain.HouseImage;
-import wooden_houses.service.impl.HouseImageServiceImpl;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class HouseImageServiceImplTest {
 
-    @Autowired
+   /* @Autowired
     private HouseImageServiceImpl service;
 
     @Test
@@ -71,5 +56,5 @@ public class HouseImageServiceImplTest {
         int id = 1;
         service.isExists(id);
         assertThat(service.isExists(id)).isTrue();
-    }
+    }*/
 }
