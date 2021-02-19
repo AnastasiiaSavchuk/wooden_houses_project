@@ -40,7 +40,7 @@ public class HouseController {
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house in the database!"),
     })
-    @GetMapping("house/{id}")
+    @GetMapping("/house/{id}")
     public ResponseEntity<?> readHouseById(@PathVariable("id") int id) {
         log.info("Looking for a house by id " + id);
         House house = service.findById(id);
@@ -94,7 +94,7 @@ public class HouseController {
             @ApiResponse(code = SC_BAD_REQUEST, message = "Something went wrong! Please try again!"),
             @ApiResponse(code = SC_NOT_FOUND, message = "Not found the house in the database!"),
     })
-    @DeleteMapping("deleteHouse/{id}")
+    @DeleteMapping("/deleteHouse/{id}")
     public ResponseEntity<?> deleteHouseById(@PathVariable("id") int id) {
         log.info("Deleting house with id " + id);
         if (Objects.isNull(service.findById(id))) {
