@@ -9,7 +9,8 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 
-        /* запуск програми -> http://localhost:8088/frontend/service*/
+        /* запуск програми -> http://localhost:8088/frontend/service
+           оригінальний сайт -> https://www.huf-haus.com/en-uk/ */
     }
 
 }
